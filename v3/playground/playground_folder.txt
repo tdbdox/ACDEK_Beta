@@ -1,0 +1,6 @@
+This folder includes frontend demos or notebooks to interact with ACDEK visually.
+
+Used for:
+- Live simulation of kernel decisions
+- Trait and ψ modulation sliders
+- Developer experimentation

@@ -1,0 +1,99 @@
+## ACDEK Enterprise Administration Dashboard
+This folder contains the backend and API layer for ACDEK's comprehensive administrative interface.
+
+### Core Dashboard Components
+- **dashboard_server.py**: Main administrative interface server
+- **admin_api.py**: RESTful API for dashboard operations
+- **telemetry_aggregator.py**: Performance data collection and processing
+- **event_processor.py**: System event handling and notification
+- **admin_auth.py**: Dashboard-specific authentication and authorization
+- **audit_viewer.py**: Administrative audit log access
+
+### Administrative Control Modules
+- **component_manager/**: Pipeline component administration
+  - **kernel_control.py**: Core kernel parameter management
+  - **enrichment_control.py**: Enrichment component configuration
+  - **plugin_admin.py**: Plugin management interface
+  - **adapter_control.py**: LLM provider configuration
+  - **routing_control.py**: Decision path management
+  - **override_manager.py**: Administrative override controls
+
+- **observability/**: System monitoring and diagnosis
+  - **metrics_dashboard.py**: Real-time performance visualizations
+  - **trace_explorer.py**: Request trace analysis tools
+  - **log_analyzer.py**: Enhanced log searching and filtering
+  - **alert_manager.py**: Alert configuration and notification
+  - **health_monitor.py**: System and component health displays
+  - **performance_analyzer.py**: Performance bottleneck identification
+
+- **trait_management/**: User trait administration
+  - **trait_explorer.py**: Trait visualization and analysis
+  - **trait_editor.py**: Administrative trait modification
+  - **history_viewer.py**: Trait mutation history
+  - **mutation_validator.py**: Trait change verification
+  - **trait_templates.py**: Organizational trait template management
+  - **class_manager.py**: Semantic class configuration
+
+### Enterprise Administration
+- **tenant_manager/**: Multi-tenant administration
+  - **tenant_provisioning.py**: New tenant setup
+  - **isolation_configuration.py**: Tenant boundary management
+  - **usage_reporting.py**: Tenant-specific analytics
+  - **quota_management.py**: Resource allocation and limits
+  - **tenant_permissions.py**: Tenant-specific access controls
+
+- **security_admin/**: Security management
+  - **user_manager.py**: Administrator user management
+  - **role_editor.py**: Role and permission configuration
+  - **audit_explorer.py**: Security event analysis
+  - **compliance_dashboard.py**: Compliance status monitoring
+  - **security_scanner.py**: Security posture assessment
+  - **incident_manager.py**: Security incident tracking
+
+- **integration_control/**: Enterprise integration management
+  - **connector_config.py**: External system connection management
+  - **webhook_manager.py**: Webhook configuration and monitoring
+  - **callback_admin.py**: Event callback administration
+  - **api_key_manager.py**: API credential management
+  - **system_sync.py**: Cross-system synchronization controls
+
+### Developer Experience
+- **developer_portal/**: Developer self-service tools
+  - **api_explorer.py**: Interactive API documentation
+  - **plugin_developer.py**: Plugin development tools
+  - **test_environment.py**: Isolated testing environment
+  - **sandbox_manager.py**: Development sandbox provisioning
+  - **example_generator.py**: Code sample generation
+
+- **knowledge_center/**: Documentation and learning
+  - **documentation_server.py**: Technical documentation access
+  - **tutorial_server.py**: Interactive learning modules
+  - **reference_library.py**: API and component references
+  - **community_forum.py**: Developer community integration
+  - **changelog_manager.py**: Version history and updates
+
+### Enterprise Reporting
+- **analytics_engine/**: Business intelligence capabilities
+  - **usage_analytics.py**: System usage patterns and trends
+  - **performance_reports.py**: System performance analysis
+  - **cost_analytics.py**: Resource utilization and cost tracking
+  - **hallucination_metrics.py**: Hallucination reduction tracking
+  - **confidence_analytics.py**: Confidence scoring analysis
+  - **business_impact.py**: ROI and business value metrics
+
+- **export_manager/**: Report generation and distribution
+  - **report_generator.py**: Customizable report creation
+  - **export_scheduler.py**: Automated report distribution
+  - **notification_manager.py**: Report delivery configuration
+  - **visualization_engine.py**: Chart and graph generation
+  - **data_exporter.py**: Raw data export capabilities
+
+### Implementation Notes
+- Dashboard uses secure WebSocket for real-time updates
+- Role-based access controls for all administrative functions
+- Comprehensive audit logging of all administrative actions
+- Responsive design for mobile and desktop access
+- Real-time alerts for critical system events
+- Configurable dashboards for different administrative roles
+- Enterprise SSO integration for administrator authentication
+- Comprehensive help documentation for all features

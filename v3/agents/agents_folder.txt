@@ -1,0 +1,37 @@
+## ACDEK Enterprise Agents
+This folder contains high-level, enterprise-ready agent definitions built on top of the ACDEK kernel.
+
+### Purpose
+These agents implement multi-pass orchestration logic with persistent identity, contextual memory, 
+and domain-specific capabilities designed for specialized enterprise workflows.
+
+### Key Agent Types
+- **AnalystAgent**: Financial data analysis with confidence-scored insights
+- **AdvisorAgent**: Decision support with contextual reasoning and fallback clarification
+- **OperationsAgent**: Workflow automation with trait-enhanced execution reliability
+- **StrategyAgent**: Long-term planning with memory-conditioned thinking
+- **CustomerSupportAgent**: Personalized interaction with adaptive tone modulation
+- **RiskEvaluationAgent**: Nuanced risk assessment with enhanced fallback safety
+
+### Implementation Structure
+- **agent_base.py**: Abstract base class with lifecycle management and kernel integration
+- **orchestrator.py**: Multi-step execution coordinators with state management
+- **memory_manager.py**: Persistent context handling with retrieval optimization
+- **session_state.py**: Stateful interaction management with version history
+- **agent_factory.py**: Dynamic agent instantiation with trait initialization
+- **executors/**: Domain-specific logic modules for specialized workflows
+
+### v3 Capabilities
+- State persistence across multiple kernel executions
+- Recursive self-improvement through trait evolution
+- Multi-step reasoning with verification at each stage
+- Personality consistency through continuous trait conditioning
+- Configurable failure recovery paths for mission-critical workflows
+- Event emission for integration with external systems
+
+### Enterprise Integration
+- Role-based customization for organizational hierarchy
+- Audit log integration for all agent decisions
+- Enterprise system connectors (CRM, ERP, etc.)
+- Fine-grained permission controls on agent capabilities
+- Team collaboration awareness for multi-agent scenarios 

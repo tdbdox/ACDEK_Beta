@@ -1,0 +1,148 @@
+## ACDEK Enterprise Configuration System
+This folder implements ACDEK's hierarchical, environment-aware configuration framework for enterprise deployments.
+
+### Core Configuration Architecture
+- **config_manager.py**: Central configuration orchestration system
+- **environment_resolver.py**: Environment detection with override capabilities
+- **config_validator.py**: Schema-based configuration validation
+- **default_provider.py**: Default configuration values management
+- **inheritance_resolver.py**: Configuration inheritance across environments
+- **sensitive_handler.py**: Secure handling of sensitive configuration values
+- **config_telemetry.py**: Configuration change monitoring and reporting
+
+### Configuration Structure
+- **schema/**: JSON Schema definitions for configuration validation
+  - **core_schema.json**: Core ACDEK kernel configuration schema
+  - **plugin_schema.json**: Plugin configuration schema definition
+  - **adapter_schema.json**: LLM adapter configuration schema
+  - **security_schema.json**: Security configuration schema
+  - **observability_schema.json**: Telemetry configuration schema
+  - **deployment_schema.json**: Deployment configuration schema
+
+- **defaults/**: Default configuration templates
+  - **base.yaml**: Base configuration for all environments
+  - **development.yaml**: Development environment defaults
+  - **staging.yaml**: Staging environment defaults
+  - **production.yaml**: Production environment defaults
+  - **enterprise.yaml**: Enterprise-specific configuration templates
+  - **airgapped.yaml**: Air-gapped deployment configuration
+
+- **providers/**: LLM provider configuration
+  - **provider_base.yaml**: Common provider configuration
+  - **openai_config.yaml**: OpenAI-specific configuration
+  - **anthropic_config.yaml**: Anthropic-specific configuration
+  - **mistral_config.yaml**: Mistral-specific configuration
+  - **gemini_config.yaml**: Google Gemini configuration
+  - **azure_openai_config.yaml**: Azure OpenAI Service configuration
+  - **on_premise_config.yaml**: On-premise model configuration
+
+- **plugins/**: Plugin system configuration
+  - **plugin_registry.yaml**: Plugin registration and discovery configuration
+  - **plugin_permissions.yaml**: Plugin capability configuration
+  - **marketplace_config.yaml**: Plugin marketplace configuration
+  - **versioning_config.yaml**: Plugin version compatibility rules
+  - **extension_points.yaml**: Plugin extension point registration
+  - **sandbox_config.yaml**: Plugin sandbox execution rules
+
+### Specialized Configuration
+- **performance/**: Performance optimization settings
+  - **caching_config.yaml**: Multi-level cache configuration
+  - **scaling_config.yaml**: Horizontal scaling parameters
+  - **throughput_config.yaml**: High-throughput optimization
+  - **latency_config.yaml**: Latency optimization settings
+  - **resource_limits.yaml**: Resource allocation and constraints
+  - **timeout_config.yaml**: Operation timeout configurations
+
+- **security/**: Security configuration
+  - **auth_config.yaml**: Authentication configuration
+  - **authorization_config.yaml**: Authorization rules and RBAC
+  - **encryption_config.yaml**: Data encryption settings
+  - **pii_config.yaml**: PII handling configuration
+  - **audit_config.yaml**: Audit logging configuration
+  - **compliance_config.yaml**: Regulatory compliance settings
+
+- **integration/**: External system integration settings
+  - **webhook_config.yaml**: Webhook registration and configuration
+  - **callback_config.yaml**: Event callback configuration
+  - **crm_config.yaml**: CRM integration configuration
+  - **erp_config.yaml**: ERP system integration
+  - **data_warehouse_config.yaml**: Data warehouse connection
+  - **messaging_config.yaml**: Message queue integration
+
+- **observability/**: Monitoring and telemetry settings
+  - **logging_config.yaml**: Structured logging configuration
+  - **metrics_config.yaml**: Metrics collection and exporters
+  - **tracing_config.yaml**: Distributed tracing configuration
+  - **alerting_config.yaml**: Alert thresholds and notification
+  - **dashboard_config.yaml**: Monitoring dashboard configuration
+  - **health_check_config.yaml**: Health check configuration
+
+### Enterprise Configuration Features
+- **tenant_config/**: Multi-tenant configuration
+  - **tenant_template.yaml**: Base template for new tenants
+  - **tenant_isolation.yaml**: Tenant isolation boundaries
+  - **tenant_quotas.yaml**: Resource allocation per tenant
+  - **tenant_defaults.yaml**: Tenant-specific default settings
+  - **tenant_routing.yaml**: Request routing for multi-tenant setup
+
+- **deployment/**: Deployment configuration
+  - **kubernetes_templates/**: Kubernetes deployment templates
+  - **docker_compose/**: Docker Compose configuration
+  - **terraform/**: Infrastructure as Code templates
+  - **cloud_provider/**: Cloud-specific deployment settings
+  - **scaling_policies/**: Auto-scaling configuration
+  - **network_policies/**: Network security configuration
+
+### Configuration Management Tools
+- **config_cli.py**: Command-line interface for configuration
+- **config_validator.py**: Configuration validation utilities
+- **config_generator.py**: Configuration template generation
+- **secret_manager.py**: Secure credential management
+- **config_migrator.py**: Version migration for configurations
+- **config_diff.py**: Configuration difference analysis
+
+### Implementation Notes
+- Strict schema validation for all configuration files
+- Environment variable override capability for all settings
+- Hierarchical configuration with multiple inheritance levels
+- Tenant-specific configuration isolation
+- Secure handling of sensitive configuration values
+- Git-compatible versioning for configuration tracking
+- Real-time configuration updates without restart
+- Configuration change audit logging
+- Cross-reference validation across configuration sections
+
+### Complexity Management: Phased Rollout
+- **feature_flags/**: Feature flag management system
+  - **flag_registry.py**: Central registry of all feature flags
+  - **flag_conditions.py**: Conditional activation rules
+  - **flag_overrides.py**: Environment-specific overrides
+  - **flag_audit.py**: Activation history and usage tracking
+  - **flag_ui.py**: Administrative interface for flag management
+  - **flag_metrics.py**: Feature usage and performance metrics
+
+- **rollout_management/**: Controlled deployment tools
+  - **component_maturity.py**: Component maturity tracking system
+  - **graduated_deployment.py**: Progressive capability activation
+  - **migration_paths.py**: V2 to V3 transition automation
+  - **canary_deployment.py**: Limited audience testing framework
+  - **rollout_monitoring.py**: Deployment health tracking
+  - **rollback_automation.py**: Automated rollback on issues
+
+### Phased Rollout Strategy
+- **Component Maturity Model**: Explicit graduation criteria for each component
+  - **Alpha**: Initial implementation with limited testing
+  - **Beta**: Feature complete with comprehensive testing
+  - **RC**: Production ready with performance validation
+  - **GA**: Fully supported with SLA guarantees
+  
+- **Graduated Feature Activation**: Progressive enablement of capabilities
+  - **Core First**: Basic pipeline functionality enabled first
+  - **Enhancement Layer**: Advanced features controlled by flags
+  - **Enterprise Layer**: Enterprise-specific features separately toggled
+  
+- **Migration Strategy**: Controlled transition paths
+  - **Parallel Operation**: V2 and V3 running side-by-side during transition
+  - **Progressive Data Migration**: Phased data transfer between versions
+  - **Compatibility Shims**: Temporary compatibility layers during transition
+  - **Feature Parity Tracking**: Explicit mapping of v2 to v3 capabilities

@@ -1,0 +1,51 @@
+## ACDEK Enterprise Benchmarks
+This folder contains comprehensive benchmark suites for ACDEK validation with enterprise-grade methodologies.
+
+### Validation Categories
+- **Hallucination Mitigation**: Quantifiable reduction in factual inaccuracies
+- **Guessing Reduction**: Improved handling of unknown information with proper fallbacks
+- **Confidence Modulation**: Accurate self-assessment of response reliability
+- **Trait Consistency**: Stable personality traits across varied contexts
+- **Execution Reliability**: Fault tolerance under diverse failure scenarios
+- **Enterprise Scalability**: Performance metrics under high-throughput conditions
+- **Security Compliance**: Data protection and access control validation
+- **Memory Conditioning**: Proper trait evolution through consistent interactions
+
+### Benchmark Structure
+- **automated/**: Continuous integration benchmarks
+  - **hallucination_tests/**: False information detection and prevention
+  - **confidence_tests/**: Accuracy of confidence scoring
+  - **reliability_tests/**: System behavior under failure conditions
+  - **performance_tests/**: Latency and throughput metrics
+  - **security_tests/**: Access control and data protection
+  
+- **comparative/**: Cross-version and cross-product comparisons
+  - **v2_vs_v3/**: Direct comparison with previous ACDEK versions
+  - **raw_llm/**: Comparison with unenhanced LLM responses
+  - **competitor/**: Evaluation against similar middleware solutions
+
+- **enterprise_scenarios/**: Industry-specific validation scenarios
+  - **financial_services/**: Banking and investment use cases
+  - **healthcare/**: Medical decision support scenarios
+  - **manufacturing/**: Supply chain and operations workflows
+  - **retail/**: Customer interaction and pricing simulations
+
+### Implementation Notes
+- Each benchmark includes seed data, expected outputs, and evaluation metrics
+- Results are stored in versioned JSON for reproducibility and comparison
+- CI integration automatically runs benchmarks on all PRs and releases
+- Dashboards visualize benchmark trends over time and across configurations
+- Regression detection alerts for any performance degradation
+
+### Measurement Standards
+- **Hallucination Score**: % of unfounded statements (target: <2%)
+- **Confidence Accuracy**: Correlation between stated and actual confidence
+- **Decision Reliability**: % of correct path selections under ambiguity
+- **Latency Performance**: Transaction time under load (target: <200ms)
+- **Recovery Rate**: % of successful recoveries from simulated failures
+
+### Enterprise Validation
+- Penetration testing scenarios with security-focused benchmarks
+- Compliance validation for regulated industry requirements
+- Multi-tenant isolation verification
+- High-availability stress testing 

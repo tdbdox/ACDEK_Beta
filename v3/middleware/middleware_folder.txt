@@ -1,0 +1,6 @@
+This folder defines ACDEK's async runtime integrations and event-based hooks.
+
+Examples:
+- Webhook handling
+- Post-kernel callbacks
+- Real-time stream transformers

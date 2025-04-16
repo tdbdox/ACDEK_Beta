@@ -1,0 +1,113 @@
+## ACDEK Core Kernel
+This folder contains the distributed, resilient core execution kernel of ACDEK v3.
+
+It implements the enhanced structured protocol:
+Ω = f(Q, Ar, Cu, ef, ψ) with circuit-breaker patterns and multi-tier fallbacks
+
+### Key Components
+- **acdek_kernel.py**: Main distributed pipeline orchestrator with circuit-breaker implementation
+- **gate.py**: Enhanced decision gating with confidence-weighted path selection
+- **gamma.py**: Payload verification with formal constraint validation
+- **omega.py**: Advanced modulation vector with trait-based personalization
+- **phi.py**: Multi-path execution resolution with graceful degradation
+- **async_pipeline.py**: Asynchronous execution coordinator for parallel processing
+- **fallback_chain.py**: Configurable multi-tier fallback logic with recovery paths
+- **retry_manager.py**: Progressive retry strategies with backoff mechanisms
+
+### Implementation Notes
+- All components use interface-based design for plugin compatibility
+- Each component includes telemetry hooks for OpenTelemetry integration
+- Components support both sync and async execution models
+- Core features include full distributed tracing and isolated failure handling
+- Pipeline supports hot-swappable components via registry
+
+### Performance Goals
+- <20ms execution time for critical path components
+- Support for 100+ concurrent requests with consistent latency
+- Memory-efficient design for containerized environments
+
+### v3 Enhancements
+- Built-in circuit breakers for all external dependencies
+- Detailed trace logging with contextualized diagnostic data
+- Parallel execution of compatible pipeline components
+- Comprehensive error handling with graceful degradation paths
+- Support for distributed deployment across multiple nodes
+
+### Performance Optimization: Latency Modes
+- **performance_modes.py**: Configurable performance profiles
+  - **accuracy_mode.py**: Maximum accuracy with full verification
+  - **balanced_mode.py**: Optimal balance of speed and accuracy
+  - **speed_mode.py**: Maximum throughput with acceptable accuracy
+  - **emergency_mode.py**: Minimal processing for crisis scenarios
+  
+- **adaptive_processing.py**: Request characteristic-based optimization
+  - **request_classifier.py**: Automatic request complexity detection
+  - **resource_allocator.py**: Dynamic resource allocation
+  - **pipeline_optimizer.py**: Execution path optimization
+  - **priority_scheduler.py**: Request priority-based scheduling
+  
+- **progressive_execution.py**: Tiered processing framework
+  - **fast_path.py**: Accelerated execution for simple requests
+  - **enrichment_stages.py**: Progressive enrichment application
+  - **verification_levels.py**: Configurable verification depth
+  - **confidence_thresholds.py**: Adaptive confidence requirements
+
+### Latency Mode Strategy
+- **Performance Profiles**: Multiple pre-configured execution modes
+  - **Accuracy Mode**: Complete enrichment, full validation, maximum confidence thresholds
+  - **Balanced Mode**: Standard enrichment, normal validation, default confidence thresholds
+  - **Speed Mode**: Minimal enrichment, light validation, reduced confidence thresholds
+  - **Emergency Mode**: Critical operations only, for extreme load scenarios
+  
+- **Adaptive Processing**: Dynamic optimization based on request characteristics
+  - Request complexity detection at ingestion
+  - Content-aware processing depth adjustment
+  - Context-sensitive resource allocation
+  - Domain-specific optimization strategies
+  
+- **Configuration Controls**: Fine-grained performance tuning
+  - Environment-specific performance defaults
+  - Per-tenant performance profiles
+  - Dynamic profile switching based on system load
+  - Per-request performance directives
+
+### Performance Optimization: Graceful Fallback
+- **fallback_manager/**: Strategic fallback orchestration
+  - **fallback_chain.py**: Multi-tier fallback sequencing
+  - **capability_reduction.py**: Progressive capability reduction
+  - **self_healing.py**: Automatic recovery procedures
+  - **fallback_telemetry.py**: Fallback metrics collection
+  - **degradation_policy.py**: Controlled degradation rules
+  - **recovery_coordinator.py**: Service restoration management
+  - **priority_preservation.py**: Critical function preservation
+
+- **degradation_paths/**: Controlled degradation strategies
+  - **enrichment_reduction.py**: Simplified enrichment paths
+  - **confidence_adjustment.py**: Dynamic confidence thresholds
+  - **vector_simplification.py**: Reduced vector processing
+  - **caching_enhancement.py**: Increased cache reliance
+  - **constraint_relaxation.py**: Simplified constraint checking
+  - **batch_prioritization.py**: Request priority enforcement
+  - **timeout_management.py**: Adaptive timeout control
+
+### Graceful Fallback Strategy
+- **Progressive Degradation**: Ordered capability reduction under load
+  - **Level 1**: Cache hit rate optimization and batch prioritization
+  - **Level 2**: Reduced enrichment depth and simplified vector operations
+  - **Level 3**: Minimal validation with lowered confidence thresholds
+  - **Level 4**: Critical operations only with maximum caching
+  - **Level 5**: Read-only operation with administrative functions only
+
+- **Domain Preservation**: Business-critical function protection
+  - **Critical Path Protection**: Essential flows preserved at all costs
+  - **Priority-Based Processing**: Request priority enforcement
+  - **Service Differentiation**: Critical vs. non-critical service separation
+  - **Resource Reservation**: Reserved capacity for essential operations
+  - **SLA Enforcement**: Maintaining service guarantees for priority functions
+
+- **Recovery Orchestration**: Automated system restoration
+  - **Load Monitoring**: Continuous system capacity evaluation
+  - **Circuit Breakers**: Automatic service protection mechanisms
+  - **Staged Recovery**: Phased service restoration procedures
+  - **Health Checks**: Comprehensive component health validation
+  - **Capacity Testing**: Progressive load testing during recovery

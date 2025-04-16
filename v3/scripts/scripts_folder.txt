@@ -1,0 +1,137 @@
+## ACDEK Enterprise Utility Scripts
+This folder contains comprehensive developer utilities, data processing scripts, and DevOps automation for the ACDEK platform.
+
+### Development Utilities
+- **setup/**: Development environment setup
+  - **setup_dev_environment.py**: Complete development environment setup
+  - **install_dependencies.py**: Project dependency installation
+  - **configure_git_hooks.py**: Git hooks installation for CI checks
+  - **create_virtual_env.py**: Virtual environment creation
+  - **install_test_tools.py**: Testing tool installation
+  - **setup_docker_dev.py**: Docker development environment
+  - **configure_ide.py**: IDE configuration generator
+
+- **code_generation/**: Scaffolding and boilerplate
+  - **create_plugin.py**: Plugin template generator
+  - **create_interface.py**: Interface definition generator
+  - **create_component.py**: Component template generator
+  - **generate_test.py**: Test file generator
+  - **create_docs.py**: Documentation template generator
+  - **generate_client.py**: Client library generator
+  - **create_benchmark.py**: Benchmark template generator
+
+- **data_generation/**: Test and sample data
+  - **generate_traits.py**: Trait data generation utilities
+  - **create_semantic_classes.py**: Semantic class generator
+  - **generate_test_requests.py**: Test request generator
+  - **create_mock_responses.py**: Mock response creation
+  - **generate_embeddings.py**: Test embedding generator
+  - **create_synthetic_logs.py**: Log entry generation
+  - **generate_performance_data.py**: Performance test data
+
+### Analysis Tools
+- **benchmark/**: Benchmark automation
+  - **run_benchmarks.py**: Benchmark suite executor
+  - **analyze_results.py**: Benchmark result analysis
+  - **generate_reports.py**: Report generation from benchmarks
+  - **compare_versions.py**: Cross-version benchmark comparison
+  - **visualize_performance.py**: Performance visualization
+  - **extract_metrics.py**: Metric extraction from results
+  - **run_load_tests.py**: Load and stress test automation
+
+- **profiling/**: Performance profiling
+  - **profile_components.py**: Component-level profiling
+  - **memory_usage.py**: Memory utilization analysis
+  - **latency_breakdown.py**: Request latency analysis
+  - **throughput_test.py**: Throughput measurement
+  - **bottleneck_detection.py**: Performance bottleneck analysis
+  - **trace_visualization.py**: Request trace visualization
+  - **profile_summarizer.py**: Profiling result summarization
+
+- **debugging/**: Debugging utilities
+  - **log_analyzer.py**: Log analysis and pattern detection
+  - **trace_explorer.py**: Distributed trace analysis
+  - **replay_request.py**: Request replay from trace data
+  - **error_analyzer.py**: Error pattern detection
+  - **config_validator.py**: Configuration validation
+  - **component_tester.py**: Isolated component testing
+  - **state_dumper.py**: System state snapshot tools
+
+### DevOps Automation
+- **deployment/**: Deployment automation
+  - **build_docker_images.py**: Docker image builder
+  - **deploy_kubernetes.py**: Kubernetes deployment
+  - **version_bump.py**: Version management automation
+  - **generate_changelog.py**: Changelog generation
+  - **deploy_cloud.py**: Cloud provider deployment
+  - **rollback_automation.py**: Deployment rollback
+  - **blue_green_deploy.py**: Blue-green deployment
+
+- **ci_cd/**: CI/CD pipeline tools
+  - **run_tests.py**: Test suite runner
+  - **code_quality.py**: Code quality checks
+  - **security_scan.py**: Security vulnerability scanning
+  - **dependency_check.py**: Dependency vulnerability scanning
+  - **release_preparation.py**: Release packaging
+  - **documentation_build.py**: Documentation generation
+  - **pr_validator.py**: Pull request validation
+
+- **monitoring/**: System monitoring
+  - **health_check.py**: System health validation
+  - **alert_tester.py**: Alert configuration testing
+  - **metric_collector.py**: Metric collection utilities
+  - **dashboard_generator.py**: Monitoring dashboard setup
+  - **log_rotation.py**: Log management utilities
+  - **resource_monitor.py**: Resource utilization tracking
+  - **synthetic_monitor.py**: Synthetic transaction monitoring
+
+### Data Management
+- **migration/**: Data migration
+  - **schema_migration.py**: Database schema migration
+  - **data_migration.py**: Data transformation and migration
+  - **version_converter.py**: Cross-version data conversion
+  - **backup_utility.py**: Data backup automation
+  - **restore_utility.py**: Data restoration tools
+  - **data_validation.py**: Migration validation
+  - **incremental_migration.py**: Progressive data migration
+
+- **maintenance/**: System maintenance
+  - **cleanup_utilities.py**: Temporary data cleanup
+  - **cache_management.py**: Cache maintenance
+  - **database_optimization.py**: Database performance tuning
+  - **index_rebuilder.py**: Search index maintenance
+  - **log_archiver.py**: Log archiving and purging
+  - **cert_renewal.py**: Certificate management
+  - **storage_analyzer.py**: Storage utilization analysis
+
+### Enterprise Integration
+- **integration/**: Enterprise connectors
+  - **crm_connector.py**: CRM system integration utilities
+  - **erp_connector.py**: ERP system integration tools
+  - **ldap_sync.py**: Directory service synchronization
+  - **sso_setup.py**: Single sign-on configuration
+  - **webhook_tester.py**: Webhook testing utilities
+  - **api_gateway_config.py**: API gateway configuration
+  - **message_queue_tools.py**: Messaging system utilities
+
+- **export/**: Data export utilities
+  - **data_exporter.py**: Structured data export
+  - **report_generator.py**: Report generation utilities
+  - **audit_export.py**: Audit log exporters
+  - **telemetry_export.py**: Telemetry data export
+  - **document_generator.py**: Document generation
+  - **archive_creator.py**: Archive creation for data export
+  - **format_converter.py**: Data format conversion tools
+
+### Implementation Notes
+- All scripts include comprehensive documentation and usage examples
+- Scripts follow consistent command-line interface patterns
+- Standardized logging and error handling across all scripts
+- Configuration-driven behavior with sensible defaults
+- Progress reporting for long-running operations
+- Graceful error handling and recovery options
+- Full test coverage with automated validation
+- Cross-platform compatibility (Linux, macOS, Windows)
+- Enterprise-grade security practices
+- Script outputs are structured for easy parsing
+- Integration with CI/CD pipelines

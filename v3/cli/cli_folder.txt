@@ -1,0 +1,108 @@
+## ACDEK Enterprise CLI Toolkit
+This folder contains ACDEK's comprehensive command-line interface with enterprise-grade developer tools.
+
+### Core CLI Framework
+- **cli_main.py**: Main entry point with command routing
+- **cli_config.py**: Configuration management and environment handling
+- **auth_manager.py**: CLI authentication and credential management
+- **output_formatter.py**: Structured output rendering (JSON, YAML, table)
+- **interactive_shell.py**: Interactive REPL environment
+- **progress_tracker.py**: Long-running operation visualization
+- **telemetry_consent.py**: Usage analytics opt-in management
+
+### Primary Command Modules
+- **simulate.py**: Interactive simulation and testing
+  - **simulate_request.py**: Single request simulation
+  - **simulate_batch.py**: Batch request processing
+  - **simulate_interactive.py**: Interactive session with memory conditioning
+  - **simulate_profile.py**: Pre-configured trait profile simulation
+  - **simulate_scenario.py**: Multi-stage interaction scenarios
+  - **simulate_export.py**: Simulation result export utilities
+
+- **trace.py**: Advanced debugging and request tracing
+  - **trace_request.py**: Single request tracing with component-level visibility
+  - **trace_search.py**: Historical trace searching and filtering
+  - **trace_visualize.py**: Pipeline visualization with component timing
+  - **trace_compare.py**: Cross-request comparison utilities
+  - **trace_export.py**: Trace export for external analysis
+  - **trace_replay.py**: Request replay from stored traces
+
+- **benchmark.py**: Performance and accuracy testing
+  - **benchmark_run.py**: Execute predefined benchmark scenarios
+  - **benchmark_analyze.py**: Result analysis and comparison
+  - **benchmark_profile.py**: Performance profiling with hotspot detection
+  - **benchmark_report.py**: Detailed report generation
+  - **benchmark_validate.py**: Benchmark integrity verification
+  - **benchmark_custom.py**: Custom benchmark creation
+
+- **deploy.py**: Deployment management and automation
+  - **deploy_local.py**: Local development environment setup
+  - **deploy_docker.py**: Containerized deployment utilities
+  - **deploy_kubernetes.py**: Kubernetes deployment management
+  - **deploy_cloud.py**: Cloud provider deployment (AWS, GCP, Azure)
+  - **deploy_monitor.py**: Deployment health monitoring
+  - **deploy_rollback.py**: Safe deployment rollback
+
+### Advanced Command Modules
+- **profile.py**: Performance profiling and optimization
+  - **profile_component.py**: Component-level performance analysis
+  - **profile_memory.py**: Memory usage analysis
+  - **profile_latency.py**: Latency breakdown visualization
+  - **profile_bottleneck.py**: Bottleneck identification
+  - **profile_compare.py**: Cross-version performance comparison
+  - **profile_optimize.py**: Automatic optimization suggestions
+
+- **scan.py**: Security and compliance assessment
+  - **scan_security.py**: Security vulnerability scanning
+  - **scan_compliance.py**: Regulatory compliance verification
+  - **scan_config.py**: Configuration security analysis
+  - **scan_dependencies.py**: Dependency vulnerability checking
+  - **scan_report.py**: Security assessment reporting
+  - **scan_remediate.py**: Guided remediation workflows
+
+- **monitor.py**: Runtime monitoring and diagnostics
+  - **monitor_instance.py**: Instance health monitoring
+  - **monitor_metrics.py**: Live metrics visualization
+  - **monitor_logs.py**: Log streaming and filtering
+  - **monitor_alerts.py**: Alert configuration and notification
+  - **monitor_dashboard.py**: Terminal-based monitoring dashboard
+  - **monitor_export.py**: Monitoring data export utilities
+
+- **generate.py**: Code and configuration generation
+  - **generate_plugin.py**: Plugin scaffolding generator
+  - **generate_config.py**: Configuration template creation
+  - **generate_client.py**: Client library code generation
+  - **generate_docs.py**: Documentation generation
+  - **generate_schema.py**: Schema definition generation
+  - **generate_test.py**: Test case generation
+
+### Enterprise Integration
+- **admin.py**: Administrative capabilities
+  - **admin_user.py**: User management utilities
+  - **admin_tenant.py**: Tenant administration
+  - **admin_plugin.py**: Plugin management
+  - **admin_config.py**: Configuration management
+  - **admin_quota.py**: Resource quota administration
+  - **admin_logs.py**: Administrative logging
+
+- **integrate.py**: External system integration
+  - **integrate_test.py**: Integration testing utilities
+  - **integrate_webhook.py**: Webhook configuration and testing
+  - **integrate_sync.py**: Data synchronization utilities
+  - **integrate_migration.py**: Migration utilities from other systems
+  - **integrate_export.py**: Data export for external systems
+  - **integrate_validate.py**: Integration validation utilities
+
+### Implementation Features
+- Enhanced shell auto-completion for all commands
+- Contextual help with examples for each command
+- Color-coded output with support for multiple formats
+- Progress tracking for long-running operations
+- Environment-aware configuration management
+- Credentials management with secure storage
+- Intelligent update notifications
+- Configurable verbosity levels for all commands
+- Comprehensive error handling with troubleshooting guidance
+- Command output filtering and transformation
+- Script-friendly modes for automation
+- Rich terminal UI for interactive commands

@@ -1,0 +1,99 @@
+## ACDEK Enterprise Component Registry
+This folder implements ACDEK's dynamic module discovery, resolution, and lifecycle management system.
+
+### Core Registry Architecture
+- **registry_core.py**: Central registry management and orchestration
+- **component_resolver.py**: Dynamic component lookup and resolution
+- **plugin_loader.py**: Secure plugin loading with dependency resolution
+- **version_manager.py**: Component version compatibility checking
+- **security_validator.py**: Runtime security validation for components
+- **lifecycle_manager.py**: Component lifecycle (init, start, stop, cleanup)
+- **registry_telemetry.py**: Performance monitoring for registry operations
+
+### Registry Components
+- **registries/**: Core registry implementations
+  - **plugin_registry.py**: Dynamic plugin registration and discovery
+  - **adapter_registry.py**: LLM provider adapter management
+  - **enrichment_registry.py**: Enrichment component registration
+  - **storage_registry.py**: Storage provider registry
+  - **interface_registry.py**: Interface contract registration
+  - **extension_registry.py**: Extension point management
+  - **hook_registry.py**: Event hook registration and routing
+
+- **resolvers/**: Component resolution and dependency management
+  - **dependency_resolver.py**: Component dependency resolution
+  - **interface_resolver.py**: Interface implementation resolution
+  - **compatibility_resolver.py**: Version compatibility resolution
+  - **priority_resolver.py**: Component priority and ordering
+  - **fallback_resolver.py**: Fallback chain resolution
+  - **conflict_resolver.py**: Component conflict resolution
+  - **context_resolver.py**: Context-aware component selection
+
+- **loaders/**: Dynamic code loading and verification
+  - **module_loader.py**: Secure Python module loading
+  - **plugin_importer.py**: Custom import hook for plugins
+  - **extension_loader.py**: Extension point implementation loading
+  - **code_analyzer.py**: Static code analysis for security
+  - **signature_verifier.py**: Code signature verification
+  - **sandbox_loader.py**: Isolated execution environment
+  - **hot_reload.py**: Runtime component replacement
+
+### Enterprise Registry Features
+- **distributed/**: Distributed registry coordination
+  - **discovery_service.py**: Cross-node component discovery
+  - **registry_replication.py**: Registry state replication
+  - **node_coordinator.py**: Multi-node registry coordination
+  - **consistency_manager.py**: Registry state consistency
+  - **global_lock.py**: Distributed registry modification locking
+  - **registry_events.py**: Cross-node registry event propagation
+  - **registry_snapshot.py**: Point-in-time registry state capture
+
+- **security/**: Registry security mechanisms
+  - **permission_checker.py**: Component capability verification
+  - **integrity_validator.py**: Component integrity verification
+  - **audit_logger.py**: Registry modification audit logging
+  - **permission_enforcer.py**: Component permission boundaries
+  - **code_scanner.py**: Security vulnerability scanning
+  - **scope_isolation.py**: Component isolation enforcement
+  - **registry_access.py**: Registry access control
+
+- **monitoring/**: Registry observability
+  - **component_metrics.py**: Component usage and performance tracking
+  - **dependency_graph.py**: Component dependency visualization
+  - **registry_events.py**: Registry modification event stream
+  - **health_monitor.py**: Component health and status tracking
+  - **performance_profiler.py**: Component performance analysis
+  - **error_tracker.py**: Component error monitoring
+  - **usage_analytics.py**: Component usage pattern analysis
+
+### Management Utilities
+- **admin/**: Registry administration
+  - **registry_admin.py**: Administrative interface for registry
+  - **component_manager.py**: Component lifecycle management
+  - **version_control.py**: Component version management
+  - **status_reporter.py**: Registry health and status reporting
+  - **system_validation.py**: Comprehensive registry validation
+  - **registry_export.py**: Registry state export and import
+  - **registry_cleanup.py**: Unused component cleanup
+
+- **tooling/**: Developer utilities
+  - **registry_explorer.py**: Interactive registry exploration
+  - **dependency_checker.py**: Component dependency validation
+  - **compatibility_tester.py**: Component compatibility testing
+  - **mock_registry.py**: Testing utilities for registry
+  - **benchmark_tools.py**: Registry performance benchmarking
+  - **documentation_generator.py**: Registry documentation
+
+### Implementation Notes
+- Registry operations are fully transactional
+- Component loading uses secure sandbox for untrusted code
+- Component versioning follows semantic versioning
+- All registry modifications are audit-logged
+- Registry state is eventually consistent in distributed mode
+- Components can be hot-swapped without service interruption
+- Registry can operate in local or distributed mode
+- Component dependencies are automatically resolved
+- Registry includes comprehensive telemetry 
+- Registry state can be exported/imported for disaster recovery
+- Component permissions follow least-privilege principle
+- Full interface validation for all registered components

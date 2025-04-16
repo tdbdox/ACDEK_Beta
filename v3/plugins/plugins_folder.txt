@@ -1,0 +1,86 @@
+## ACDEK Enterprise Plugin System
+This folder implements ACDEK's dynamic plugin architecture for enterprise customization and extension.
+
+### Core Plugin Infrastructure
+- **plugin_manager.py**: Central plugin discovery and lifecycle coordinator
+- **plugin_loader.py**: Dynamic module loading with safety validation
+- **plugin_registry.py**: Runtime registry with version management
+- **plugin_metrics.py**: Performance monitoring for loaded plugins
+- **plugin_security.py**: Sandbox execution environment for untrusted plugins
+- **plugin_dependencies.py**: Dependency resolution for plugin chains
+
+### Plugin Categories
+- **enrichment_plugins/**: Query and context enhancement plugins
+  - **enterprise_intent_classifier/**: Organization-specific intent routing
+  - **domain_specific_vector/**: Industry-specific vector matching
+  - **custom_embeddings/**: Specialized embedding models
+  - **enhanced_trait_mapper/**: Organization-specific trait mapping
+  - **constraint_validator/**: Domain-specific constraint validation
+
+- **adapter_plugins/**: LLM provider integration plugins
+  - **enterprise_openai/**: OpenAI with organization-specific optimizations
+  - **on_premise_llm/**: Private model deployment integrations
+  - **specialized_models/**: Domain-specific model routing
+  - **airgapped_deployment/**: Isolated environment adapters
+  - **batch_processor/**: High-volume request optimization
+
+- **modulation_plugins/**: Decision and behavior modulation
+  - **regulatory_compliance/**: Industry-specific compliance guardrails
+  - **brand_voice/**: Organization voice and tone enforcement
+  - **risk_modulator/**: Domain-specific risk assessment
+  - **confidence_threshold/**: Custom confidence requirements
+  - **decisioning_policy/**: Enterprise policy enforcement
+
+- **connector_plugins/**: External system integrations
+  - **enterprise_crm/**: CRM system connectors (Salesforce, etc.)
+  - **enterprise_erp/**: ERP system connectors (SAP, Oracle, etc.)
+  - **knowledge_base/**: Document management system connectors
+  - **analytics_platform/**: Business intelligence connectors
+  - **ticketing_system/**: Issue tracking integrations
+
+- **storage_plugins/**: Persistence and caching implementations
+  - **enterprise_cache/**: Distributed caching implementations
+  - **vector_store/**: Vector database integrations
+  - **audit_storage/**: Compliance-focused immutable storage
+  - **document_store/**: Document repository integrations
+  - **memory_store/**: Trait persistence implementations
+
+### Management Utilities
+- **plugin_admin.py**: Administrative interface for plugin management
+- **plugin_dashboard/**: Web UI for plugin configuration and monitoring
+- **plugin_permissions.py**: Role-based access control for plugin capabilities
+- **plugin_audit.py**: Detailed usage tracking and audit logging
+- **version_manager.py**: Plugin version control and compatibility checking
+- **dependency_resolver.py**: Automatic dependency resolution for plugins
+
+### Enterprise Extensions
+- **marketplace/**: Plugin discovery and distribution platform
+  - **plugin_catalog.py**: Browsable plugin directory
+  - **plugin_verification.py**: Security and quality verification
+  - **plugin_analytics.py**: Usage and performance analytics
+  - **plugin_ratings.py**: User feedback and ratings system
+  - **plugin_distribution.py**: Secure plugin packaging and distribution
+
+- **enterprise_customization/**: Organization-specific customization
+  - **tenant_isolation.py**: Multi-tenant plugin segregation
+  - **deployment_profiles/**: Environment-specific configurations
+  - **approval_workflow/**: Change management workflow integration
+  - **compliance_validation/**: Regulatory compliance verification
+  - **custom_plugin_templates/**: Organization-specific plugin templates
+
+### Developer Tools
+- **plugin_sdk/**: Plugin development toolkit
+  - **scaffolding.py**: Plugin code generation utilities
+  - **test_harness.py**: Testing framework for plugin validation
+  - **interface_validator.py**: Interface compliance checking
+  - **documentation_generator.py**: Plugin documentation tools
+  - **performance_profiler.py**: Plugin optimization utilities
+
+### Implementation Notes
+- All plugins follow a standardized lifecycle: initialize → register → execute → cleanup
+- Runtime hot-swapping is supported for zero-downtime updates
+- Plugins are versioned with explicit compatibility declarations
+- Sandbox execution prevents plugin failures from affecting kernel stability
+- Performance metrics are tracked for all loaded plugins
+- Comprehensive audit logging tracks all plugin operations
+- Plugin security scanning is performed at load time

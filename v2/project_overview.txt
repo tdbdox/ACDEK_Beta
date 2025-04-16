@@ -1,0 +1,42 @@
+ACDEK Project Overview
+======================
+
+Purpose:
+--------
+
+The Adaptive Contextual Decision Execution Kernel (ACDEK) is a modular execution architecture designed to ground large language model (LLM)-driven agent workflows with enriched context, behavioral modulation, and hallucination mitigation. ACDEK provides a structured pipeline for interpreting user intent, verifying relevant data, integrating user context, adjusting behavioral parameters, and executing decisions with auditable reasoning.
+
+Core Mission:
+-------------
+
+To create a dependable, context-aware intelligence layer that:
+- Increases execution precision in agentic workflows
+- Reduces hallucinations and guessing by constraining with enriched variables
+- Enables reliable fallback, clarification, or execution routing
+- Functions as a modular SDK for developers and infrastructure layer for enterprise-grade AI systems
+
+Key Components:
+---------------
+
+1. **Query Enrichment (`solve_Q`)** — Parses user queries into structured intents, dependencies, constraints, and ambiguity scores.
+2. **Data Alignment (`solve_Ar`)** — Matches operational data semantically with the query and verifies confidence levels.
+3. **Context Fusion (`solve_Cu`)** — Enriches decisions using user behavior traits or historical profiles.
+4. **Environmental Processing (`solve_ef`)** — Integrates real-time environment signals to modulate execution strategies.
+5. **Payload Verification (`Γ`)** — Validates if the available data supports safe execution of the query.
+6. **Modulation (`Ω`)** — Outputs a behavioral policy vector (tone, assertiveness, fallback logic).
+7. **Gate Function (`G`)** — Determines execution path: proceed, clarify, or fallback.
+8. **Final Execution (`Φ`)** — Executes or selects a fallback path based on evaluated outcomes.
+
+Development Phases:
+--------------------
+
+- Alpha: Controlled environment testing and core equation validation.
+- Beta v1: Added vector embeddings, semantic slot alignment, and basic trait-based modulation.
+- Beta v2: Introduced semantic class routing, modular class registry, and user-defined schema referencing.
+
+Strategic Applications:
+------------------------
+
+- **Executive Suite:** A B2B SaaS platform for AI-powered decision automation using ACDEK.
+- **ACDEK SDK + API:** Open developer layer for embedding ACDEK logic into third-party tools.
+- **Infrastructure Licensing:** Black-box ACDEK kernel licensing to major AI providers for enhanced LLM reasoning and reliability.

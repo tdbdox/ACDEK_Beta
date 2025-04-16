@@ -1,0 +1,7 @@
+This folder includes connector code for external systems like:
+
+- Solvion Executive Suite
+- CRMs, ERPs, productivity tools
+- Finance and analytics APIs
+
+Used to embed ACDEK into enterprise workflows.

@@ -1,0 +1,161 @@
+## ACDEK Enterprise Storage System
+This folder implements ACDEK's distributed, resilient storage framework for trait persistence, vector embeddings, and request history.
+
+### Core Storage Architecture
+- **storage_manager.py**: Central storage orchestration and provider management
+- **storage_router.py**: Intelligent routing between storage backends
+- **abstract_storage.py**: Storage abstraction layer with provider interfaces
+- **storage_telemetry.py**: Performance monitoring for storage operations
+- **persistence_policy.py**: Data retention and lifecycle management
+- **storage_security.py**: Access control and encryption for stored data
+- **distributed_lock.py**: Concurrency control for distributed environments
+
+### Primary Storage Components
+- **memory_store/**: User trait and context persistence
+  - **trait_store.py**: Persistent storage for user trait data
+  - **trait_history.py**: Historical trait mutation tracking
+  - **trait_version.py**: Trait versioning with reversion capabilities
+  - **mutation_log.py**: Detailed trait mutation audit logs
+  - **semantic_class_store.py**: Semantic class persistence
+  - **profile_manager.py**: User profile aggregation and management
+  - **memory_trace.py**: Long-term memory trace simulation
+
+- **vector_store/**: Embedding and semantic vector storage
+  - **embedding_cache.py**: Multi-level cache for vector embeddings
+  - **vector_index.py**: High-performance vector indexing
+  - **vector_search.py**: Semantic search across vector space
+  - **model_mapping.py**: Cross-model vector space mapping
+  - **incremental_index.py**: Progressive vector index updates
+  - **vector_partitioning.py**: Sharded vector storage for scale
+  - **vector_compression.py**: Storage-efficient vector representations
+
+- **session_store/**: Request and interaction history
+  - **session_manager.py**: Session tracking and correlation
+  - **request_log.py**: Historical request storage and indexing
+  - **response_cache.py**: Response caching with invalidation
+  - **interaction_history.py**: User interaction sequence tracking
+  - **context_window.py**: Sliding context window management
+  - **session_replay.py**: Historical session replay capabilities
+  - **session_analytics.py**: Session-level analytics aggregation
+
+### Specialized Storage Systems
+- **audit_store/**: Immutable audit records
+  - **audit_log.py**: Tamper-evident audit logging
+  - **compliance_log.py**: Regulatory compliance record keeping
+  - **security_events.py**: Security-focused event storage
+  - **admin_actions.py**: Administrative action tracking
+  - **data_access.py**: Data access logging and verification
+  - **chain_of_custody.py**: Evidence chain for all data changes
+  - **export_manager.py**: Compliance report generation
+
+- **enrichment_cache/**: Query enrichment acceleration
+  - **intent_cache.py**: Cached intent classification
+  - **dependency_cache.py**: Relationship cache for query dependencies
+  - **constraint_cache.py**: Cached constraint validation results
+  - **slot_cache.py**: Data slot resolution cache
+  - **confidence_cache.py**: Confidence score caching
+  - **enrichment_invalidation.py**: Smart cache invalidation
+  - **progressive_cache.py**: Progressive computation caching
+
+- **trace_store/**: Debugging and observability data
+  - **trace_repository.py**: Distributed request trace storage
+  - **span_store.py**: Individual component span storage
+  - **log_aggregator.py**: Structured log aggregation
+  - **metric_timeseries.py**: Time-series metric storage
+  - **trace_indexer.py**: Multi-dimensional trace indexing
+  - **trace_correlation.py**: Cross-component trace correlation
+  - **debug_snapshot.py**: Point-in-time system state snapshots
+
+### Storage Providers
+- **providers/**: Pluggable storage backend implementations
+  - **memory_provider.py**: In-memory storage for development
+  - **file_provider.py**: Local file system storage
+  - **redis_provider.py**: Redis-based distributed cache
+  - **postgresql_provider.py**: Relational database storage
+  - **mongodb_provider.py**: Document database storage
+  - **s3_provider.py**: Object storage implementation
+  - **elasticsearch_provider.py**: Full-text and vector search
+  - **pinecone_provider.py**: Specialized vector database
+  - **qdrant_provider.py**: Vector similarity search database
+  - **chroma_provider.py**: Embedding database integration
+
+### Enterprise Features
+- **distributed/**: Distributed storage coordination
+  - **sharding.py**: Data sharding across multiple nodes
+  - **replication.py**: Multi-region data replication
+  - **consensus.py**: Distributed consensus for consistency
+  - **partition_manager.py**: Data partitioning for scale
+  - **failover.py**: Automatic failover mechanisms
+  - **recovery.py**: Data recovery and repair utilities
+
+- **compliance/**: Regulatory compliance features
+  - **data_residency.py**: Regional data storage enforcement
+  - **retention_policy.py**: Automated data retention rules
+  - **gdpr_tools.py**: GDPR compliance utilities
+  - **pii_scanner.py**: PII detection and special handling
+  - **access_records.py**: Data access audit trails
+  - **right_to_forget.py**: Data deletion request handling
+
+### Optimization Components
+- **performance/**: Storage performance enhancement
+  - **cache_tiering.py**: Multi-level cache management
+  - **read_through.py**: Read-through cache patterns
+  - **write_behind.py**: Write-behind cache patterns
+  - **batch_operations.py**: Operation batching for efficiency
+  - **prefetching.py**: Predictive data prefetching
+  - **compression.py**: Data compression strategies
+  - **hot_cold_split.py**: Usage-based storage tiering
+
+### Performance Optimization: Psi Caching
+- **modulation_cache/**: Psi value caching system
+  - **psi_vector_cache.py**: Modulation vector cache
+  - **semantic_invalidation.py**: Intelligent cache invalidation
+  - **vector_compression.py**: Memory-efficient vector storage
+  - **hit_rate_analyzer.py**: Cache effectiveness monitoring
+  - **locality_optimizer.py**: Cache layout optimization
+  - **distributed_psi_cache.py**: Multi-node cache coordination
+  - **consistency_manager.py**: Cache consistency maintenance
+
+- **trait_cache/**: Trait and memory optimization
+  - **trait_vector_store.py**: Optimized trait vector storage
+  - **trait_history_compressor.py**: History compression
+  - **mutation_cache.py**: Mutation operation caching
+  - **trait_prefetcher.py**: Predictive trait loading
+  - **semantic_class_cache.py**: Class matching acceleration
+  - **trait_indexer.py**: High-performance trait indexing
+  - **temporal_optimizer.py**: Time-based access optimization
+
+### Psi Caching Strategy
+- **Multi-Dimensional Caching**: Specialized caches for different data types
+  - **Vector Caching**: Optimized storage for embedding vectors
+  - **Semantic Caching**: Result caching based on semantic similarity
+  - **Modulation Caching**: Psi vector caching for similar contexts
+  - **Decision Caching**: Gate decision results for similar inputs
+  - **Confidence Caching**: Confidence scores for recurring patterns
+
+- **Intelligent Invalidation**: Context-aware cache invalidation strategies
+  - **Semantic Drift Detection**: Invalidation based on context changes
+  - **Time-Decay Policies**: Age-based invalidation for temporal data
+  - **Dependency Tracking**: Related cache entries invalidation
+  - **Confidence-Based Retention**: High-confidence results retained longer
+  - **Usage Pattern Analysis**: Access-based retention prioritization
+
+- **Memory Optimization**: Advanced memory management techniques
+  - **Vector Quantization**: Compressed vector representations
+  - **Dimensionality Reduction**: Optimized vector spaces for storage
+  - **Tiered Storage Hierarchy**: Hot/warm/cold data separation
+  - **Incremental Updates**: Delta-based storage for evolving data
+  - **Shared Embedding Space**: Common embedding space for efficiency
+
+### Implementation Notes
+- All storage operations are fully asynchronous
+- Comprehensive retry logic for transient failures
+- Storage backends are hot-swappable at runtime
+- Transparent encryption for all sensitive data
+- Schema versioning with automatic migration
+- Configurable backup and disaster recovery
+- Data consistency guarantees with transactional support
+- Multi-region replication for high availability
+- Comprehensive telemetry for all storage operations
+- Automatic data lifecycle management
+- Extensible provider interface for custom backends

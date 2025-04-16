@@ -1,0 +1,117 @@
+## ACDEK Enterprise Examples Repository
+This folder contains production-ready implementation examples demonstrating ACDEK's enterprise capabilities.
+
+### Core Example Categories
+- **tutorials/**: Step-by-step learning examples
+  - **quick_start/**: Basic setup and first execution examples
+  - **core_concepts/**: Examples illustrating fundamental ACDEK concepts
+  - **hallucination_mitigation/**: Techniques for reducing speculation
+  - **trait_conditioning/**: Memory and trait evolution examples
+  - **decision_confidence/**: Confidence scoring and threshold examples
+  - **fallback_patterns/**: Effective fallback implementation patterns
+  - **progressive_learning/**: Examples of interactive refinement
+
+- **agent_patterns/**: Ready-to-use agent implementations
+  - **analyst_agent/**: Financial data analysis agent with confidence scoring
+  - **advisor_agent/**: Recommendation engine with fallback clarification
+  - **support_agent/**: Customer service agent with adaptive tone
+  - **operations_agent/**: Workflow automation with verification
+  - **research_agent/**: Information gathering with source validation
+  - **code_agent/**: Software development with constraint enforcement
+  - **strategy_agent/**: Long-term planning with memory conditioning
+
+- **enterprise_integrations/**: Business system integrations
+  - **crm_integration/**: CRM system integration (Salesforce, etc.)
+  - **erp_integration/**: ERP system integration (SAP, Oracle, etc.)
+  - **business_intelligence/**: Analytics platform integration
+  - **knowledge_management/**: Document system integration
+  - **productivity_suite/**: Workspace and productivity integration
+  - **messaging_platform/**: Enterprise messaging integration
+  - **ticketing_system/**: Issue tracking system integration
+
+### Advanced Examples
+- **deployment_architectures/**: Production deployment patterns
+  - **kubernetes/**: Kubernetes deployment examples with scaling
+  - **docker_compose/**: Containerized deployment examples
+  - **serverless/**: Serverless deployment with AWS Lambda/Azure Functions
+  - **multi_region/**: Multi-region deployment with replication
+  - **hybrid_cloud/**: Hybrid cloud/on-premise deployment
+  - **high_availability/**: HA deployment with failure recovery
+  - **edge_computing/**: Edge deployment with limited resources
+
+- **multi_tenant/**: Multi-tenant implementation examples
+  - **saas_platform/**: Software-as-a-Service platform integration
+  - **customer_isolation/**: Tenant isolation and boundaries
+  - **resource_management/**: Multi-tenant resource allocation
+  - **billing_integration/**: Usage tracking and billing examples
+  - **tenant_customization/**: Tenant-specific configuration
+  - **cross_tenant_analytics/**: Multi-tenant analytics
+  - **tenant_administration/**: Tenant management capabilities
+
+- **security_implementations/**: Security-focused examples
+  - **authentication/**: Authentication integration examples
+  - **authorization/**: RBAC and permission implementations
+  - **data_protection/**: Encryption and data security examples
+  - **compliance/**: Regulatory compliance examples
+  - **audit_logging/**: Security audit trail implementation
+  - **sensitive_data/**: PII handling and redaction examples
+  - **penetration_testing/**: Security testing methodologies
+
+### Industry-Specific Examples
+- **financial_services/**: Financial industry examples
+  - **risk_analysis/**: Risk assessment with confidence scoring
+  - **investment_advisor/**: Investment recommendation engine
+  - **financial_compliance/**: Regulatory compliance enforcement
+  - **fraud_detection/**: Transaction validation with fallbacks
+  - **portfolio_analysis/**: Data analysis with validation
+  - **financial_reporting/**: Report generation with fact-checking
+  - **market_intelligence/**: Market analysis with source verification
+
+- **healthcare/**: Healthcare industry examples
+  - **clinical_decision/**: Clinical decision support with validation
+  - **patient_engagement/**: Patient communication with tone modulation
+  - **healthcare_compliance/**: HIPAA compliance implementation
+  - **medical_research/**: Research assistant with fact validation
+  - **care_coordination/**: Care planning with information verification
+  - **health_analytics/**: Health data analysis with confidence scoring
+  - **telehealth/**: Remote care with context persistence
+
+- **manufacturing/**: Manufacturing industry examples
+  - **quality_control/**: Quality assurance with validation
+  - **supply_chain/**: Supply chain optimization with verification
+  - **production_planning/**: Production workflow with constraint checking
+  - **equipment_maintenance/**: Predictive maintenance with confidence
+  - **inventory_management/**: Inventory optimization with validation
+  - **manufacturing_compliance/**: Safety and regulatory compliance
+  - **factory_automation/**: Automation workflows with verification
+
+### Specialized Capabilities
+- **vector_operations/**: Advanced vector processing examples
+  - **multi_modal_embedding/**: Cross-modal vector alignment
+  - **semantic_search/**: Enhanced semantic search implementations
+  - **vector_clustering/**: Semantic clustering and categorization
+  - **document_similarity/**: Document comparison with confidence
+  - **entity_extraction/**: Named entity recognition with validation
+  - **vector_visualization/**: Embedding space visualization
+  - **incremental_indexing/**: Progressive vector index building
+
+- **plugin_development/**: Custom plugin implementation examples
+  - **enrichment_plugin/**: Custom enrichment component development
+  - **adapter_plugin/**: Custom LLM provider adapter
+  - **storage_plugin/**: Custom storage backend implementation
+  - **security_plugin/**: Security and compliance plugin
+  - **ui_extension/**: Dashboard and UI extension development
+  - **connector_plugin/**: External system connector implementation
+  - **telemetry_plugin/**: Custom monitoring and alerting
+
+### Implementation Notes
+- All examples include detailed documentation and architectural diagrams
+- Each example comes with complete source code and installation instructions
+- Examples follow best practices for production deployments
+- Security and performance considerations are highlighted in all examples
+- Examples include telemetry and monitoring integration
+- Full test coverage with unit and integration tests
+- Docker containers for easy local experimentation
+- Examples include both synchronous and asynchronous implementations
+- Comprehensive error handling and fallback strategies
+- Performance benchmarks and optimization guidance

@@ -1,0 +1,7 @@
+This folder is used to store datasets, pre-parsed prompts, or any raw inputs used for training,
+testing, or benchmarking ACDEK behavior.
+
+It may include:
+- Prompt test cases
+- Annotated feedback
+- Trait examples

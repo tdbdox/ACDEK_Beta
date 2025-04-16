@@ -1,0 +1,6 @@
+This folder contains CI/CD configurations and pipeline logic, such as:
+
+- GitHub Actions workflows
+- Test runners
+- Linting and formatting checks
+- Release automation 

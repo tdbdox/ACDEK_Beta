@@ -1,0 +1,1 @@
+# simple CLI that: 1) Takes input. 2) Calls pipeline. 3) Prints result and any confidence/constraint info.

@@ -1,0 +1,84 @@
+## ACDEK Enterprise Security Framework
+This folder contains ACDEK's comprehensive security architecture for enterprise-grade protection.
+
+### Core Security Infrastructure
+- **identity_manager.py**: Enterprise identity management system
+- **authentication.py**: Multi-factor authentication framework
+- **authorization.py**: Attribute-based access control (ABAC) system
+- **token_service.py**: JWT token management with configurable claims
+- **encryption_service.py**: Data encryption for sensitive information
+- **audit_manager.py**: Immutable audit logging for compliance
+- **security_policy.py**: Organizational security policy enforcement
+
+### Authentication Services
+- **identity_providers/**: External identity system integrations
+  - **oauth_provider.py**: OAuth 2.0 integration framework
+  - **oidc_provider.py**: OpenID Connect implementation
+  - **saml_provider.py**: SAML 2.0 enterprise SSO integration
+  - **ldap_connector.py**: LDAP/Active Directory integration
+  - **mfa_service.py**: Multi-factor authentication orchestration
+  
+- **token_management/**: Secure token handling components
+  - **jwt_service.py**: JWT generation and validation
+  - **token_storage.py**: Secure token persistence
+  - **token_rotation.py**: Automatic token refresh
+  - **token_revocation.py**: Real-time token invalidation
+  - **session_manager.py**: Stateful session management
+
+### Access Control System
+- **authorization_engine.py**: Access decision engine with policy enforcement
+- **permission_registry.py**: Centralized permission definitions
+- **role_manager.py**: Role-based access control framework
+- **tenant_isolation.py**: Multi-tenant security boundaries
+- **context_aware_access.py**: Context-sensitive authorization
+- **permission_audit.py**: Permission change tracking and verification
+
+### Data Protection
+- **pii_manager.py**: Personally identifiable information handling
+- **data_classification.py**: Information classification framework
+- **data_masking.py**: Field-level data protection
+- **data_tokenization.py**: Sensitive data tokenization
+- **data_minimization.py**: Automated data reduction
+- **retention_manager.py**: Data lifecycle enforcement
+
+### Compliance Framework
+- **compliance_manager.py**: Regulatory compliance orchestration
+- **gdpr_toolkit.py**: GDPR compliance utilities
+- **hipaa_toolkit.py**: Healthcare compliance utilities
+- **finreg_toolkit.py**: Financial services compliance utilities
+- **sox_toolkit.py**: Sarbanes-Oxley compliance utilities
+- **compliance_report.py**: Automated compliance reporting
+
+### Security Operations
+- **vulnerability_scanner.py**: Security vulnerability detection
+- **threat_detection.py**: Abnormal behavior monitoring
+- **incident_response.py**: Security incident management
+- **forensic_logging.py**: Enhanced logging for investigation
+- **penetration_testing.py**: Security testing framework
+- **security_patching.py**: Vulnerability remediation management
+
+### Enterprise Security Integration
+- **siem_integration.py**: Security information and event management
+- **dlp_integration.py**: Data loss prevention integration
+- **idp_connector.py**: Identity provider federation
+- **secrets_manager.py**: Enterprise secrets management
+- **pam_integration.py**: Privileged access management
+- **security_analytics.py**: Security metrics and dashboards
+
+### Developer Security Tools
+- **secure_coding.py**: Secure coding guidelines and validation
+- **dependency_scanner.py**: Third-party vulnerability scanning
+- **security_testing.py**: Automated security test framework
+- **code_signing.py**: Artifact integrity verification
+- **crypto_helpers.py**: Cryptographic operation helpers
+- **security_documentation.py**: Security documentation generator
+
+### Implementation Notes
+- Zero-trust architecture throughout the system
+- Defense-in-depth with multiple security layers
+- Principle of least privilege for all operations
+- All sensitive data encrypted at rest and in transit
+- Comprehensive audit trails for all security events
+- Regular security testing and vulnerability assessment
+- Compliance-ready documentation and reporting
+- Runtime security monitoring with alerting

@@ -1,0 +1,156 @@
+## ACDEK Enterprise Web Interface
+This folder contains the frontend web applications for ACDEK's administrative dashboard, developer portal, and monitoring interfaces.
+
+### Core Frontend Architecture
+- **core/**: Frontend foundation components
+  - **app.tsx**: Application entry point
+  - **router.tsx**: Application routing
+  - **store/**: State management
+  - **hooks/**: Custom React hooks
+  - **themes/**: UI theming system
+  - **providers/**: Context providers
+  - **layouts/**: Page layout components
+
+- **api/**: API client integration
+  - **client.ts**: API client configuration
+  - **auth.ts**: Authentication utilities
+  - **endpoints.ts**: API endpoint definitions
+  - **types.ts**: API data type definitions
+  - **interceptors/**: Request/response interceptors
+  - **caching/**: API response caching
+  - **error-handling/**: API error handling
+
+- **components/**: Reusable UI components
+  - **ui/**: Generic UI components
+  - **data-display/**: Data visualization components
+  - **forms/**: Form elements and validation
+  - **layout/**: Layout components
+  - **navigation/**: Navigation components
+  - **feedback/**: User feedback components
+  - **security/**: Authentication UI components
+
+### Enterprise Applications
+- **admin-dashboard/**: Administrative interface
+  - **pages/**: Dashboard pages
+    - **overview/**: System overview dashboard
+    - **component-management/**: Component administration
+    - **plugin-manager/**: Plugin management
+    - **user-administration/**: User and role management
+    - **tenant-management/**: Multi-tenant administration
+    - **configuration/**: System configuration
+    - **security/**: Security administration
+  
+  - **features/**: Dashboard feature modules
+    - **modulation-explorer/**: Trait modulation visualization
+    - **performance-monitor/**: Performance analytics
+    - **audit-explorer/**: Audit log analysis
+    - **registry-viewer/**: Component registry explorer
+    - **deployment-controller/**: Deployment management
+    - **integration-manager/**: External system integration
+
+- **developer-portal/**: Developer tools and documentation
+  - **pages/**: Portal pages
+    - **documentation/**: Interactive documentation
+    - **api-explorer/**: API testing interface
+    - **examples/**: Example implementation browser
+    - **playground/**: Interactive testing environment
+    - **plugin-development/**: Plugin development tools
+    - **sdk-documentation/**: SDK usage guides
+  
+  - **features/**: Developer tools
+    - **code-generator/**: Code scaffolding tools
+    - **test-runner/**: Test execution interface
+    - **request-simulator/**: Request simulation
+    - **vector-explorer/**: Embedding visualization
+    - **schema-builder/**: Schema definition tools
+    - **trait-designer/**: Trait profile creator
+
+- **monitoring/**: Observability and monitoring
+  - **pages/**: Monitoring pages
+    - **metrics-dashboard/**: Real-time metrics
+    - **trace-explorer/**: Distributed trace analysis
+    - **log-viewer/**: Log search and analysis
+    - **alert-manager/**: Alert configuration and history
+    - **system-health/**: Component health status
+    - **performance-analytics/**: Performance visualization
+  
+  - **features/**: Monitoring tools
+    - **trace-viewer/**: Request trace visualization
+    - **log-analyzer/**: Log pattern analysis
+    - **metric-explorer/**: Custom metric queries
+    - **alert-builder/**: Alert configuration
+    - **dashboard-builder/**: Custom dashboard creation
+    - **health-monitor/**: Health check configuration
+
+### Enterprise Tools
+- **analytics/**: Advanced analytics interfaces
+  - **hallucination-detection/**: Hallucination identification
+  - **confidence-analysis/**: Confidence score analysis
+  - **drift-monitor/**: Semantic drift detection
+  - **performance-profiler/**: Performance analysis
+  - **usage-patterns/**: System usage visualization
+  - **cost-analytics/**: Resource utilization tracking
+  - **anomaly-detection/**: Usage anomaly identification
+
+- **agent-builder/**: Agent configuration tools
+  - **agent-designer/**: Visual agent designer
+  - **trait-editor/**: Agent trait configuration
+  - **workflow-builder/**: Agent workflow configuration
+  - **constraint-editor/**: Constraint definition tools
+  - **integration-designer/**: System integration configuration
+  - **test-bench/**: Agent testing interface
+  - **deployment-wizard/**: Agent deployment tools
+
+- **reporting/**: Enterprise reporting
+  - **report-builder/**: Custom report creation
+  - **dashboard-generator/**: Dashboard creation tools
+  - **export-manager/**: Report export management
+  - **scheduled-reports/**: Report scheduling interface
+  - **compliance-reports/**: Regulatory compliance reporting
+  - **visualization-tools/**: Data visualization builders
+  - **insights-engine/**: Automated analysis tools
+
+### Technical Implementation
+- **authentication/**: Auth implementations
+  - **login/**: Authentication interfaces
+  - **sso/**: Single sign-on integrations
+  - **mfa/**: Multi-factor authentication
+  - **permissions/**: Permission management
+  - **role-management/**: Role-based access control
+  - **session-management/**: Session handling
+  - **auth-flows/**: Authentication workflows
+
+- **infrastructure/**: Frontend infrastructure
+  - **build/**: Build configuration
+  - **ci/**: CI pipeline configuration
+  - **deployment/**: Deployment configuration
+  - **testing/**: Test infrastructure
+  - **performance/**: Performance optimization
+  - **security/**: Security configuration
+  - **i18n/**: Internationalization
+
+- **utilities/**: Frontend utilities
+  - **formatters/**: Data formatting utilities
+  - **validators/**: Input validation
+  - **analytics/**: Usage analytics
+  - **error-handling/**: Error boundary components
+  - **accessibility/**: Accessibility utilities
+  - **testing/**: Test utilities
+  - **state-management/**: State management utilities
+
+### Implementation Notes
+- Modern React application with TypeScript
+- Component-based architecture with atomic design principles
+- Enterprise-grade authentication and authorization
+- Responsive design for desktop and mobile
+- Comprehensive accessibility compliance (WCAG 2.1 AA)
+- Internationalization support
+- Theme customization with white-labeling capabilities
+- Real-time updates with WebSocket integration
+- Extensive client-side telemetry
+- Performance optimization for large datasets
+- Offline capability for critical operations
+- Comprehensive test coverage
+- Rich data visualization with interactive exploration
+- Role-based UI customization
+- Full keyboard navigation support

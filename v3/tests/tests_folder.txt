@@ -1,0 +1,154 @@
+## ACDEK Enterprise Testing Framework
+This folder contains comprehensive test infrastructure for ensuring enterprise-grade reliability and performance.
+
+### Core Test Infrastructure
+- **framework/**: Test framework foundation
+  - **test_runner.py**: Test execution engine
+  - **assertion_library.py**: Enhanced assertion utilities
+  - **test_fixtures.py**: Common test fixtures
+  - **mock_factory.py**: Test mock generation
+  - **test_utils.py**: Test helper utilities
+  - **performance_measurement.py**: Performance test utilities
+  - **coverage_analyzer.py**: Test coverage tools
+
+- **unit/**: Component-level tests
+  - **kernel/**: Core kernel component tests
+  - **enrichment/**: Enrichment pipeline tests
+  - **plugin/**: Plugin system tests
+  - **adapters/**: LLM provider adapter tests
+  - **security/**: Security component tests
+  - **storage/**: Storage system tests
+  - **interfaces/**: Interface compliance tests
+
+- **integration/**: Multi-component tests
+  - **pipeline/**: Full pipeline integration tests
+  - **plugin_integration/**: Plugin interaction tests
+  - **adapter_integration/**: LLM provider integration tests
+  - **security_integration/**: Security integration tests
+  - **storage_integration/**: Storage interaction tests
+  - **api_integration/**: API endpoint tests
+  - **event_integration/**: Event flow tests
+
+### Integration Testing Controls: Test Matrix
+- **matrix/**: Comprehensive test coverage system
+  - **test_matrix_generator.py**: Test coverage matrix generator
+  - **configuration_permutator.py**: Config permutation testing
+  - **component_compatibility.py**: Cross-component compatibility tests
+  - **version_compatibility.py**: Cross-version compatibility tests
+  - **provider_compatibility.py**: LLM provider compatibility tests
+  - **platform_compatibility.py**: Deployment platform tests
+  - **gap_analyzer.py**: Test coverage gap identification
+
+- **verification/**: Contract verification tests
+  - **interface_verification/**: Interface contract tests
+  - **plugin_verification/**: Plugin compliance tests
+  - **api_verification/**: API contract tests
+  - **schema_verification/**: Data schema validation
+  - **event_verification/**: Event contract tests
+  - **protocol_verification/**: Protocol compliance tests
+  - **compatibility_verification/**: Version compatibility tests
+
+### Integration Testing Controls: Scenario Testing
+- **scenarios/**: Real-world workflow simulation
+  - **enterprise_workflows/**: Enterprise usage patterns
+    - **financial_services/**: Financial industry scenarios
+    - **healthcare/**: Healthcare industry scenarios
+    - **manufacturing/**: Manufacturing industry scenarios
+    - **retail/**: Retail industry scenarios
+    - **technology/**: Technology industry scenarios
+    - **government/**: Government usage scenarios
+  
+  - **failure_scenarios/**: Resilience validation
+    - **component_failure/**: Single component failure tests
+    - **dependency_failure/**: External dependency failures
+    - **network_partition/**: Network partition scenarios
+    - **resource_exhaustion/**: Resource limit scenarios
+    - **data_corruption/**: Data corruption recovery
+    - **partial_failure/**: Partial system failure scenarios
+  
+  - **lifecycle_tests/**: Long-running tests
+    - **trait_evolution/**: Trait mutation over time
+    - **memory_persistence/**: Memory retention tests
+    - **scaling_scenarios/**: Dynamic scaling tests
+    - **migration_tests/**: Version migration tests
+    - **upgrade_downgrade/**: Version change tests
+    - **long_running/**: Extended operation tests
+
+### Integration Testing Controls: Plugin Contracts
+- **plugin_contracts/**: Plugin interface verification
+  - **contract_validators/**: Formal interface validation tools
+    - **enrichment_validator.py**: Enrichment plugin validators
+    - **adapter_validator.py**: Adapter plugin validators
+    - **storage_validator.py**: Storage plugin validators
+    - **ui_validator.py**: UI extension validators
+    - **security_validator.py**: Security plugin validators
+    - **connector_validator.py**: Connector plugin validators
+  
+  - **runtime_validation/**: Dynamic runtime contract checking
+    - **sandbox_testing.py**: Isolated plugin execution
+    - **interaction_simulation.py**: Component interaction tests
+    - **boundary_testing.py**: Edge case validators
+    - **compliance_verification.py**: Compliance checking
+    - **performance_contract.py**: Performance SLA validation
+    - **security_boundary.py**: Security isolation tests
+
+- **contract_definitions/**: Formal contract specifications
+  - **interface_contracts/**: Interface specifications
+  - **component_contracts/**: Component behavior contracts
+  - **performance_contracts/**: Performance requirements
+  - **security_contracts/**: Security requirements
+  - **reliability_contracts/**: Reliability requirements
+  - **compatibility_contracts/**: Compatibility requirements
+
+### Enterprise Validation
+- **compliance/**: Regulatory compliance validation
+  - **security_compliance/**: Security standard tests
+  - **privacy_compliance/**: Privacy regulation tests
+  - **audit_compliance/**: Audit requirement tests
+  - **industry_compliance/**: Industry-specific regulation tests
+  - **governance_tests/**: Governance requirement tests
+  - **risk_assessment/**: Risk framework validation
+
+- **performance/**: Performance validation suite
+  - **throughput/**: Throughput capacity tests
+  - **latency/**: Response time validation
+  - **scalability/**: Scaling behavior tests
+  - **resource_utilization/**: Resource usage efficiency
+  - **concurrency/**: Concurrent operation tests
+  - **saturation/**: System saturation tests
+  - **endurance/**: Long-duration performance stability
+
+### Test Matrix Strategy
+- Comprehensive permutation testing across all major dimensions:
+  - Component versions and configurations
+  - LLM providers and models
+  - Runtime environments and deployment patterns
+  - Load profiles and data characteristics
+  - Security policies and access patterns
+  - Integration patterns and external systems
+
+- Key test dimensions include:
+  - **functional_correctness**: Basic operation validation
+  - **reliability_under_stress**: Performance under load
+  - **fault_tolerance**: Resilience to failures
+  - **security_compliance**: Security requirement validation
+  - **compatibility**: Cross-version and cross-component compatibility
+  - **upgrade_safety**: Version migration validation
+
+### Scenario Testing Strategy
+- Real-world workflow validation with end-to-end scenarios
+- Failure injection to validate resilience patterns
+- State persistence validation across complex interactions
+- Cross-component interaction validation in full system context
+- Realistic data patterns and volumes for production simulation
+- Time-based scenarios for detecting temporal issues
+- Comprehensive verification of all execution paths
+
+### Plugin Contract Strategy
+- Formal interface compliance verification
+- Runtime validation of component interactions
+- Behavior verification through explicit contracts
+- Performance validation against SLA requirements
+- Security boundary enforcement through isolation
+- Resource consumption verification
+- Cross-component interaction validation

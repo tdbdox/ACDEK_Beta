@@ -1,0 +1,59 @@
+## ACDEK Advanced Enrichment Pipeline
+This folder contains ACDEK's parallel enrichment functions that enhance LLM queries with enterprise-grade context and constraints.
+
+### Core Enrichment Functions
+- **solve_q.py**: Query intent disambiguation with semantic classification
+  - Enhanced ambiguity detection with uncertainty quantification
+  - Constraint extraction with formalized validation rules
+  - Intent classification with confidence scoring
+  - Multi-intent fusion for complex queries
+  - Progressive refinement for ambiguous inputs
+  
+- **solve_ar_vector.py**: Advanced data alignment with multi-modal vector matching
+  - Distributed vector storage with sharded indexing
+  - Multi-model embedding strategies for diverse data types
+  - Cross-modal verification with confidence scoring
+  - Semantic drift detection with boundary enforcement
+  - Tiered confidence scoring with provenance tracking
+  
+- **solve_cu.py**: User context synthesis with memory conditioning
+  - Progressive trait evolution with temporal weighting
+  - Multi-dimensional context mapping with similarity clustering
+  - Semantic class routing with confidence-weighted selection
+  - Trait mutation logging with justification traces
+  - Cross-session persistence with versioned history
+  
+- **solve_ef.py**: Environmental factor processing with adaptive modulation
+  - Real-time signal processing with priority weighting
+  - Multi-source environmental aggregation
+  - Context-aware signal interpretation
+  - Volatility estimation with confidence adjustment
+  - Cross-component impact assessment
+  
+- **solve_psi.py**: Behavioral modulation with enterprise customization
+  - Organization-specific policy enforcement
+  - Role-based modulation profiles
+  - Context-sensitive tone adjustment
+  - Confidence threshold management
+  - Fallback policy orchestration
+
+### Implementation Features
+- **async_enrichment.py**: Parallel enrichment coordinator
+- **vector_cache.py**: Distributed embedding cache with invalidation strategies
+- **confidence_scoring.py**: Enhanced confidence calculation with evidence tracking
+- **constraint_validator.py**: Formal constraint verification engine
+- **enrichment_factory.py**: Pluggable enrichment module loader
+
+### Performance Optimizations
+- Asynchronous enrichment for non-blocking execution
+- Tiered caching for frequently accessed embeddings
+- Batched vector operations for throughput optimization
+- Progressive computation with early termination
+- Distributed processing support for horizontal scaling
+
+### Enterprise Capabilities
+- Full OpenTelemetry instrumentation for pipeline visibility
+- Detailed enrichment traces for auditability
+- Granular override controls for administrative management
+- Versioned trait mutations with reversion capability
+- Compliance-aware data handling with redaction options

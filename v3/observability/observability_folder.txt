@@ -1,0 +1,78 @@
+## ACDEK Enterprise Observability Framework
+This folder implements production-grade telemetry, monitoring, and diagnostic systems for ACDEK.
+
+### Core Observability Components
+- **telemetry_manager.py**: Central orchestrator for all instrumentation
+- **opentelemetry_integration.py**: Standards-compliant metrics, traces, and logs
+- **trace_context.py**: Distributed request context with correlation IDs
+- **metrics_collector.py**: Performance metrics with dimensional tagging
+- **log_manager.py**: Structured logging with redaction and sanitization
+- **health_endpoints.py**: Component-level health and readiness checks
+
+### Instrumentation Framework
+- **acdek_instrumentation.py**: Core pipeline instrumentation hooks
+- **component_profiler.py**: Performance measurement for individual components
+- **event_emitter.py**: Standardized event emission for cross-system correlation
+- **anomaly_detector.py**: Pattern-based anomaly detection in runtime metrics
+- **trace_enricher.py**: Context enhancement for comprehensive diagnostics
+- **custom_exporters/**: Specialized exporters for enterprise monitoring systems
+
+### Enterprise Dashboard Integration
+- **prometheus_exporter.py**: Prometheus-compatible metrics exposition
+- **grafana_dashboards/**: Pre-configured Grafana dashboards for ACDEK monitoring
+- **datadog_integration.py**: Datadog APM and metrics integration
+- **newrelic_exporter.py**: New Relic APM compatibility layer
+- **elastic_integration.py**: Elasticsearch/Kibana observability stack integration
+- **splunk_integration.py**: Splunk compatibility for enterprise environments
+
+### Performance Monitoring
+- **latency_histograms.py**: Detailed performance distribution tracking
+- **throughput_metrics.py**: Request throughput monitoring with dimensional analysis
+- **resource_utilization.py**: CPU, memory, and network usage tracking
+- **saturation_detector.py**: Early warning system for resource constraints
+- **bottleneck_analyzer.py**: Automated bottleneck identification
+- **performance_baseline.py**: Historical comparison with regression detection
+
+### Specialized Monitoring
+- **hallucination_monitoring.py**: Detection and tracking of potential hallucinations
+- **confidence_accuracy.py**: Correlation between predicted and actual confidence
+- **trait_evolution_tracker.py**: Visualization of trait mutations over time
+- **decision_path_analyzer.py**: Gate decision monitoring with justification
+- **semantic_drift_detector.py**: Monitoring for unexpected semantic shifts
+- **security_monitor.py**: Access pattern analysis and anomaly detection
+
+### Enterprise Features
+- **pii_redaction.py**: Automated PII detection and redaction in logs
+- **compliance_reports.py**: Pre-built reports for regulatory requirements
+- **audit_trail.py**: Immutable audit logging for all system interactions
+- **alert_manager.py**: Configurable alerting system with notification routing
+- **slo_monitor.py**: Service Level Objective tracking with burn rate alerts
+- **incident_management.py**: Automated incident creation and tracking
+
+### Implementation Notes
+- All components support both synchronous and asynchronous operation modes
+- Sampling rates are configurable for high-throughput environments
+- Storage backends support both local and distributed configurations
+- Dashboard components integrate with the ACDEK Admin Interface
+- All metrics include dimensional tags for detailed filtering
+- Log redaction follows configurable compliance policies
+- Core performance metrics are maintained at < 1% overhead
+
+### Complexity Management: Trace Logic
+- **causal_chain_analyzer.py**: Request flow causal analysis tool
+- **cross_component_correlator.py**: Cross-service trace correlation
+- **request_path_visualizer.py**: Visual request flow analyzer
+- **component_dependency_mapper.py**: Runtime dependency discovery
+- **distributed_context_propagation.py**: Context propagation across services
+- **trace_sampling_strategy.py**: Intelligent trace sampling for high volume
+- **trace_aggregator.py**: Multi-service trace collection and analysis
+
+### Trace Logic Strategy
+- **End-to-End Visibility**: Complete request lifecycle tracking across all components
+- **Context Propagation**: Consistent correlation IDs across all distributed services
+- **Causal Analysis**: Root cause identification through trace analysis
+- **Span Hierarchy**: Hierarchical span organization for complex operations
+- **Trace Sampling**: Intelligent sampling strategies for production performance
+- **Service Maps**: Automatic service dependency mapping from trace data
+- **Anomaly Detection**: Pattern recognition for unexpected trace patterns
+- **Correlation Search**: Cross-service search capabilities for complex issues
