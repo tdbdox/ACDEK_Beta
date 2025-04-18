@@ -1,5 +1,6 @@
 import logging
 import time
+import math  # for signal decay calculations
 import numpy as np
 import traceback
 import json
@@ -59,6 +60,7 @@ class ConfidenceConfig:
         os.path.dirname(os.path.abspath(__file__)), 
         'cache'
     ))
+    decay_rate: float = 0.001  # rate for exponential confidence decay
 
 
 @dataclass
@@ -776,6 +778,26 @@ class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore
                 if len(self.historical_scores[category]) % 100 == 0:
                     self._save_historical_data(category)
             
+            # Uncertainty quantification
+            try:
+                uncertainty = 1.0 - score.aggregate_score
+                score.metadata['uncertainty'] = uncertainty
+            except Exception:
+                score.metadata['uncertainty'] = None
+            # Signal confidence decay based on input timestamp
+            input_ts = data.get('timestamp')
+            if input_ts:
+                age = time.time() - input_ts
+                decay_factor = math.exp(-self.config.decay_rate * age)
+                score.aggregate_score *= decay_factor
+                score.factors['signal_decay'] = decay_factor
+                score.metadata['decay_factor'] = decay_factor
+            # Correlation with constraint strength if provided
+            constraint_strength = data.get('constraint_strength')
+            if constraint_strength is not None:
+                score.aggregate_score *= constraint_strength
+                score.factors['constraint_correlation'] = constraint_strength
+                score.metadata['constraint_strength'] = constraint_strength
             return score
             
         except Exception as e:
