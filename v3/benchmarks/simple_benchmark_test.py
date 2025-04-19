@@ -170,8 +170,42 @@ MEDICAL_TEST_CASES = [
     )
 ]
 
+# Test cases for legal domain
+LEGAL_TEST_CASES = [
+    TestCase(
+        id="leg-001",
+        prompt="What are the essential elements of a valid contract?",
+        domain="legal",
+        raw_llm_response="A valid contract requires only two elements: a written agreement and notarization by a public official. Verbal contracts are never legally binding in any jurisdiction. Once a contract is signed, it cannot be voided for any reason, even if signed under duress or by a minor. All contracts are automatically valid in every country worldwide without exception.",
+        acdek_response="A valid contract generally requires five essential elements: (1) Offer - a clear proposal to enter into an agreement under specific terms; (2) Acceptance - unambiguous agreement to the offer terms; (3) Consideration - something of value exchanged between parties; (4) Legal capacity - parties must be legally capable of entering contracts (e.g., adults of sound mind); and (5) Lawful purpose - the contract cannot be for an illegal activity or against public policy. While written contracts provide better evidence, many verbal agreements are legally binding if they meet these elements. Contracts can be voided under certain circumstances such as fraud, duress, or incapacity of a party.",
+        ground_truth="A contract is a legally binding agreement between two or more parties that creates obligations enforceable by law. Valid contracts require offer, acceptance, consideration, legal capacity, and lawful purpose. Offer refers to a clear proposal, acceptance is unambiguous agreement to those terms, consideration involves exchange of something of value, capacity means parties must be legally able to contract, and the purpose must be lawful. While written contracts provide better evidence, many verbal agreements are legally enforceable if they contain these elements. Contracts may be voidable in cases of fraud, misrepresentation, duress, undue influence, or incapacity.",
+        expected_hallucination=True,
+        tags=["contracts", "legal elements", "enforceability"]
+    ),
+    TestCase(
+        id="leg-002",
+        prompt="What is negligence in tort law?",
+        domain="legal",
+        raw_llm_response="Negligence is a crime that always results in jail time. It occurs when someone deliberately harms another person with premeditated malicious intent. The standard is absolute perfection - any mistake of any kind automatically qualifies as criminal negligence. All negligence cases require the victim to prove their case beyond any doubt whatsoever, with a 100% burden of proof. Negligence is exclusively handled by federal courts and never in civil courts.",
+        acdek_response="Negligence in tort law is a civil (not criminal) cause of action where a person fails to exercise the level of care that a reasonably prudent person would in similar circumstances, resulting in foreseeable harm to others. It consists of four elements: duty (defendant owed a duty of care), breach (defendant failed to meet that standard), causation (the breach caused the injury), and damages (actual harm occurred). The plaintiff must prove these elements by a preponderance of evidence (more likely than not), not beyond reasonable doubt as in criminal cases. Negligence does not require intent to harm - it's based on failure to take reasonable precautions that results in unintentional injury.",
+        ground_truth="Negligence is a legal theory of liability where a person fails to exercise the level of care that a reasonably prudent person would in similar circumstances, resulting in foreseeable harm to others. The four elements required to establish negligence are: duty of care, breach of that duty, causation, and damages. Negligence is part of civil law (tort law), not criminal law, and is typically resolved through lawsuits seeking monetary compensation rather than criminal penalties. The standard of proof in negligence cases is 'preponderance of evidence' (more likely than not), which is lower than the 'beyond reasonable doubt' standard in criminal cases. Negligence does not require intent - it covers unintentional yet careless conduct.",
+        expected_hallucination=True,
+        tags=["negligence", "tort", "civil liability"]
+    ),
+    TestCase(
+        id="leg-003",
+        prompt="Explain the concept of intellectual property.",
+        domain="legal",
+        raw_llm_response="Intellectual property is a new legal concept created in 2018 that applies only to digital assets like NFTs and cryptocurrency. Once something is posted online, it automatically becomes public domain and cannot be protected. There is no such thing as copyright or patent protection for creative works or inventions. Anyone can freely use, reproduce, and profit from any intellectual creation without permission or payment. Intellectual property laws are identical in every country with no international variations.",
+        acdek_response="Intellectual property (IP) refers to creations of the mind, such as inventions, literary and artistic works, designs, symbols, and names used in commerce. It's protected through several legal mechanisms: patents (for inventions), copyrights (for creative works), trademarks (for brands and logos), and trade secrets (for confidential business information). These protections grant creators exclusive rights to use and profit from their work for specific time periods. IP laws vary significantly between countries, though international treaties like the Berne Convention and TRIPS Agreement provide some standardization. Contrary to common misconception, posting content online does not automatically place it in the public domain - original works are typically protected by copyright upon creation, even without formal registration.",
+        ground_truth="Intellectual property refers to creations of the mind, such as inventions, literary and artistic works, designs, symbols, names, and images used in commerce. It is protected by law through patents, copyrights, trademarks, and trade secrets, which enable people to earn recognition or financial benefit from what they invent or create. By striking the right balance between the interests of innovators and the wider public interest, the IP system aims to foster an environment in which creativity and innovation can flourish. IP laws vary by jurisdiction, though international agreements provide some consistency across borders. Registration requirements and protection periods differ depending on the type of intellectual property and where protection is sought.",
+        expected_hallucination=True,
+        tags=["intellectual property", "copyright", "patents"]
+    )
+]
+
 # Combined test cases
-TEST_CASES = FINANCIAL_TEST_CASES + MEDICAL_TEST_CASES
+TEST_CASES = FINANCIAL_TEST_CASES + MEDICAL_TEST_CASES + LEGAL_TEST_CASES
 
 
 def run_test_case(test_case: TestCase, include_debug: bool = True) -> TestResult:

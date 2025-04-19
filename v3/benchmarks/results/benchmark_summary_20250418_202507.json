@@ -1,0 +1,37 @@
+{
+  "test_count": 7,
+  "domains": [
+    "legal",
+    "medical",
+    "financial"
+  ],
+  "avg_raw_factuality": 0.5645316353866032,
+  "avg_acdek_factuality": 0.6311154727424894,
+  "avg_improvement_rate": 0.2346033936405146,
+  "avg_execution_time": 1144.3001202174596,
+  "hallucination_detection_accuracy": 0.5714285714285714,
+  "domain_metrics": {
+    "legal": {
+      "count": 3,
+      "avg_raw_factuality": 0.7676799694697062,
+      "avg_acdek_factuality": 0.7699506481488546,
+      "avg_improvement_rate": 0.06822637812231813,
+      "avg_execution_time": 756.6696802775065
+    },
+    "medical": {
+      "count": 2,
+      "avg_raw_factuality": 0.38896084725856783,
+      "avg_acdek_factuality": 0.6181041300296783,
+      "avg_improvement_rate": 0.684485109007427,
+      "avg_execution_time": 756.8689584732056
+    },
+    "financial": {
+      "count": 2,
+      "avg_raw_factuality": 0.43537992238998413,
+      "avg_acdek_factuality": 0.4358740523457527,
+      "avg_improvement_rate": 0.034287201550896935,
+      "avg_execution_time": 2113.176941871643
+    }
+  },
+  "overall_success": true
+}

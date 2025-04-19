@@ -1,0 +1,562 @@
+[
+  {
+    "case_id": "fin-001",
+    "domain": "financial",
+    "raw_factuality_score": 0.22758644819259644,
+    "acdek_factuality_score": 0.18446947634220123,
+    "raw_hallucination_flag": true,
+    "acdek_hallucination_flag": true,
+    "improvement_rate": 0.0,
+    "execution_time": 3461.1659049987793,
+    "tags": [
+      "investing",
+      "risk",
+      "strategy"
+    ],
+    "raw_confidence": 0.2503450930118561,
+    "acdek_confidence": 0.20291642397642137,
+    "metadata": {
+      "raw_details": {
+        "reference_similarity": 0.0,
+        "reference_id": "fin1",
+        "factuality_details": {
+          "vector_similarity": 0.22758644819259644,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 5.245208740234375e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033102474",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.64,
+        "execution_time_ms": 2841.917037963867
+      },
+      "acdek_details": {
+        "reference_similarity": 0.0,
+        "reference_id": "fin1",
+        "factuality_details": {
+          "vector_similarity": 0.18446947634220123,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 8.106231689453125e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033102588",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.64,
+        "execution_time_ms": 113.96288871765137
+      },
+      "raw_constraint_pass": true,
+      "acdek_constraint_pass": true,
+      "expected_hallucination": true
+    }
+  },
+  {
+    "case_id": "fin-002",
+    "domain": "financial",
+    "raw_factuality_score": 0.6431733965873718,
+    "acdek_factuality_score": 0.6872786283493042,
+    "raw_hallucination_flag": false,
+    "acdek_hallucination_flag": false,
+    "improvement_rate": 0.06857440310179387,
+    "execution_time": 765.1879787445068,
+    "tags": [
+      "investing",
+      "securities",
+      "fundamentals"
+    ],
+    "raw_confidence": 0.707490736246109,
+    "acdek_confidence": 0.7560064911842347,
+    "metadata": {
+      "raw_details": {
+        "reference_similarity": 0.5317816138267517,
+        "reference_id": "fin10",
+        "factuality_details": {
+          "vector_similarity": 0.6431733965873718,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 3.814697265625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033103268",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.64,
+        "execution_time_ms": 174.15714263916016
+      },
+      "acdek_details": {
+        "reference_similarity": 0.5317816138267517,
+        "reference_id": "fin10",
+        "factuality_details": {
+          "vector_similarity": 0.6872786283493042,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 4.291534423828125e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033103353",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.64,
+        "execution_time_ms": 85.69598197937012
+      },
+      "raw_constraint_pass": true,
+      "acdek_constraint_pass": true,
+      "expected_hallucination": true
+    }
+  },
+  {
+    "case_id": "med-001",
+    "domain": "medical",
+    "raw_factuality_score": 0.3,
+    "acdek_factuality_score": 0.6304386258125305,
+    "raw_hallucination_flag": true,
+    "acdek_hallucination_flag": true,
+    "improvement_rate": 1.1014620860417685,
+    "execution_time": 868.6058521270752,
+    "tags": [
+      "diabetes",
+      "treatment",
+      "management"
+    ],
+    "raw_confidence": 0.33,
+    "acdek_confidence": 0.6934824883937837,
+    "metadata": {
+      "raw_details": {
+        "reference_similarity": 0.5178161859512329,
+        "reference_id": "med3",
+        "factuality_details": {
+          "vector_similarity": 0.4412240982055664,
+          "has_contradiction": true,
+          "contradiction_confidence": 0.95,
+          "contradiction_reason": "Response incorrectly claims diabetes can be completely cured"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 4.0531158447265625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033104135",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.75,
+        "execution_time_ms": 276.2932777404785
+      },
+      "acdek_details": {
+        "reference_similarity": 0.5178161859512329,
+        "reference_id": "med3",
+        "factuality_details": {
+          "vector_similarity": 0.6304386258125305,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 4.0531158447265625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033104222",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.75,
+        "execution_time_ms": 86.98916435241699
+      },
+      "raw_constraint_pass": true,
+      "acdek_constraint_pass": true,
+      "expected_hallucination": true
+    }
+  },
+  {
+    "case_id": "med-002",
+    "domain": "medical",
+    "raw_factuality_score": 0.4779216945171356,
+    "acdek_factuality_score": 0.6057696342468262,
+    "raw_hallucination_flag": true,
+    "acdek_hallucination_flag": true,
+    "improvement_rate": 0.2675081319730855,
+    "execution_time": 645.1320648193359,
+    "tags": [
+      "vaccines",
+      "immunization",
+      "public health"
+    ],
+    "raw_confidence": 0.5257138639688492,
+    "acdek_confidence": 0.6663465976715088,
+    "metadata": {
+      "raw_details": {
+        "reference_similarity": 0.5209372639656067,
+        "reference_id": "med8",
+        "factuality_details": {
+          "vector_similarity": 0.4779216945171356,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 5.9604644775390625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033104850",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.75,
+        "execution_time_ms": 122.45297431945801
+      },
+      "acdek_details": {
+        "reference_similarity": 0.5209372639656067,
+        "reference_id": "med8",
+        "factuality_details": {
+          "vector_similarity": 0.6057696342468262,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 6.9141387939453125e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033104867",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.75,
+        "execution_time_ms": 17.4252986907959
+      },
+      "raw_constraint_pass": true,
+      "acdek_constraint_pass": true,
+      "expected_hallucination": true
+    }
+  },
+  {
+    "case_id": "leg-001",
+    "domain": "legal",
+    "raw_factuality_score": 0.6562182307243347,
+    "acdek_factuality_score": 0.7905324101448059,
+    "raw_hallucination_flag": true,
+    "acdek_hallucination_flag": false,
+    "improvement_rate": 0.2046791343669544,
+    "execution_time": 775.2602100372314,
+    "tags": [
+      "contracts",
+      "legal elements",
+      "enforceability"
+    ],
+    "raw_confidence": 0.7218400537967683,
+    "acdek_confidence": 0.8695856511592865,
+    "metadata": {
+      "raw_details": {
+        "reference_similarity": 0.5869230628013611,
+        "reference_id": "leg1",
+        "factuality_details": {
+          "vector_similarity": 0.6562182307243347,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 3.0994415283203125e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033105566",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.72,
+        "execution_time_ms": 197.48902320861816
+      },
+      "acdek_details": {
+        "reference_similarity": 0.5869230628013611,
+        "reference_id": "leg1",
+        "factuality_details": {
+          "vector_similarity": 0.7905324101448059,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 3.814697265625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033105643",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.72,
+        "execution_time_ms": 77.15582847595215
+      },
+      "raw_constraint_pass": true,
+      "acdek_constraint_pass": true,
+      "expected_hallucination": true
+    }
+  },
+  {
+    "case_id": "leg-002",
+    "domain": "legal",
+    "raw_factuality_score": 0.7911384105682373,
+    "acdek_factuality_score": 0.7534936666488647,
+    "raw_hallucination_flag": false,
+    "acdek_hallucination_flag": false,
+    "improvement_rate": 0.0,
+    "execution_time": 787.7891063690186,
+    "tags": [
+      "negligence",
+      "tort",
+      "civil liability"
+    ],
+    "raw_confidence": 0.8702522516250611,
+    "acdek_confidence": 0.8288430333137513,
+    "metadata": {
+      "raw_details": {
+        "reference_similarity": 0.7679492831230164,
+        "reference_id": "leg5",
+        "factuality_details": {
+          "vector_similarity": 0.7911384105682373,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 4.0531158447265625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033106340",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.72,
+        "execution_time_ms": 191.8020248413086
+      },
+      "acdek_details": {
+        "reference_similarity": 0.7679492831230164,
+        "reference_id": "leg5",
+        "factuality_details": {
+          "vector_similarity": 0.7534936666488647,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 5.0067901611328125e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033106431",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.72,
+        "execution_time_ms": 90.69108963012695
+      },
+      "raw_constraint_pass": true,
+      "acdek_constraint_pass": true,
+      "expected_hallucination": true
+    }
+  },
+  {
+    "case_id": "leg-003",
+    "domain": "legal",
+    "raw_factuality_score": 0.8556832671165466,
+    "acdek_factuality_score": 0.7658258676528931,
+    "raw_hallucination_flag": false,
+    "acdek_hallucination_flag": false,
+    "improvement_rate": 0.0,
+    "execution_time": 706.9597244262695,
+    "tags": [
+      "intellectual property",
+      "copyright",
+      "patents"
+    ],
+    "raw_confidence": 0.9412515938282013,
+    "acdek_confidence": 0.8424084544181825,
+    "metadata": {
+      "raw_details": {
+        "reference_similarity": 0.7694298028945923,
+        "reference_id": "leg6",
+        "factuality_details": {
+          "vector_similarity": 0.8556832671165466,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 2.86102294921875e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033107122",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.72,
+        "execution_time_ms": 186.08784675598145
+      },
+      "acdek_details": {
+        "reference_similarity": 0.7694298028945923,
+        "reference_id": "leg6",
+        "factuality_details": {
+          "vector_similarity": 0.7658258676528931,
+          "has_contradiction": false,
+          "contradiction_confidence": 0.0,
+          "contradiction_reason": "No contradiction detected"
+        },
+        "constraint_results": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 4.0531158447265625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745033107138",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "threshold": 0.72,
+        "execution_time_ms": 15.613794326782227
+      },
+      "raw_constraint_pass": true,
+      "acdek_constraint_pass": true,
+      "expected_hallucination": true
+    }
+  }
+]
