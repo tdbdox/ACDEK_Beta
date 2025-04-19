@@ -1,0 +1,29 @@
+{
+  "test_count": 4,
+  "domains": [
+    "financial",
+    "medical"
+  ],
+  "avg_raw_factuality": 0.412170384824276,
+  "avg_acdek_factuality": 0.5269890911877155,
+  "avg_improvement_rate": 0.35938615527916196,
+  "avg_execution_time": 963.6774063110352,
+  "hallucination_detection_accuracy": 0.5,
+  "domain_metrics": {
+    "financial": {
+      "count": 2,
+      "avg_raw_factuality": 0.43537992238998413,
+      "avg_acdek_factuality": 0.4358740523457527,
+      "avg_improvement_rate": 0.034287201550896935,
+      "avg_execution_time": 1650.9463787078857
+    },
+    "medical": {
+      "count": 2,
+      "avg_raw_factuality": 0.38896084725856783,
+      "avg_acdek_factuality": 0.6181041300296783,
+      "avg_improvement_rate": 0.684485109007427,
+      "avg_execution_time": 276.40843391418457
+    }
+  },
+  "overall_success": false
+}

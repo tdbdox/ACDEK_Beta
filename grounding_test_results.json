@@ -1,0 +1,399 @@
+{
+  "metrics": {
+    "total_cases": 9,
+    "domains": [
+      "legal",
+      "financial",
+      "medical"
+    ],
+    "true_positive_rate": 0.6666666666666666,
+    "true_negative_rate": 0.8888888888888888,
+    "avg_retrieval_similarity": 0.7860687639978197,
+    "avg_processing_time_ms": 83.70677630106609,
+    "avg_factuality_correct": 0.7833333333333333,
+    "avg_factuality_incorrect": 0.5068597462442185,
+    "avg_factuality_edge": 0.6753974371486239,
+    "domain_metrics": {
+      "legal": {
+        "case_count": 3,
+        "avg_factuality_correct": 0.7833333333333333,
+        "avg_factuality_incorrect": 0.705960214138031,
+        "avg_factuality_edge": 0.7520688772201538,
+        "true_positive_rate": 0.6666666666666666,
+        "true_negative_rate": 0.6666666666666666,
+        "avg_retrieval_similarity": 0.7658893664677938,
+        "avg_processing_time_ms": 112.1528148651123
+      },
+      "financial": {
+        "case_count": 3,
+        "avg_factuality_correct": 0.7833333333333333,
+        "avg_factuality_incorrect": 0.3499999999999999,
+        "avg_factuality_edge": 0.7832639813423157,
+        "true_positive_rate": 0.6666666666666666,
+        "true_negative_rate": 1.0,
+        "avg_retrieval_similarity": 0.8085637887318929,
+        "avg_processing_time_ms": 84.24607912699382
+      },
+      "medical": {
+        "case_count": 3,
+        "avg_factuality_correct": 0.7833333333333333,
+        "avg_factuality_incorrect": 0.4646190245946249,
+        "avg_factuality_edge": 0.49085945288340255,
+        "true_positive_rate": 0.6666666666666666,
+        "true_negative_rate": 1.0,
+        "avg_retrieval_similarity": 0.7837531367937723,
+        "avg_processing_time_ms": 54.721434911092125
+      }
+    }
+  },
+  "objectives": {
+    "accurate_retrieval": true,
+    "factuality_scoring": false,
+    "performance": true,
+    "edge_case_handling": true
+  },
+  "results": [
+    {
+      "case_id": "fin-asset-1",
+      "domain": "financial",
+      "prompt": "What is an asset in financial terms?",
+      "retrieved_reference": {
+        "id": "fin1",
+        "text": "An asset is a resource with economic value that an individual, corporation, or country owns or controls with the expectation it will provide future benefit.",
+        "similarity": 0.7844148874282837,
+        "retrieval_time_ms": 2089.8449420928955
+      },
+      "correct_response": {
+        "text": "An asset is a resource with economic value that an individual, corporation, or country owns or controls with the expectation it will provide future benefit.",
+        "factuality_score": 1.0,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 16.973018646240234
+      },
+      "incorrect_response": {
+        "text": "An asset is a type of liability that companies use to secure loans. Assets are always listed on the liability side of the balance sheet.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 1.0311603546142578
+      },
+      "edge_response": {
+        "text": "An asset is something that has value and can potentially provide future benefit to its owner, though some assets may depreciate over time.",
+        "factuality_score": 0.8337358832359314,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 81.07280731201172
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": true,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.7844148874282837,
+        "total_processing_time_ms": 99.07698631286621
+      }
+    },
+    {
+      "case_id": "fin-equity-1",
+      "domain": "financial",
+      "prompt": "How is equity calculated in a company?",
+      "retrieved_reference": {
+        "id": "fin3",
+        "text": "Equity represents ownership in a company and is calculated as the difference between total assets and total liabilities.",
+        "similarity": 0.8062484860420227,
+        "retrieval_time_ms": 15.075922012329102
+      },
+      "correct_response": {
+        "text": "Equity represents ownership in a company and is calculated as the difference between total assets and total liabilities.",
+        "factuality_score": 1.0,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 0.9171962738037109
+      },
+      "incorrect_response": {
+        "text": "Equity is calculated by adding up all the cash a company has in its accounts. It has nothing to do with assets or liabilities.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.7076263427734375
+      },
+      "edge_response": {
+        "text": "Equity shows ownership interest and is generally determined by subtracting what a company owes from what it owns, though the specific calculation can vary in complex situations.",
+        "factuality_score": 0.8073500394821167,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 75.94442367553711
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": true,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.8062484860420227,
+        "total_processing_time_ms": 77.56924629211426
+      }
+    },
+    {
+      "case_id": "fin-income-1",
+      "domain": "financial",
+      "prompt": "What does an income statement show?",
+      "retrieved_reference": {
+        "id": "fin12",
+        "text": "An income statement is a financial document that shows a company's revenues and expenses over a specific period, indicating how the revenues are transformed into net income or net profit.",
+        "similarity": 0.8350279927253723,
+        "retrieval_time_ms": 81.36296272277832
+      },
+      "correct_response": {
+        "text": "An income statement is a financial document that shows a company's revenues and expenses over a specific period, indicating how the revenues are transformed into net income or net profit.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.8308887481689453
+      },
+      "incorrect_response": {
+        "text": "An income statement only tracks cash flow and has nothing to do with revenues or expenses. It's primarily used for tax planning.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.7040500640869141
+      },
+      "edge_response": {
+        "text": "Income statements summarize how much money a company made and spent, though they don't provide a complete picture of a company's financial health without balance sheets and cash flow statements.",
+        "factuality_score": 0.7087060213088989,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 74.55706596374512
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": false,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.8350279927253723,
+        "total_processing_time_ms": 76.09200477600098
+      }
+    },
+    {
+      "case_id": "leg-contract-1",
+      "domain": "legal",
+      "prompt": "What are the requirements for a valid contract?",
+      "retrieved_reference": {
+        "id": "leg1",
+        "text": "A contract is a legally binding agreement between two or more parties that creates obligations enforceable by law. Valid contracts require offer, acceptance, consideration, legal capacity, and lawful purpose.",
+        "similarity": 0.6482778191566467,
+        "retrieval_time_ms": 246.9632625579834
+      },
+      "correct_response": {
+        "text": "A contract is a legally binding agreement between two or more parties that creates obligations enforceable by law. Valid contracts require offer, acceptance, consideration, legal capacity, and lawful purpose.",
+        "factuality_score": 1.0,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 0.7119178771972656
+      },
+      "incorrect_response": {
+        "text": "A valid contract only requires a verbal agreement between friends. No documentation or consideration is needed, and contracts automatically expire after one year.",
+        "factuality_score": 0.5861526727676392,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 75.95276832580566
+      },
+      "edge_response": {
+        "text": "Contracts typically need parties to agree to something, exchange something of value, and have legal elements in place, though specific requirements can vary by jurisdiction.",
+        "factuality_score": 0.7223109006881714,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 79.33497428894043
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": true,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.6482778191566467,
+        "total_processing_time_ms": 155.99966049194336
+      }
+    },
+    {
+      "case_id": "leg-tort-1",
+      "domain": "legal",
+      "prompt": "What is tort law?",
+      "retrieved_reference": {
+        "id": "leg3",
+        "text": "Tort law is a body of civil law that addresses wrongful acts resulting in injury or harm to another person, property, reputation, or other legally protected interests, providing remedies through civil litigation.",
+        "similarity": 0.8302090764045715,
+        "retrieval_time_ms": 81.8018913269043
+      },
+      "correct_response": {
+        "text": "Tort law is a body of civil law that addresses wrongful acts resulting in injury or harm to another person, property, reputation, or other legally protected interests, providing remedies through civil litigation.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.6718635559082031
+      },
+      "incorrect_response": {
+        "text": "Tort law deals exclusively with car accidents and requires payment to the government rather than affected parties. It's primarily a criminal law matter.",
+        "factuality_score": 0.6789785027503967,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 14.979839324951172
+      },
+      "edge_response": {
+        "text": "Tort law handles situations where someone causes harm that isn't criminal but still deserves compensation, though many tort cases settle before trial.",
+        "factuality_score": 0.7638076543807983,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 13.8092041015625
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": false,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.8302090764045715,
+        "total_processing_time_ms": 29.460906982421875
+      }
+    },
+    {
+      "case_id": "leg-ip-1",
+      "domain": "legal",
+      "prompt": "What is intellectual property?",
+      "retrieved_reference": {
+        "id": "leg6",
+        "text": "Intellectual property refers to creations of the mind, such as inventions, literary and artistic works, designs, symbols, names, and images used in commerce. It is protected by patents, copyrights, trademarks, and trade secrets.",
+        "similarity": 0.8191812038421631,
+        "retrieval_time_ms": 79.83803749084473
+      },
+      "correct_response": {
+        "text": "Intellectual property refers to creations of the mind, such as inventions, literary and artistic works, designs, symbols, names, and images used in commerce. It is protected by patents, copyrights, trademarks, and trade secrets.",
+        "factuality_score": 1.0,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 0.74005126953125
+      },
+      "incorrect_response": {
+        "text": "Intellectual property means owning actual physical property like land or buildings. It has nothing to do with creative works or inventions.",
+        "factuality_score": 0.8527494668960571,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 74.91683959960938
+      },
+      "edge_response": {
+        "text": "Intellectual property covers creative and innovative works, though protection strength and duration varies widely depending on the type and country.",
+        "factuality_score": 0.7700880765914917,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 75.34098625183105
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": true,
+        "correctly_identified_hallucination": false,
+        "retrieval_similarity": 0.8191812038421631,
+        "total_processing_time_ms": 150.99787712097168
+      }
+    },
+    {
+      "case_id": "med-hypertension-1",
+      "domain": "medical",
+      "prompt": "What is hypertension and how is it diagnosed?",
+      "retrieved_reference": {
+        "id": "med2",
+        "text": "Hypertension (high blood pressure) is a chronic condition where blood pressure against artery walls is consistently elevated. It is diagnosed when readings consistently exceed 130/80 mmHg. Untreated hypertension increases risk of heart disease, stroke, and kidney failure.",
+        "similarity": 0.7485127449035645,
+        "retrieval_time_ms": 178.84302139282227
+      },
+      "correct_response": {
+        "text": "Hypertension (high blood pressure) is a chronic condition where blood pressure against artery walls is consistently elevated. It is diagnosed when readings consistently exceed 130/80 mmHg. Untreated hypertension increases risk of heart disease, stroke, and kidney failure.",
+        "factuality_score": 1.0,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 0.7359981536865234
+      },
+      "incorrect_response": {
+        "text": "Hypertension is low blood pressure diagnosed through a single blood test. It's easily cured with over-the-counter medication and has no long-term health effects.",
+        "factuality_score": 0.6938570737838745,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 79.46896553039551
+      },
+      "edge_response": {
+        "text": "High blood pressure occurs when your heart works too hard to pump blood. While specific numbers are used for diagnosis, the threshold for what's considered high blood pressure has changed over the years.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.6101131439208984
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": true,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.7485127449035645,
+        "total_processing_time_ms": 80.81507682800293
+      }
+    },
+    {
+      "case_id": "med-diabetes-1",
+      "domain": "medical",
+      "prompt": "What is diabetes mellitus?",
+      "retrieved_reference": {
+        "id": "med3",
+        "text": "Diabetes mellitus is a metabolic disorder characterized by high blood sugar levels (hyperglycemia) over a prolonged period. The two main types are Type 1 (autoimmune condition where the pancreas produces little or no insulin) and Type 2 (where cells become resistant to insulin's effects).",
+        "similarity": 0.8544768691062927,
+        "retrieval_time_ms": 14.85586166381836
+      },
+      "correct_response": {
+        "text": "Diabetes mellitus is a metabolic disorder characterized by high blood sugar levels (hyperglycemia) over a prolonged period. The two main types are Type 1 (autoimmune condition where the pancreas produces little or no insulin) and Type 2 (where cells become resistant to insulin's effects).",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.6651878356933594
+      },
+      "incorrect_response": {
+        "text": "Diabetes is a contagious viral infection that affects the liver and can be completely cured with antibiotics. All types of diabetes are caused by eating too much sugar.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.5576610565185547
+      },
+      "edge_response": {
+        "text": "Diabetes is when your body has trouble regulating blood sugar levels, though the specific causes and treatments vary depending on which type you have.",
+        "factuality_score": 0.7725783586502075,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 80.28125762939453
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": false,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.8544768691062927,
+        "total_processing_time_ms": 81.50410652160645
+      }
+    },
+    {
+      "case_id": "med-cancer-1",
+      "domain": "medical",
+      "prompt": "What is cancer and how is it treated?",
+      "retrieved_reference": {
+        "id": "med9",
+        "text": "Cancer is a disease characterized by the uncontrolled growth and spread of abnormal cells. These cells can invade and destroy normal body tissue and spread throughout the body. Treatment options include surgery, radiation, chemotherapy, immunotherapy, and targeted therapy.",
+        "similarity": 0.74826979637146,
+        "retrieval_time_ms": 15.346765518188477
+      },
+      "correct_response": {
+        "text": "Cancer is a disease characterized by the uncontrolled growth and spread of abnormal cells. These cells can invade and destroy normal body tissue and spread throughout the body. Treatment options include surgery, radiation, chemotherapy, immunotherapy, and targeted therapy.",
+        "factuality_score": 1.0,
+        "hallucination_flag": false,
+        "constraint_pass": true,
+        "processing_time_ms": 0.7371902465820312
+      },
+      "incorrect_response": {
+        "text": "Cancer is a bacterial infection that's completely curable with a specific herb that doctors don't want you to know about. All cancers are caused by cell phone radiation.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.5729198455810547
+      },
+      "edge_response": {
+        "text": "Cancer happens when cells grow out of control. While there are many treatments available, the effectiveness depends on the cancer type, stage, and individual factors.",
+        "factuality_score": 0.35,
+        "hallucination_flag": true,
+        "constraint_pass": true,
+        "processing_time_ms": 0.5350112915039062
+      },
+      "validation_metrics": {
+        "correctly_identified_factual": true,
+        "correctly_identified_hallucination": true,
+        "retrieval_similarity": 0.74826979637146,
+        "total_processing_time_ms": 1.8451213836669922
+      }
+    }
+  ]
+}

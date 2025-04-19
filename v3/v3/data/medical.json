@@ -1,0 +1,52 @@
+[
+  {
+    "id": "med1",
+    "text": "COVID-19 is a respiratory illness caused by the SARS-CoV-2 virus. Common symptoms include fever, cough, shortness of breath, fatigue, and loss of taste or smell. It is primarily transmitted through respiratory droplets when infected individuals cough, sneeze, talk, or breathe.",
+    "source": "Centers for Disease Control and Prevention"
+  },
+  {
+    "id": "med2",
+    "text": "Hypertension (high blood pressure) is a chronic condition where blood pressure against artery walls is consistently elevated. It is diagnosed when readings consistently exceed 130/80 mmHg. Untreated hypertension increases risk of heart disease, stroke, and kidney failure.",
+    "source": "American Heart Association"
+  },
+  {
+    "id": "med3",
+    "text": "Diabetes mellitus is a metabolic disorder characterized by high blood sugar levels (hyperglycemia) over a prolonged period. The two main types are Type 1 (autoimmune condition where the pancreas produces little or no insulin) and Type 2 (where cells become resistant to insulin's effects).",
+    "source": "American Diabetes Association"
+  },
+  {
+    "id": "med4",
+    "text": "The common cold is a viral infectious disease of the upper respiratory tract primarily caused by rhinoviruses. Symptoms typically include sore throat, runny nose, coughing, sneezing, and general malaise, usually lasting 7-10 days.",
+    "source": "National Institutes of Health"
+  },
+  {
+    "id": "med5",
+    "text": "Antibiotics are medications that destroy or inhibit the growth of bacteria but have no effect on viruses. Inappropriate use of antibiotics can lead to antibiotic resistance, making infections harder to treat.",
+    "source": "World Health Organization"
+  },
+  {
+    "id": "med6",
+    "text": "Myocardial infarction (heart attack) occurs when blood flow to a part of the heart is blocked, causing damage to heart muscle. Symptoms include chest pain or discomfort, shortness of breath, nausea, lightheadedness, and cold sweats. Immediate medical attention is required.",
+    "source": "American College of Cardiology"
+  },
+  {
+    "id": "med7",
+    "text": "Alzheimer's disease is a progressive neurodegenerative disorder that causes brain cells to degenerate and die, leading to memory loss, cognitive decline, and behavioral changes. It is the most common cause of dementia among older adults.",
+    "source": "Alzheimer's Association"
+  },
+  {
+    "id": "med8",
+    "text": "Vaccination is the administration of a vaccine to stimulate an individual's immune system to develop protection against specific infectious diseases. Vaccines contain weakened or inactivated parts of a particular organism that trigger an immune response.",
+    "source": "World Health Organization"
+  },
+  {
+    "id": "med9",
+    "text": "Cancer is a disease characterized by the uncontrolled growth and spread of abnormal cells. These cells can invade and destroy normal body tissue and spread throughout the body. Treatment options include surgery, radiation, chemotherapy, immunotherapy, and targeted therapy.",
+    "source": "National Cancer Institute"
+  },
+  {
+    "id": "med10",
+    "text": "Asthma is a chronic inflammatory disease of the airways characterized by recurring symptoms, reversible airflow obstruction, and bronchospasm. Symptoms include wheezing, coughing, chest tightness, and shortness of breath.",
+    "source": "National Heart, Lung, and Blood Institute"
+  }
+]

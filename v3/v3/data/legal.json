@@ -1,0 +1,52 @@
+[
+  {
+    "id": "leg1",
+    "text": "A contract is a legally binding agreement between two or more parties that creates obligations enforceable by law. Valid contracts require offer, acceptance, consideration, legal capacity, and lawful purpose.",
+    "source": "Black's Law Dictionary"
+  },
+  {
+    "id": "leg2",
+    "text": "Consideration in contract law refers to something of value exchanged between parties that induces them to enter into the agreement and makes the contract legally binding.",
+    "source": "Restatement (Second) of Contracts"
+  },
+  {
+    "id": "leg3",
+    "text": "Tort law is a body of civil law that addresses wrongful acts resulting in injury or harm to another person, property, reputation, or other legally protected interests, providing remedies through civil litigation.",
+    "source": "American Law Institute"
+  },
+  {
+    "id": "leg4",
+    "text": "Jurisdiction refers to a court's legal authority to hear and decide a case. It includes subject matter jurisdiction (authority over the issue), personal jurisdiction (authority over the parties), and territorial jurisdiction (authority over the geographic area).",
+    "source": "Federal Rules of Civil Procedure"
+  },
+  {
+    "id": "leg5",
+    "text": "Negligence is a legal theory of liability where a person fails to exercise the level of care that a reasonably prudent person would in similar circumstances, resulting in foreseeable harm to others.",
+    "source": "Prosser and Keeton on Torts"
+  },
+  {
+    "id": "leg6",
+    "text": "Intellectual property refers to creations of the mind, such as inventions, literary and artistic works, designs, symbols, names, and images used in commerce. It is protected by patents, copyrights, trademarks, and trade secrets.",
+    "source": "World Intellectual Property Organization"
+  },
+  {
+    "id": "leg7",
+    "text": "Due process refers to the legal requirement that the state must respect all legal rights owed to a person and the principles of fairness in all legal matters. It protects individuals from arbitrary denial of life, liberty, or property by the government.",
+    "source": "U.S. Constitution, 5th and 14th Amendments"
+  },
+  {
+    "id": "leg8",
+    "text": "A corporation is a legal entity separate from its owners (shareholders), providing limited liability protection. It has legal rights and responsibilities including the ability to enter contracts, own assets, and incur liabilities.",
+    "source": "Delaware General Corporation Law"
+  },
+  {
+    "id": "leg9",
+    "text": "Probate is the legal process of administering a deceased person's estate, validating their will if one exists, and distributing assets to beneficiaries according to the will or state law if no will exists.",
+    "source": "Uniform Probate Code"
+  },
+  {
+    "id": "leg10",
+    "text": "Criminal law deals with behaviors deemed harmful to society as a whole. It establishes definitions of crimes, sets punishments, and outlines the rules governing the process of addressing criminal accusations.",
+    "source": "Model Penal Code"
+  }
+]

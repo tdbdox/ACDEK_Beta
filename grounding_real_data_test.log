@@ -1,0 +1,545 @@
+2025-04-18 18:34:05,593 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 18:34:05,629 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 18:34:05,630 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 18:34:05,630 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 18:34:05,632 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:05,632 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:34:05,632 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 18:34:05,686 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 18:34:05,686 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 18:34:13,021 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 7.39 seconds
+2025-04-18 18:34:13,747 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:13,747 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:13,747 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:13,830 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:13,830 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:13,830 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:13,908 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:13,909 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:13,909 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:13,909 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:13,909 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:34:13,925 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:13,925 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:13,925 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:13,939 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:13,939 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:13,939 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,014 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,014 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,015 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,015 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:14,015 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:34:14,096 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,096 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,096 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,176 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,176 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,176 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,283 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,284 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,284 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,284 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:14,284 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:34:14,692 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,692 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,693 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,707 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,707 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,707 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,787 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,787 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,787 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,787 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:14,787 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:34:14,868 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,868 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,868 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,884 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,884 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,884 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,899 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:14,899 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:14,899 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:14,899 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:14,900 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:34:15,051 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,051 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,051 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,128 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,128 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,128 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,204 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,204 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,205 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,205 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:15,206 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:34:15,591 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,592 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,592 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,669 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,669 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,669 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,684 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,684 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,684 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,684 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:15,685 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:34:15,700 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,700 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,701 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,780 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,780 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,780 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,794 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,794 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,795 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,795 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:34:15,795 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:34:15,810 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,810 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,810 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,897 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,897 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,897 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:34:15,985 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:34:15,985 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:34:15,985 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:15,811 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 18:35:15,843 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 18:35:15,844 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 18:35:15,844 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 18:35:15,845 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:15,846 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:35:15,846 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 18:35:15,867 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 18:35:15,867 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 18:35:27,873 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 12.03 seconds
+2025-04-18 18:35:28,342 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,342 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,344 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,439 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,439 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,439 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,534 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,534 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,534 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,534 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:28,535 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:35:28,551 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,551 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,551 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,567 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,567 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,567 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,650 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,651 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,651 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,651 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:28,651 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:35:28,740 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,740 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,740 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,830 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,830 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,831 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,928 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:28,929 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:28,929 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:28,929 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:28,929 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:35:29,214 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,214 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,215 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,228 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,229 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,229 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,308 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,308 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,308 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,308 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:29,309 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:35:29,391 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,391 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,391 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,405 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,405 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,405 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,420 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,420 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,420 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,420 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:29,420 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:35:29,503 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,504 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,504 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,578 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,578 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,578 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,653 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,653 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,653 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,653 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:29,654 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:35:29,841 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,841 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,841 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,924 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,925 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,925 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,940 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,940 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,941 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:29,941 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:29,941 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:35:29,957 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:29,957 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:29,957 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:30,040 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:30,040 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:30,040 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:30,054 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:30,054 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:30,054 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:30,055 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:30,055 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:35:30,070 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:30,070 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:30,071 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:30,148 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:30,149 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:30,149 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:30,233 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:30,233 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:30,233 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:44,848 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 18:35:44,883 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 18:35:44,883 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 18:35:44,884 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 18:35:44,885 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:44,885 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:35:44,885 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 18:35:44,908 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 18:35:44,908 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 18:35:46,639 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 1.75 seconds
+2025-04-18 18:35:47,014 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,014 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,014 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,093 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,093 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,093 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,164 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,165 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,165 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,165 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:47,165 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:35:47,181 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,181 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,181 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,196 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,196 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,196 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,269 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,270 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,270 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,270 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:47,270 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:35:47,351 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,351 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,351 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,424 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,424 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,424 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,500 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,500 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,500 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,500 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:47,501 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:35:47,711 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,711 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,711 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,725 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,725 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,726 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,801 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,802 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,802 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,802 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:47,802 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:35:47,882 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,882 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,882 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,897 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,897 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,897 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,911 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,911 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,911 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:47,911 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:47,912 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:35:47,993 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:47,993 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:47,993 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,070 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,070 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,070 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,147 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,147 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,148 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,148 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:48,149 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:35:48,333 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,333 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,333 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,415 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,415 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,416 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,430 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,431 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,431 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,431 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:48,431 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:35:48,445 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,446 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,446 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,526 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,526 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,526 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,541 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,541 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,542 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,542 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:35:48,542 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:35:48,558 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,558 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,558 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,642 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,642 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,642 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:35:48,730 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:35:48,730 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:35:48,731 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:24,001 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 18:36:24,032 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 18:36:24,033 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 18:36:24,034 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 18:36:24,035 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:24,035 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:36:24,035 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 18:36:24,059 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 18:36:24,059 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 18:36:25,870 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 1.84 seconds
+2025-04-18 18:36:26,308 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,308 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,310 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,389 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,389 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,389 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,460 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,460 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,461 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,461 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:26,461 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:36:26,476 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,476 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,476 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,492 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,492 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,492 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,566 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,566 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,566 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,566 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:26,566 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:36:26,647 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,647 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,647 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,719 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,719 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,719 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,795 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:26,795 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:26,795 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:26,795 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:26,796 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:36:27,006 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,006 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,006 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,020 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,020 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,020 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,096 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,096 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,096 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,096 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:27,096 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:36:27,177 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,177 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,177 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,191 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,191 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,192 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,206 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,207 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,207 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,207 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:27,207 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:36:27,289 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,289 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,289 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,365 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,365 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,365 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,439 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,439 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,439 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,439 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:27,440 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:36:27,626 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,626 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,626 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,704 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,704 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,704 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,719 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,719 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,719 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,719 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:27,719 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:36:27,734 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,734 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,734 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,837 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,837 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,837 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,851 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,851 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,851 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,851 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:27,852 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:36:27,867 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,867 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,867 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:27,949 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:27,949 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:27,949 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:28,033 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:28,033 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:28,033 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:57,499 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 18:36:57,526 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 18:36:57,527 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 18:36:57,528 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 18:36:57,529 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:57,529 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:36:57,529 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 18:36:57,564 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 18:36:57,564 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 18:36:59,231 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 1.70 seconds
+2025-04-18 18:36:59,635 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,635 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,635 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,636 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:36:59,636 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,636 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,636 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,717 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,717 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,718 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,718 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:59,718 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:36:59,733 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,733 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,734 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,734 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:36:59,734 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,734 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,734 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,810 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,810 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,810 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,810 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:59,811 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 18:36:59,892 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:36:59,892 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,892 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,892 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,893 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:36:59,893 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,893 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,893 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,968 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:36:59,968 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:36:59,968 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:36:59,968 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:36:59,968 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:37:00,215 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,215 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,215 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,291 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,291 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,291 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,371 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,371 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,371 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,371 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:37:00,371 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:37:00,453 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:37:00,453 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,453 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,453 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,468 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,468 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,468 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,482 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,482 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,482 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,482 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:37:00,482 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'legal'
+2025-04-18 18:37:00,562 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,563 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,563 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,637 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,638 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,638 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,713 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,713 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,713 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,713 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:37:00,714 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:37:00,892 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,893 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,893 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,972 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,972 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,972 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,973 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:37:00,973 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,973 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,973 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,973 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:37:00,973 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:37:00,988 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:37:00,988 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,988 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,988 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:00,989 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:37:00,989 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:00,989 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:00,989 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:01,069 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:01,069 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:01,069 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:01,069 - v3.grounding.grounding_engine - INFO - Reference cache cleared
+2025-04-18 18:37:01,069 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 18:37:01,085 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:01,085 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:01,085 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:01,086 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:37:01,086 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:01,086 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:01,086 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 18:37:01,086 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference
+2025-04-18 18:37:01,086 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 18:37:01,086 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 18:37:01,086 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00

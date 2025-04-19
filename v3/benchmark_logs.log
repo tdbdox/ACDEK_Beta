@@ -2403,3 +2403,283 @@ AttributeError: 'ConfidenceScore' object has no attribute 'timestamp'
 2025-04-18 14:36:30,054 - acdek.acdek_kernel - INFO - ACDEK run completed
 2025-04-18 14:36:30,054 - resilience.events - INFO - {'event': 'circuit_breaker', 'name': 'acdek_kernel', 'state': 'CLOSED', 'failure_count': 0}
 2025-04-18 14:36:30,055 - resilience.events - INFO - {'event': 'circuit_breaker', 'name': 'acdek_kernel', 'state': 'CLOSED', 'failure_count': 0}
+2025-04-18 19:45:45,270 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 19:45:45,304 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 19:45:45,304 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 19:45:45,305 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 19:45:45,308 - acdek_benchmark - INFO - Starting benchmark with 4 test cases
+2025-04-18 19:45:45,308 - acdek_benchmark - INFO - Running test case fin-001 (financial)
+2025-04-18 19:45:45,308 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 19:45:45,308 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 19:45:45,348 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 19:45:45,349 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 19:45:47,165 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 1.86 seconds
+2025-04-18 19:45:47,635 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:45:47,724 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:47,724 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:47,724 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:47,724 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:45:47,800 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:47,800 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:47,800 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:47,800 - acdek_benchmark - INFO - Completed test case fin-001
+2025-04-18 19:45:47,800 - acdek_benchmark - INFO - Raw factuality: 0.2276, ACDEK factuality: 0.1845
+2025-04-18 19:45:47,800 - acdek_benchmark - INFO - Improvement rate: 0.00%
+2025-04-18 19:45:47,800 - acdek_benchmark - INFO - Running test case fin-002 (financial)
+2025-04-18 19:45:48,300 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:48,300 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:48,300 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:48,609 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:48,609 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:48,610 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:48,610 - acdek_benchmark - INFO - Completed test case fin-002
+2025-04-18 19:45:48,610 - acdek_benchmark - INFO - Raw factuality: 0.6432, ACDEK factuality: 0.6873
+2025-04-18 19:45:48,610 - acdek_benchmark - INFO - Improvement rate: 6.86%
+2025-04-18 19:45:48,610 - acdek_benchmark - INFO - Running test case med-001 (medical)
+2025-04-18 19:45:48,610 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 19:45:48,838 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference: Response incorrectly claims diabetes can be completely cured
+2025-04-18 19:45:48,838 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:48,838 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:48,839 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:49,055 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:49,055 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:49,055 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:49,055 - acdek_benchmark - INFO - Completed test case med-001
+2025-04-18 19:45:49,055 - acdek_benchmark - INFO - Raw factuality: 0.3000, ACDEK factuality: 0.6304
+2025-04-18 19:45:49,055 - acdek_benchmark - INFO - Improvement rate: 110.15%
+2025-04-18 19:45:49,055 - acdek_benchmark - INFO - Running test case med-002 (medical)
+2025-04-18 19:45:49,147 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:49,147 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:49,147 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:49,162 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:45:49,163 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:45:49,163 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:45:49,163 - acdek_benchmark - INFO - Completed test case med-002
+2025-04-18 19:45:49,163 - acdek_benchmark - INFO - Raw factuality: 0.4779, ACDEK factuality: 0.6058
+2025-04-18 19:45:49,163 - acdek_benchmark - INFO - Improvement rate: 26.75%
+2025-04-18 19:45:49,164 - acdek_benchmark - INFO - Saved results to ./benchmarks/results/benchmark_results_20250418_194549.json
+2025-04-18 19:45:49,164 - acdek_benchmark - INFO - Saved summary to ./benchmarks/results/benchmark_summary_20250418_194549.json
+2025-04-18 19:46:24,064 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 19:46:24,091 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 19:46:24,092 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 19:46:24,092 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 19:46:24,095 - acdek_benchmark - INFO - Starting benchmark with 4 test cases
+2025-04-18 19:46:24,095 - acdek_benchmark - INFO - Running test case fin-001 (financial)
+2025-04-18 19:46:24,601 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 19:46:24,601 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 19:46:24,634 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 19:46:24,634 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 19:46:26,296 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 1.69 seconds
+2025-04-18 19:46:26,638 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:46:26,739 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:26,739 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:26,739 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:26,740 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:46:26,828 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:26,828 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:26,829 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:26,829 - acdek_benchmark - INFO - Completed test case fin-001
+2025-04-18 19:46:26,829 - acdek_benchmark - INFO - Raw factuality: 0.2276, ACDEK factuality: 0.1845
+2025-04-18 19:46:26,829 - acdek_benchmark - INFO - Improvement rate: 0.00%
+2025-04-18 19:46:26,829 - acdek_benchmark - INFO - Running test case fin-002 (financial)
+2025-04-18 19:46:27,504 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:27,504 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:27,504 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:27,585 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:27,585 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:27,585 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:27,585 - acdek_benchmark - INFO - Completed test case fin-002
+2025-04-18 19:46:27,585 - acdek_benchmark - INFO - Raw factuality: 0.6432, ACDEK factuality: 0.6873
+2025-04-18 19:46:27,585 - acdek_benchmark - INFO - Improvement rate: 6.86%
+2025-04-18 19:46:27,585 - acdek_benchmark - INFO - Running test case med-001 (medical)
+2025-04-18 19:46:28,093 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 19:46:28,364 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference: Response incorrectly claims diabetes can be completely cured
+2025-04-18 19:46:28,364 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:28,364 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:28,365 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:28,516 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:28,516 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:28,516 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:28,517 - acdek_benchmark - INFO - Completed test case med-001
+2025-04-18 19:46:28,517 - acdek_benchmark - INFO - Raw factuality: 0.3000, ACDEK factuality: 0.6304
+2025-04-18 19:46:28,517 - acdek_benchmark - INFO - Improvement rate: 110.15%
+2025-04-18 19:46:28,517 - acdek_benchmark - INFO - Running test case med-002 (medical)
+2025-04-18 19:46:29,129 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:29,129 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:29,129 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:29,145 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:46:29,145 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:46:29,145 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:46:29,145 - acdek_benchmark - INFO - Completed test case med-002
+2025-04-18 19:46:29,145 - acdek_benchmark - INFO - Raw factuality: 0.4779, ACDEK factuality: 0.6058
+2025-04-18 19:46:29,145 - acdek_benchmark - INFO - Improvement rate: 26.75%
+2025-04-18 19:46:29,147 - acdek_benchmark - INFO - Saved results to ./benchmarks/results/benchmark_results_20250418_194629.json
+2025-04-18 19:46:29,147 - acdek_benchmark - INFO - Saved summary to ./benchmarks/results/benchmark_summary_20250418_194629.json
+2025-04-18 19:46:56,509 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 19:46:56,539 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 19:46:56,539 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 19:46:56,540 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 19:46:56,542 - acdek_benchmark - INFO - Starting benchmark with 4 test cases
+2025-04-18 19:46:56,542 - acdek_benchmark - INFO - Running test case fin-001 (financial)
+2025-04-18 19:46:57,049 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 19:46:57,049 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 19:46:57,089 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 19:46:57,089 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 19:47:02,316 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 5.27 seconds
+2025-04-18 19:47:02,701 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:47:02,808 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:02,808 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:02,808 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:02,809 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:47:02,884 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:02,884 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:02,884 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:02,885 - acdek_benchmark - INFO - Completed test case fin-001
+2025-04-18 19:47:02,885 - acdek_benchmark - INFO - Raw factuality: 0.2276, ACDEK factuality: 0.1845
+2025-04-18 19:47:02,885 - acdek_benchmark - INFO - Improvement rate: 0.00%
+2025-04-18 19:47:02,885 - acdek_benchmark - INFO - Running test case fin-002 (financial)
+2025-04-18 19:47:03,555 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:03,555 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:03,555 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:03,637 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:03,637 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:03,637 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:03,637 - acdek_benchmark - INFO - Completed test case fin-002
+2025-04-18 19:47:03,637 - acdek_benchmark - INFO - Raw factuality: 0.6432, ACDEK factuality: 0.6873
+2025-04-18 19:47:03,637 - acdek_benchmark - INFO - Improvement rate: 6.86%
+2025-04-18 19:47:03,637 - acdek_benchmark - INFO - Running test case med-001 (medical)
+2025-04-18 19:47:04,145 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 19:47:04,391 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference: Response incorrectly claims diabetes can be completely cured
+2025-04-18 19:47:04,391 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:04,391 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:04,392 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:04,474 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:04,474 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:04,474 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:04,474 - acdek_benchmark - INFO - Completed test case med-001
+2025-04-18 19:47:04,474 - acdek_benchmark - INFO - Raw factuality: 0.3000, ACDEK factuality: 0.6304
+2025-04-18 19:47:04,474 - acdek_benchmark - INFO - Improvement rate: 110.15%
+2025-04-18 19:47:04,474 - acdek_benchmark - INFO - Running test case med-002 (medical)
+2025-04-18 19:47:05,092 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:05,092 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:05,092 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:05,108 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:47:05,108 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:47:05,108 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:47:05,108 - acdek_benchmark - INFO - Completed test case med-002
+2025-04-18 19:47:05,108 - acdek_benchmark - INFO - Raw factuality: 0.4779, ACDEK factuality: 0.6058
+2025-04-18 19:47:05,108 - acdek_benchmark - INFO - Improvement rate: 26.75%
+2025-04-18 19:47:05,110 - acdek_benchmark - INFO - Saved results to ./benchmarks/results/benchmark_results_20250418_194705.json
+2025-04-18 19:47:05,110 - acdek_benchmark - INFO - Saved summary to ./benchmarks/results/benchmark_summary_20250418_194705.json
+2025-04-18 19:48:18,206 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 19:48:18,235 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 19:48:18,235 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 19:48:18,236 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 19:48:18,239 - acdek_benchmark - INFO - Starting benchmark with 4 test cases
+2025-04-18 19:48:18,239 - acdek_benchmark - INFO - Running test case fin-001 (financial)
+2025-04-18 19:48:18,745 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 19:48:18,745 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 19:48:18,778 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 19:48:18,778 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 19:48:20,667 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 1.92 seconds
+2025-04-18 19:48:20,968 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:48:21,045 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:21,045 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:21,045 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:21,046 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:48:21,109 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:21,109 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:21,109 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:21,109 - acdek_benchmark - INFO - Completed test case fin-001
+2025-04-18 19:48:21,109 - acdek_benchmark - INFO - Raw factuality: 0.2276, ACDEK factuality: 0.1845
+2025-04-18 19:48:21,109 - acdek_benchmark - INFO - Improvement rate: 0.00%
+2025-04-18 19:48:21,109 - acdek_benchmark - INFO - Running test case fin-002 (financial)
+2025-04-18 19:48:21,766 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:21,766 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:21,766 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:21,835 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:21,835 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:21,835 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:21,835 - acdek_benchmark - INFO - Completed test case fin-002
+2025-04-18 19:48:21,835 - acdek_benchmark - INFO - Raw factuality: 0.6432, ACDEK factuality: 0.6873
+2025-04-18 19:48:21,835 - acdek_benchmark - INFO - Improvement rate: 6.86%
+2025-04-18 19:48:21,835 - acdek_benchmark - INFO - Running test case med-001 (medical)
+2025-04-18 19:48:22,342 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 19:48:22,544 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference: Response incorrectly claims diabetes can be completely cured
+2025-04-18 19:48:22,544 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:22,544 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:22,544 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:22,617 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:22,617 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:22,617 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:22,617 - acdek_benchmark - INFO - Completed test case med-001
+2025-04-18 19:48:22,617 - acdek_benchmark - INFO - Raw factuality: 0.3000, ACDEK factuality: 0.6304
+2025-04-18 19:48:22,617 - acdek_benchmark - INFO - Improvement rate: 110.15%
+2025-04-18 19:48:22,617 - acdek_benchmark - INFO - Running test case med-002 (medical)
+2025-04-18 19:48:23,221 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:23,221 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:23,221 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:23,235 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:23,235 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:23,235 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:23,236 - acdek_benchmark - INFO - Completed test case med-002
+2025-04-18 19:48:23,236 - acdek_benchmark - INFO - Raw factuality: 0.4779, ACDEK factuality: 0.6058
+2025-04-18 19:48:23,236 - acdek_benchmark - INFO - Improvement rate: 26.75%
+2025-04-18 19:48:23,237 - acdek_benchmark - INFO - Saved results to ./benchmarks/results/benchmark_results_20250418_194823.json
+2025-04-18 19:48:23,237 - acdek_benchmark - INFO - Saved summary to ./benchmarks/results/benchmark_summary_20250418_194823.json
+2025-04-18 19:48:27,013 - registry.plugin_registry - INFO - Plugin registry initialized
+2025-04-18 19:48:27,040 - storage.vector_store.embed_utils - INFO - No disk cache found for version 1.3.0, starting with empty cache
+2025-04-18 19:48:27,040 - storage.vector_store.embed_utils - INFO - Initialized embedding cache v1.3.0 (max_size=10000, ttl=86400s, method=SignatureMethod.ADAPTIVE)
+2025-04-18 19:48:27,041 - registry.plugin_registry - INFO - Registered plugin: <Plugin: sentence_transformer_aligner (vector_alignment) v1.3.0>
+2025-04-18 19:48:27,043 - acdek_benchmark - INFO - Starting benchmark with 4 test cases
+2025-04-18 19:48:27,043 - acdek_benchmark - INFO - Running test case fin-001 (financial)
+2025-04-18 19:48:27,550 - v3.grounding.grounding_engine - INFO - Loaded 15 reference entries for domain 'financial'
+2025-04-18 19:48:27,550 - storage.vector_store.embed_utils - INFO - Loading embedding model: all-MiniLM-L6-v2
+2025-04-18 19:48:27,587 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: mps
+2025-04-18 19:48:27,587 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-04-18 19:48:33,529 - storage.vector_store.embed_utils - INFO - Model all-MiniLM-L6-v2 loaded in 5.98 seconds
+2025-04-18 19:48:33,789 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:48:33,865 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:33,865 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:33,865 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:33,866 - v3.grounding.grounding_engine - WARNING - No matching references found for domain 'financial'. Using first reference as fallback.
+2025-04-18 19:48:33,928 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:33,928 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:33,928 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:33,929 - acdek_benchmark - INFO - Completed test case fin-001
+2025-04-18 19:48:33,929 - acdek_benchmark - INFO - Raw factuality: 0.2276, ACDEK factuality: 0.1845
+2025-04-18 19:48:33,929 - acdek_benchmark - INFO - Improvement rate: 0.00%
+2025-04-18 19:48:33,929 - acdek_benchmark - INFO - Running test case fin-002 (financial)
+2025-04-18 19:48:34,585 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:34,585 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:34,585 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:34,651 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:34,652 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:34,652 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:34,652 - acdek_benchmark - INFO - Completed test case fin-002
+2025-04-18 19:48:34,652 - acdek_benchmark - INFO - Raw factuality: 0.6432, ACDEK factuality: 0.6873
+2025-04-18 19:48:34,652 - acdek_benchmark - INFO - Improvement rate: 6.86%
+2025-04-18 19:48:34,652 - acdek_benchmark - INFO - Running test case med-001 (medical)
+2025-04-18 19:48:35,159 - v3.grounding.grounding_engine - INFO - Loaded 10 reference entries for domain 'medical'
+2025-04-18 19:48:35,359 - v3.grounding.grounding_engine - INFO - Detected contradiction between response and reference: Response incorrectly claims diabetes can be completely cured
+2025-04-18 19:48:35,360 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:35,360 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:35,360 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:35,429 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:35,429 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:35,429 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:35,429 - acdek_benchmark - INFO - Completed test case med-001
+2025-04-18 19:48:35,429 - acdek_benchmark - INFO - Raw factuality: 0.3000, ACDEK factuality: 0.6304
+2025-04-18 19:48:35,429 - acdek_benchmark - INFO - Improvement rate: 110.15%
+2025-04-18 19:48:35,429 - acdek_benchmark - INFO - Running test case med-002 (medical)
+2025-04-18 19:48:36,033 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:36,034 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:36,034 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:36,048 - enrichment.constraint_verifier - INFO - Loaded 0 validators with 0 total constraints
+2025-04-18 19:48:36,048 - enrichment.constraint_verifier - INFO - Initialized ConstraintVerifier with 0 validators in strict mode
+2025-04-18 19:48:36,048 - enrichment.constraint_verifier - INFO - Constraint validation completed: passed=True, confidence=0.00
+2025-04-18 19:48:36,048 - acdek_benchmark - INFO - Completed test case med-002
+2025-04-18 19:48:36,048 - acdek_benchmark - INFO - Raw factuality: 0.4779, ACDEK factuality: 0.6058
+2025-04-18 19:48:36,048 - acdek_benchmark - INFO - Improvement rate: 26.75%
+2025-04-18 19:48:36,050 - acdek_benchmark - INFO - Saved results to ./benchmarks/results/benchmark_results_20250418_194836.json
+2025-04-18 19:48:36,050 - acdek_benchmark - INFO - Saved summary to ./benchmarks/results/benchmark_summary_20250418_194836.json
