@@ -5,6 +5,7 @@ Provides context managers and aggregators for latency and retry metrics.
 """
 import time
 from contextlib import contextmanager
+from typing import Dict, Any
 
 @contextmanager
 def latency_timer(metric_name: str, metrics: Dict[str, float]):  # type: ignore

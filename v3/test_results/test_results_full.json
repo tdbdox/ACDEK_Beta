@@ -1,0 +1,738 @@
+{
+  "results": [
+    {
+      "case_id": "leg-001",
+      "domain": "legal",
+      "execution_time": 0.0022058486938476562,
+      "request": {
+        "prompt": "What are the key elements required for a valid contract?",
+        "context": {
+          "request_id": "constant_load_0_1745011956"
+        },
+        "parameters": {
+          "confidence_threshold": 0.7,
+          "domain": "legal"
+        }
+      },
+      "response": {
+        "enrichment": {
+          "success": false,
+          "data": {
+            "prompt": "What are the key elements required for a valid contract?",
+            "context": {
+              "request_id": "constant_load_0_1745011956"
+            },
+            "parameters": {
+              "confidence_threshold": 0.7,
+              "domain": "legal"
+            }
+          },
+          "errors": {
+            "vector_alignment": "Stage 'vector_alignment' does not have a valid processing method",
+            "ar_enrichment": "Dependency 'vector_alignment' failed"
+          },
+          "metrics": {
+            "timing": {
+              "vector_alignment": 0.00017976760864257812,
+              "total": 0.0009400844573974609
+            }
+          },
+          "stage_results": {},
+          "fallback_depth": 0,
+          "fallback_penalty": 0.0
+        },
+        "constraints": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 6.198883056640625e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745011956430",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "confidence": {
+          "aggregate_score": 0.8,
+          "factors": {},
+          "metadata": {},
+          "timestamp": 1745011956.430521
+        },
+        "timing": {
+          "enrichment": 0.0010678768157958984,
+          "constraint": 0.0,
+          "confidence": 0.0,
+          "total": 0.0
+        },
+        "request_id": "constant_load_0_1745011956",
+        "config": {}
+      },
+      "hallucination_issues": [
+        {
+          "id": "missing_fact_0_1745011956",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: A valid contract typically requires offer, acceptance, consideration, capacity, and legality.",
+          "evidence": "A valid contract typically requires offer, acceptance, consideration, capacity, and legality.",
+          "confidence": 0.9290346950292587,
+          "metadata": {
+            "fact_index": 0,
+            "best_match_score": 0.07096530497074127,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_1_1745011956",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Consideration refers to something of value exchanged between parties.",
+          "evidence": "Consideration refers to something of value exchanged between parties.",
+          "confidence": 0.966212797909975,
+          "metadata": {
+            "fact_index": 1,
+            "best_match_score": 0.03378720209002495,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_2_1745011956",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Capacity means parties must be legally capable of entering into contracts.",
+          "evidence": "Capacity means parties must be legally capable of entering into contracts.",
+          "confidence": 0.9725620187819004,
+          "metadata": {
+            "fact_index": 2,
+            "best_match_score": 0.027437981218099594,
+            "best_match_chunk": "<simulated response>"
+          }
+        }
+      ],
+      "hallucination_score": 0.8000000000000002,
+      "performance_metrics": {
+        "total_time_ms": 2.2058486938476562,
+        "enrichment_time_ms": 1.0678768157958984,
+        "constraint_time_ms": 0.0,
+        "confidence_time_ms": 0.0,
+        "confidence_score": 0.8
+      }
+    },
+    {
+      "case_id": "sci-001",
+      "domain": "scientific",
+      "execution_time": 0.002534151077270508,
+      "request": {
+        "prompt": "Explain how quantum computers work compared to classical computers.",
+        "context": {
+          "request_id": "constant_load_1_1745011957"
+        },
+        "parameters": {
+          "confidence_threshold": 0.7,
+          "domain": "scientific"
+        }
+      },
+      "response": {
+        "enrichment": {
+          "success": false,
+          "data": {
+            "prompt": "Explain how quantum computers work compared to classical computers.",
+            "context": {
+              "request_id": "constant_load_1_1745011957"
+            },
+            "parameters": {
+              "confidence_threshold": 0.7,
+              "domain": "scientific"
+            }
+          },
+          "errors": {
+            "vector_alignment": "Stage 'vector_alignment' does not have a valid processing method",
+            "ar_enrichment": "Dependency 'vector_alignment' failed"
+          },
+          "metrics": {
+            "timing": {
+              "vector_alignment": 0.0002601146697998047,
+              "total": 0.0009739398956298828
+            }
+          },
+          "stage_results": {},
+          "fallback_depth": 0,
+          "fallback_penalty": 0.0
+        },
+        "constraints": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 1.3828277587890625e-05,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745011957434",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "confidence": {
+          "aggregate_score": 0.8,
+          "factors": {},
+          "metadata": {},
+          "timestamp": 1745011957.434913
+        },
+        "timing": {
+          "enrichment": 0.001196146011352539,
+          "constraint": 0.0,
+          "confidence": 0.0,
+          "total": 0.0
+        },
+        "request_id": "constant_load_1_1745011957",
+        "config": {}
+      },
+      "hallucination_issues": [
+        {
+          "id": "missing_fact_0_1745011957",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Quantum computers use qubits that can exist in multiple states simultaneously due to superposition.",
+          "evidence": "Quantum computers use qubits that can exist in multiple states simultaneously due to superposition.",
+          "confidence": 0.899530403316021,
+          "metadata": {
+            "fact_index": 0,
+            "best_match_score": 0.10046959668397903,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_1_1745011957",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Classical computers use bits that can only be in one state (0 or 1) at a time.",
+          "evidence": "Classical computers use bits that can only be in one state (0 or 1) at a time.",
+          "confidence": 0.9087574705481529,
+          "metadata": {
+            "fact_index": 1,
+            "best_match_score": 0.09124252945184708,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_2_1745011957",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Quantum computers leverage entanglement and interference to perform calculations.",
+          "evidence": "Quantum computers leverage entanglement and interference to perform calculations.",
+          "confidence": 0.912799172103405,
+          "metadata": {
+            "fact_index": 2,
+            "best_match_score": 0.087200827896595,
+            "best_match_chunk": "<simulated response>"
+          }
+        }
+      ],
+      "hallucination_score": 0.8000000000000002,
+      "performance_metrics": {
+        "total_time_ms": 2.534151077270508,
+        "enrichment_time_ms": 1.196146011352539,
+        "constraint_time_ms": 0.0,
+        "confidence_time_ms": 0.0,
+        "confidence_score": 0.8
+      }
+    },
+    {
+      "case_id": "fin-001",
+      "domain": "financial",
+      "execution_time": 0.0029168128967285156,
+      "request": {
+        "prompt": "What is dollar-cost averaging and how does it work for investing?",
+        "context": {
+          "request_id": "constant_load_2_1745011958"
+        },
+        "parameters": {
+          "confidence_threshold": 0.7,
+          "domain": "financial"
+        }
+      },
+      "response": {
+        "enrichment": {
+          "success": false,
+          "data": {
+            "prompt": "What is dollar-cost averaging and how does it work for investing?",
+            "context": {
+              "request_id": "constant_load_2_1745011958"
+            },
+            "parameters": {
+              "confidence_threshold": 0.7,
+              "domain": "financial"
+            }
+          },
+          "errors": {
+            "vector_alignment": "Stage 'vector_alignment' does not have a valid processing method",
+            "ar_enrichment": "Dependency 'vector_alignment' failed"
+          },
+          "metrics": {
+            "timing": {
+              "vector_alignment": 0.0001819133758544922,
+              "total": 0.0007128715515136719
+            }
+          },
+          "stage_results": {},
+          "fallback_depth": 0,
+          "fallback_penalty": 0.0
+        },
+        "constraints": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 1.1920928955078125e-05,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745011958433",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "confidence": {
+          "aggregate_score": 0.8,
+          "factors": {},
+          "metadata": {},
+          "timestamp": 1745011958.4336839
+        },
+        "timing": {
+          "enrichment": 0.0011408329010009766,
+          "constraint": 0.0,
+          "confidence": 0.0,
+          "total": 0.0
+        },
+        "request_id": "constant_load_2_1745011958",
+        "config": {}
+      },
+      "hallucination_issues": [
+        {
+          "id": "missing_fact_0_1745011958",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Dollar-cost averaging is investing a fixed amount at regular intervals regardless of market price.",
+          "evidence": "Dollar-cost averaging is investing a fixed amount at regular intervals regardless of market price.",
+          "confidence": 0.9525571726262569,
+          "metadata": {
+            "fact_index": 0,
+            "best_match_score": 0.04744282737374306,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_1_1745011958",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: It may reduce the impact of volatility on investments.",
+          "evidence": "It may reduce the impact of volatility on investments.",
+          "confidence": 0.9125762432813644,
+          "metadata": {
+            "fact_index": 1,
+            "best_match_score": 0.08742375671863556,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_2_1745011958",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: It doesn't guarantee profits or protect against losses in declining markets.",
+          "evidence": "It doesn't guarantee profits or protect against losses in declining markets.",
+          "confidence": 1.0,
+          "metadata": {
+            "fact_index": 2,
+            "best_match_score": 0.0,
+            "best_match_chunk": null
+          }
+        }
+      ],
+      "hallucination_score": 0.8000000000000002,
+      "performance_metrics": {
+        "total_time_ms": 2.9168128967285156,
+        "enrichment_time_ms": 1.1408329010009766,
+        "constraint_time_ms": 0.0,
+        "confidence_time_ms": 0.0,
+        "confidence_score": 0.8
+      }
+    },
+    {
+      "case_id": "gen-001",
+      "domain": "general",
+      "execution_time": 0.002521038055419922,
+      "request": {
+        "prompt": "What are effective strategies for improving productivity when working from home?",
+        "context": {
+          "request_id": "constant_load_3_1745011959"
+        },
+        "parameters": {
+          "confidence_threshold": 0.7,
+          "domain": "general"
+        }
+      },
+      "response": {
+        "enrichment": {
+          "success": false,
+          "data": {
+            "prompt": "What are effective strategies for improving productivity when working from home?",
+            "context": {
+              "request_id": "constant_load_3_1745011959"
+            },
+            "parameters": {
+              "confidence_threshold": 0.7,
+              "domain": "general"
+            }
+          },
+          "errors": {
+            "vector_alignment": "Stage 'vector_alignment' does not have a valid processing method",
+            "ar_enrichment": "Dependency 'vector_alignment' failed"
+          },
+          "metrics": {
+            "timing": {
+              "vector_alignment": 0.0002601146697998047,
+              "total": 0.0009090900421142578
+            }
+          },
+          "stage_results": {},
+          "fallback_depth": 0,
+          "fallback_penalty": 0.0
+        },
+        "constraints": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 8.821487426757812e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745011959433",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "confidence": {
+          "aggregate_score": 0.8,
+          "factors": {},
+          "metadata": {},
+          "timestamp": 1745011959.433623
+        },
+        "timing": {
+          "enrichment": 0.0010790824890136719,
+          "constraint": 0.0,
+          "confidence": 0.0,
+          "total": 0.0
+        },
+        "request_id": "constant_load_3_1745011959",
+        "config": {}
+      },
+      "hallucination_issues": [
+        {
+          "id": "missing_fact_0_1745011959",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Effective work-from-home strategies include creating a dedicated workspace, establishing routines, and taking regular breaks.",
+          "evidence": "Effective work-from-home strategies include creating a dedicated workspace, establishing routines, and taking regular breaks.",
+          "confidence": 1.0,
+          "metadata": {
+            "fact_index": 0,
+            "best_match_score": 0.0,
+            "best_match_chunk": null
+          }
+        },
+        {
+          "id": "missing_fact_1_1745011959",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Time management techniques like Pomodoro can help maintain focus.",
+          "evidence": "Time management techniques like Pomodoro can help maintain focus.",
+          "confidence": 0.9542888402938843,
+          "metadata": {
+            "fact_index": 1,
+            "best_match_score": 0.04571115970611572,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_2_1745011959",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Different strategies work for different people.",
+          "evidence": "Different strategies work for different people.",
+          "confidence": 0.8878618404269218,
+          "metadata": {
+            "fact_index": 2,
+            "best_match_score": 0.11213815957307816,
+            "best_match_chunk": "<simulated response>"
+          }
+        }
+      ],
+      "hallucination_score": 0.8000000000000002,
+      "performance_metrics": {
+        "total_time_ms": 2.521038055419922,
+        "enrichment_time_ms": 1.0790824890136719,
+        "constraint_time_ms": 0.0,
+        "confidence_time_ms": 0.0,
+        "confidence_score": 0.8
+      }
+    },
+    {
+      "case_id": "sci-001",
+      "domain": "scientific",
+      "execution_time": 0.0023729801177978516,
+      "request": {
+        "prompt": "Explain how quantum computers work compared to classical computers.",
+        "context": {
+          "request_id": "constant_load_4_1745011960"
+        },
+        "parameters": {
+          "confidence_threshold": 0.7,
+          "domain": "scientific"
+        }
+      },
+      "response": {
+        "enrichment": {
+          "success": false,
+          "data": {
+            "prompt": "Explain how quantum computers work compared to classical computers.",
+            "context": {
+              "request_id": "constant_load_4_1745011960"
+            },
+            "parameters": {
+              "confidence_threshold": 0.7,
+              "domain": "scientific"
+            }
+          },
+          "errors": {
+            "vector_alignment": "Stage 'vector_alignment' does not have a valid processing method",
+            "ar_enrichment": "Dependency 'vector_alignment' failed"
+          },
+          "metrics": {
+            "timing": {
+              "vector_alignment": 0.0002529621124267578,
+              "total": 0.0010738372802734375
+            }
+          },
+          "stage_results": {},
+          "fallback_depth": 0,
+          "fallback_penalty": 0.0
+        },
+        "constraints": {
+          "passed": true,
+          "aggregate_confidence": 0.0,
+          "total_constraints": 0,
+          "passed_constraints": 0,
+          "failed_constraints": 0,
+          "execution_time": 8.821487426757812e-06,
+          "assertion_results": [],
+          "metadata": {
+            "attestation": {
+              "request_id": "val_1745011960434",
+              "integrity_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+              "execution_path": [],
+              "attestation_count": 0
+            }
+          }
+        },
+        "confidence": {
+          "aggregate_score": 0.8,
+          "factors": {},
+          "metadata": {},
+          "timestamp": 1745011960.4348428
+        },
+        "timing": {
+          "enrichment": 0.0012671947479248047,
+          "constraint": 0.0,
+          "confidence": 0.0,
+          "total": 0.0
+        },
+        "request_id": "constant_load_4_1745011960",
+        "config": {}
+      },
+      "hallucination_issues": [
+        {
+          "id": "missing_fact_0_1745011960",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Quantum computers use qubits that can exist in multiple states simultaneously due to superposition.",
+          "evidence": "Quantum computers use qubits that can exist in multiple states simultaneously due to superposition.",
+          "confidence": 0.899530403316021,
+          "metadata": {
+            "fact_index": 0,
+            "best_match_score": 0.10046959668397903,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_1_1745011960",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Classical computers use bits that can only be in one state (0 or 1) at a time.",
+          "evidence": "Classical computers use bits that can only be in one state (0 or 1) at a time.",
+          "confidence": 0.9087574705481529,
+          "metadata": {
+            "fact_index": 1,
+            "best_match_score": 0.09124252945184708,
+            "best_match_chunk": "<simulated response>"
+          }
+        },
+        {
+          "id": "missing_fact_2_1745011960",
+          "type": "factual_error",
+          "severity": 0.8,
+          "span": [
+            0,
+            20
+          ],
+          "text": "Missing fact: Quantum computers leverage entanglement and interference to perform calculations.",
+          "evidence": "Quantum computers leverage entanglement and interference to perform calculations.",
+          "confidence": 0.912799172103405,
+          "metadata": {
+            "fact_index": 2,
+            "best_match_score": 0.087200827896595,
+            "best_match_chunk": "<simulated response>"
+          }
+        }
+      ],
+      "hallucination_score": 0.8000000000000002,
+      "performance_metrics": {
+        "total_time_ms": 2.3729801177978516,
+        "enrichment_time_ms": 1.2671947479248047,
+        "constraint_time_ms": 0.0,
+        "confidence_time_ms": 0.0,
+        "confidence_score": 0.8
+      }
+    }
+  ],
+  "summary": {
+    "execution": {
+      "total_tests": 5,
+      "success_count": 5,
+      "error_count": 0,
+      "success_rate": 1.0
+    },
+    "timing": {
+      "avg_execution_time_ms": 2.5101661682128906,
+      "median_execution_time_ms": 2.521038055419922,
+      "std_dev_execution_time_ms": 0.26338383266580623,
+      "p95_execution_time_ms": 2.9168128967285156,
+      "p99_execution_time_ms": 2.9168128967285156
+    },
+    "hallucination": {
+      "avg_hallucination_score": 0.8000000000000002,
+      "hallucination_count": 5,
+      "hallucination_rate": 1.0
+    },
+    "domain_metrics": {
+      "legal": {
+        "count": 1,
+        "avg_execution_time_ms": 2.2058486938476562,
+        "avg_hallucination_score": 0.8000000000000002,
+        "hallucination_rate": 1.0
+      },
+      "general": {
+        "count": 1,
+        "avg_execution_time_ms": 2.521038055419922,
+        "avg_hallucination_score": 0.8000000000000002,
+        "hallucination_rate": 1.0
+      },
+      "financial": {
+        "count": 1,
+        "avg_execution_time_ms": 2.9168128967285156,
+        "avg_hallucination_score": 0.8000000000000002,
+        "hallucination_rate": 1.0
+      },
+      "scientific": {
+        "count": 2,
+        "avg_execution_time_ms": 2.4535655975341797,
+        "avg_hallucination_score": 0.8000000000000002,
+        "hallucination_rate": 1.0
+      }
+    },
+    "performance": {
+      "max_concurrency": 1,
+      "total_requests": 5,
+      "requests_per_second": 398.38000075984957,
+      "success_rate": 1.0,
+      "error_rate": 0.0
+    },
+    "success_criteria": {
+      "performance_overhead_success": true,
+      "hallucination_reduction_success": false,
+      "overall_success": false
+    }
+  },
+  "bottlenecks": []
+}

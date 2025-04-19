@@ -8,11 +8,24 @@ from typing import Dict, List, Any, Optional, Tuple, Union, Set
 from dataclasses import dataclass, field
 from collections import deque, defaultdict
 from datetime import datetime, timedelta
+from enum import Enum
 
 from registry.registry_types import PluginType
 from registry.plugin_registry import register_plugin
 from interfaces.vector_alignment_interface import VectorAlignmentInterface
 from interfaces.enrichment_interface import EnrichmentInterface
+
+# For hallucination metrics integration
+try:
+    from enrichment.hallucination_metrics import DriftSeverity
+except ImportError:
+    # Define locally if module not available
+    class DriftSeverity(Enum):
+        """Severity level for semantic drift."""
+        NONE = "none"
+        MINOR = "minor"
+        MODERATE = "moderate"
+        SEVERE = "severe"
 
 logger = logging.getLogger(__name__)
 
@@ -566,6 +579,9 @@ class SemanticDriftDetector(EnrichmentInterface[Dict[str, Any], DriftStats]):
         # Volatility - measure how much the drift score changes
         volatility = self._calculate_volatility(category)
         
+        # Determine drift severity for hallucination metrics integration
+        drift_severity = self._get_drift_severity(drift_score)
+        
         # Create or update category stats
         self.category_stats[category] = CategoryStats(
             category=category,
@@ -591,9 +607,72 @@ class SemanticDriftDetector(EnrichmentInterface[Dict[str, Any], DriftStats]):
                 "novelty_count": len(self.novelty_vectors[category]),
                 "temporal_stability": temporal_stability,
                 "volatility": volatility,
-                "reference_age": time.time() - self.reference_timestamps.get(category, time.time())
+                "reference_age": time.time() - self.reference_timestamps.get(category, time.time()),
+                "drift_severity": drift_severity.value,  # For hallucination metrics integration
+                "drifted_segments": self._identify_drifted_segments(category, recent, distances)
             }
         )
+        
+    def _get_drift_severity(self, drift_score: float) -> DriftSeverity:
+        """
+        Map the drift score to a severity level for hallucination metrics integration.
+        
+        Args:
+            drift_score: The calculated drift score (0.0-1.0)
+            
+        Returns:
+            DriftSeverity enum value
+        """
+        if drift_score < 0.2:
+            return DriftSeverity.NONE
+        elif drift_score < 0.4:
+            return DriftSeverity.MINOR
+        elif drift_score < 0.6:
+            return DriftSeverity.MODERATE
+        else:
+            return DriftSeverity.SEVERE
+    
+    def _identify_drifted_segments(
+        self, 
+        category: str, 
+        recent_vectors: List[np.ndarray],
+        distances: List[float]
+    ) -> List[Dict[str, Any]]:
+        """
+        Identify segments that have drifted from the reference.
+        This method supports hallucination detection by locating specific
+        drift boundaries in the content.
+        
+        Args:
+            category: Category to analyze
+            recent_vectors: List of recent vectors to analyze
+            distances: Pre-calculated distances from reference
+            
+        Returns:
+            List of drifted segments with metadata
+        """
+        drifted_segments = []
+        
+        # Use a sliding window to identify sustained drift
+        window_size = 3  # Default window size for drift detection
+        
+        if len(distances) > window_size:
+            for i in range(len(distances) - window_size + 1):
+                window = distances[i:i+window_size]
+                avg_distance = sum(window) / len(window)
+                
+                # If average distance in window exceeds threshold, this is a drift boundary
+                if avg_distance > self.drift_threshold:
+                    # In a real system, we would have metadata about text positions
+                    # For this implementation we use indices as placeholders
+                    drifted_segments.append({
+                        "start_idx": i,
+                        "end_idx": i + window_size - 1,
+                        "drift_score": avg_distance,
+                        "severity": self._get_drift_severity(avg_distance).value
+                    })
+        
+        return drifted_segments
     
     def _calculate_temporal_stability(self, category: str) -> float:
         """
@@ -820,6 +899,54 @@ class SemanticDriftDetector(EnrichmentInterface[Dict[str, Any], DriftStats]):
             "cosine_distance": cosine_distance,
             "euclidean_distance": euclidean_distance,
             "drift_detected": distance > self.drift_threshold
+        }
+    
+    def get_hallucination_drift_result(self, drift_stats: DriftStats) -> Dict[str, Any]:
+        """
+        Convert drift statistics to a format compatible with hallucination metrics.
+        This allows the drift detector to integrate with the hallucination metrics system.
+        
+        Args:
+            drift_stats: Drift statistics to convert
+            
+        Returns:
+            Dictionary formatted for hallucination metrics integration
+        """
+        try:
+            # Extract drift severity from details
+            severity_value = drift_stats.details.get("drift_severity", DriftSeverity.NONE.value)
+            severity = DriftSeverity(severity_value)
+        except (ValueError, KeyError):
+            # Default to NONE if there's an error
+            severity = DriftSeverity.NONE
+        
+        # Extract drifted segments
+        drifted_segments = drift_stats.details.get("drifted_segments", [])
+        
+        # Convert to the format expected by hallucination metrics
+        formatted_segments = []
+        for segment in drifted_segments:
+            formatted_segments.append((
+                segment.get("start_idx", 0),
+                segment.get("end_idx", 0),
+                segment.get("drift_score", 0.0)
+            ))
+        
+        # Determine boundary position (first major drift point)
+        boundary_position = None
+        if drifted_segments:
+            boundary_position = drifted_segments[0].get("start_idx", None)
+        
+        # Format in hallucination metrics structure
+        return {
+            "severity": severity.value,
+            "boundary_position": boundary_position,
+            "drift_score": drift_stats.drift_score,
+            "original_context_similarity": 1.0 - drift_stats.drift_score,
+            "drifted_segments": [
+                {"start": start, "end": end, "score": score}
+                for start, end, score in formatted_segments
+            ]
         }
     
     def _save(self) -> bool:

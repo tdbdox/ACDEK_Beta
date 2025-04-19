@@ -87,3 +87,48 @@ def log_fallback_event(
         logger.info(payload)
     else:
         logger.info(payload)
+
+def log_constraint_event(
+    event_type: str,
+    validator: str,
+    constraint: str,
+    passed: bool = None,
+    confidence: float = None,
+    message: str = None,
+    metadata: dict = None
+) -> None:
+    """
+    Log constraint verification events.
+    
+    Args:
+        event_type: Type of event (e.g., 'constraint_validation', 'cache_hit')
+        validator: ID of the validator
+        constraint: ID of the constraint
+        passed: Whether the constraint check passed (optional)
+        confidence: Confidence score for the validation (optional)
+        message: Description message (optional)
+        metadata: Additional metadata (optional)
+    """
+    payload = {
+        "event": "constraint",
+        "constraint_event": event_type,
+        "validator": validator,
+        "constraint": constraint,
+    }
+    
+    if passed is not None:
+        payload["passed"] = passed
+    if confidence is not None:
+        payload["confidence"] = confidence
+    if message is not None:
+        payload["message"] = message
+    if metadata is not None:
+        payload.update(metadata)
+        
+    if _OTEL_AVAILABLE:
+        with _tracer.start_as_current_span("constraint") as span:
+            for k, v in payload.items():
+                span.set_attribute(k, v)
+        logger.info(payload)
+    else:
+        logger.info(payload)

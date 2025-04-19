@@ -30,3 +30,26 @@ class TelemetryServer:
         """Stop the telemetry server."""
         self._server.shutdown()
         self._thread.join()
+
+class TelemetryClient:
+    """Client for sending telemetry data."""
+    def __init__(self):
+        self.server = None
+    
+    def create_span(self, name, attributes=None):
+        """Create a new span for tracing."""
+        class DummySpan:
+            def __enter__(self):
+                return self
+            
+            def __exit__(self, exc_type, exc_val, exc_tb):
+                pass
+        
+        return DummySpan()
+
+# Singleton instance
+_telemetry_client = TelemetryClient()
+
+def get_telemetry_client():
+    """Get the global telemetry client instance."""
+    return _telemetry_client

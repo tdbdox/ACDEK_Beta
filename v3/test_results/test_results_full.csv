@@ -1,0 +1,6 @@
+case_id,domain,execution_time_ms,hallucination_score,confidence_score
+leg-001,legal,2.21,0.8000,0.8000
+sci-001,scientific,2.53,0.8000,0.8000
+fin-001,financial,2.92,0.8000,0.8000
+gen-001,general,2.52,0.8000,0.8000
+sci-001,scientific,2.37,0.8000,0.8000

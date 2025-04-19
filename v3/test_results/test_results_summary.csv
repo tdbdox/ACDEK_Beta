@@ -1,0 +1,25 @@
+Metric,Value
+execution.total_tests,5
+execution.success_count,5
+execution.error_count,0
+execution.success_rate,1.0
+timing.avg_execution_time_ms,2.5101661682128906
+timing.median_execution_time_ms,2.521038055419922
+timing.std_dev_execution_time_ms,0.26338383266580623
+timing.p95_execution_time_ms,2.9168128967285156
+timing.p99_execution_time_ms,2.9168128967285156
+hallucination.avg_hallucination_score,0.8000000000000002
+hallucination.hallucination_count,5
+hallucination.hallucination_rate,1.0
+domain_metrics.legal,{'count': 1, 'avg_execution_time_ms': 2.2058486938476562, 'avg_hallucination_score': 0.8000000000000002, 'hallucination_rate': 1.0}
+domain_metrics.general,{'count': 1, 'avg_execution_time_ms': 2.521038055419922, 'avg_hallucination_score': 0.8000000000000002, 'hallucination_rate': 1.0}
+domain_metrics.financial,{'count': 1, 'avg_execution_time_ms': 2.9168128967285156, 'avg_hallucination_score': 0.8000000000000002, 'hallucination_rate': 1.0}
+domain_metrics.scientific,{'count': 2, 'avg_execution_time_ms': 2.4535655975341797, 'avg_hallucination_score': 0.8000000000000002, 'hallucination_rate': 1.0}
+performance.max_concurrency,1
+performance.total_requests,5
+performance.requests_per_second,398.38000075984957
+performance.success_rate,1.0
+performance.error_rate,0.0
+success_criteria.performance_overhead_success,True
+success_criteria.hallucination_reduction_success,False
+success_criteria.overall_success,False

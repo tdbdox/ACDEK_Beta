@@ -1,0 +1,58 @@
+{
+  "execution": {
+    "total_tests": 5,
+    "success_count": 5,
+    "error_count": 0,
+    "success_rate": 1.0
+  },
+  "timing": {
+    "avg_execution_time_ms": 2.5101661682128906,
+    "median_execution_time_ms": 2.521038055419922,
+    "std_dev_execution_time_ms": 0.26338383266580623,
+    "p95_execution_time_ms": 2.9168128967285156,
+    "p99_execution_time_ms": 2.9168128967285156
+  },
+  "hallucination": {
+    "avg_hallucination_score": 0.8000000000000002,
+    "hallucination_count": 5,
+    "hallucination_rate": 1.0
+  },
+  "domain_metrics": {
+    "legal": {
+      "count": 1,
+      "avg_execution_time_ms": 2.2058486938476562,
+      "avg_hallucination_score": 0.8000000000000002,
+      "hallucination_rate": 1.0
+    },
+    "general": {
+      "count": 1,
+      "avg_execution_time_ms": 2.521038055419922,
+      "avg_hallucination_score": 0.8000000000000002,
+      "hallucination_rate": 1.0
+    },
+    "financial": {
+      "count": 1,
+      "avg_execution_time_ms": 2.9168128967285156,
+      "avg_hallucination_score": 0.8000000000000002,
+      "hallucination_rate": 1.0
+    },
+    "scientific": {
+      "count": 2,
+      "avg_execution_time_ms": 2.4535655975341797,
+      "avg_hallucination_score": 0.8000000000000002,
+      "hallucination_rate": 1.0
+    }
+  },
+  "performance": {
+    "max_concurrency": 1,
+    "total_requests": 5,
+    "requests_per_second": 398.38000075984957,
+    "success_rate": 1.0,
+    "error_rate": 0.0
+  },
+  "success_criteria": {
+    "performance_overhead_success": true,
+    "hallucination_reduction_success": false,
+    "overall_success": false
+  }
+}

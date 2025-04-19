@@ -17,6 +17,19 @@ from interfaces.enrichment_interface import EnrichmentInterface
 # Vector utilities
 from storage.vector_store.embed_utils import cosine_similarity
 
+# For hallucination metrics integration
+try:
+    from enrichment.hallucination_metrics import ConfidenceCorrelation
+except ImportError:
+    # Define locally if module not available
+    class ConfidenceCorrelation(Enum):
+        """Types of confidence correlation mismatches."""
+        ACCURATE = "accurate"                  # Confidence aligns with factuality
+        OVERCONFIDENT = "overconfident"        # High confidence but low factuality
+        UNDERCONFIDENT = "underconfident"      # Low confidence but high factuality
+        CONFIDENTLY_WRONG = "confidently_wrong"  # Very high confidence but very low factuality
+        CONFIDENTLY_RIGHT = "confidently_right"  # Very high confidence and very high factuality
+
 # Configure logging
 logger = logging.getLogger(__name__)
 
@@ -756,6 +769,23 @@ class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore
             category = data.get("category", "default")
             metadata["category"] = category
             
+            # Check if factuality score is provided for correlation analysis
+            measured_factuality = data.get("measured_factuality")
+            if measured_factuality is not None:
+                # Analyze confidence-factuality correlation
+                correlation_result = self.analyze_confidence_correlation(
+                    aggregate_score, measured_factuality
+                )
+                metadata["confidence_correlation"] = correlation_result
+                
+                # Track correlation statistics
+                self._track_correlation_stats(
+                    correlation_result["correlation_type"],
+                    aggregate_score,
+                    measured_factuality,
+                    correlation_result["correlation_score"]
+                )
+            
             # Create confidence score object
             score = ConfidenceScore(
                 aggregate_score=aggregate_score,
@@ -810,6 +840,114 @@ class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore
                 factors={},
                 metadata={"error": str(e), "fallback": True}
             )
+    
+    def _track_correlation_stats(
+        self,
+        correlation_type: str,
+        confidence: float,
+        factuality: float,
+        correlation_score: float
+    ) -> None:
+        """
+        Track statistics for confidence-factuality correlation.
+        This helps analyze how well confidence scores predict factuality.
+        
+        Args:
+            correlation_type: Type of correlation pattern observed
+            confidence: Model's confidence score
+            factuality: Measured factuality score
+            correlation_score: Correlation quality score
+        """
+        # Initialize correlation stats storage if not exists
+        if not hasattr(self, "correlation_stats"):
+            self.correlation_stats = {
+                "accurate": {
+                    "count": 0,
+                    "avg_confidence": 0.0,
+                    "avg_factuality": 0.0,
+                    "avg_correlation": 0.0
+                },
+                "overconfident": {
+                    "count": 0,
+                    "avg_confidence": 0.0,
+                    "avg_factuality": 0.0,
+                    "avg_correlation": 0.0
+                },
+                "underconfident": {
+                    "count": 0,
+                    "avg_confidence": 0.0,
+                    "avg_factuality": 0.0,
+                    "avg_correlation": 0.0
+                },
+                "confidently_wrong": {
+                    "count": 0,
+                    "avg_confidence": 0.0,
+                    "avg_factuality": 0.0,
+                    "avg_correlation": 0.0
+                },
+                "confidently_right": {
+                    "count": 0,
+                    "avg_confidence": 0.0,
+                    "avg_factuality": 0.0,
+                    "avg_correlation": 0.0
+                },
+                "total_count": 0,
+                "overall_avg_correlation": 0.0
+            }
+        
+        # Skip if invalid correlation type
+        if correlation_type not in self.correlation_stats or correlation_type == "total_count":
+            return
+        
+        # Update overall stats
+        self.correlation_stats["total_count"] += 1
+        total = self.correlation_stats["total_count"]
+        self.correlation_stats["overall_avg_correlation"] = (
+            (self.correlation_stats["overall_avg_correlation"] * (total - 1) + correlation_score) / total
+        )
+        
+        # Update specific correlation type stats
+        type_stats = self.correlation_stats[correlation_type]
+        type_stats["count"] += 1
+        count = type_stats["count"]
+        
+        # Update rolling averages
+        type_stats["avg_confidence"] = (type_stats["avg_confidence"] * (count - 1) + confidence) / count
+        type_stats["avg_factuality"] = (type_stats["avg_factuality"] * (count - 1) + factuality) / count
+        type_stats["avg_correlation"] = (type_stats["avg_correlation"] * (count - 1) + correlation_score) / count
+    
+    def get_correlation_stats(self) -> Dict[str, Any]:
+        """
+        Get statistics about confidence-factuality correlation.
+        Useful for hallucination metrics analysis.
+        
+        Returns:
+            Dictionary of correlation statistics
+        """
+        if not hasattr(self, "correlation_stats"):
+            return {
+                "total_count": 0,
+                "overall_avg_correlation": 0.0,
+                "correlation_types": {
+                    "accurate": 0,
+                    "overconfident": 0,
+                    "underconfident": 0,
+                    "confidently_wrong": 0,
+                    "confidently_right": 0
+                }
+            }
+        
+        # Create a simplified version with just counts for each type
+        simplified = {
+            "total_count": self.correlation_stats["total_count"],
+            "overall_avg_correlation": self.correlation_stats["overall_avg_correlation"],
+            "correlation_types": {
+                k: v["count"] for k, v in self.correlation_stats.items() 
+                if k not in ["total_count", "overall_avg_correlation"]
+            }
+        }
+        
+        return simplified
     
     def process(self, input_data: Dict[str, Any]) -> ConfidenceScore:
         """
@@ -963,6 +1101,55 @@ class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore
             "recent_avg": recent_avg,
             "trend": trend,
             "last_updated": scores[-1].timestamp if scores else 0
+        }
+    
+    def analyze_confidence_correlation(
+        self,
+        reported_confidence: float,
+        measured_factuality: float,
+        correlation_threshold: float = 0.7
+    ) -> Dict[str, Any]:
+        """
+        Analyze the correlation between reported confidence and measured factuality.
+        This method supports integration with hallucination metrics.
+        
+        Args:
+            reported_confidence: Model's self-reported confidence (0.0-1.0)
+            measured_factuality: Measured factuality score (0.0-1.0)
+            correlation_threshold: Threshold for correlation quality (default 0.7)
+            
+        Returns:
+            Dictionary with confidence correlation analysis results
+        """
+        # Calculate correlation score (1.0 = perfect correlation)
+        correlation_score = 1.0 - abs(reported_confidence - measured_factuality)
+        
+        # Determine correlation type
+        if correlation_score >= correlation_threshold:
+            # Good correlation
+            if reported_confidence >= 0.8 and measured_factuality >= 0.8:
+                correlation_type = ConfidenceCorrelation.CONFIDENTLY_RIGHT
+            else:
+                correlation_type = ConfidenceCorrelation.ACCURATE
+        else:
+            # Poor correlation
+            if reported_confidence > measured_factuality:
+                # Overconfident case
+                if reported_confidence >= 0.8 and measured_factuality < 0.5:
+                    correlation_type = ConfidenceCorrelation.CONFIDENTLY_WRONG
+                else:
+                    correlation_type = ConfidenceCorrelation.OVERCONFIDENT
+            else:
+                # Underconfident case
+                correlation_type = ConfidenceCorrelation.UNDERCONFIDENT
+        
+        # Return formatted results compatible with hallucination metrics
+        return {
+            "correlation_type": correlation_type.value,
+            "reported_confidence": reported_confidence,
+            "measured_factuality": measured_factuality,
+            "correlation_score": correlation_score,
+            "is_reliable": correlation_score >= correlation_threshold
         }
     
     def evaluate_with_threshold(

@@ -281,3 +281,17 @@ def create_instance(plugin_type: PluginType, name: Optional[str] = None, config:
         Plugin instance if successful, None otherwise
     """
     return registry.create_instance(plugin_type, name, config)
+
+
+def get_plugin_info(plugin_type: PluginType, name: Optional[str] = None) -> Optional[PluginMetadata]:
+    """
+    Get plugin metadata by type and name from the global registry.
+    
+    Args:
+        plugin_type: Type of plugin to retrieve
+        name: Name of plugin to retrieve, or None to get the default
+        
+    Returns:
+        Plugin metadata if found, None otherwise
+    """
+    return get_plugin(plugin_type, name)
