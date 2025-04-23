@@ -18,7 +18,7 @@ def main():
     )
     parser.add_argument(
         "-f", "--fallback-mode", type=str, default="strict",
-        choices=["strict", "lenient", "deferred"],
+        choices=["strict", "relaxed", "progressive", "deferred", "evidence"],
         help="Fallback mode"
     )
     parser.add_argument(
@@ -38,6 +38,10 @@ def main():
     parser.add_argument(
         "--export-session", type=str, default=None,
         help="Path to JSON file to export session metrics upon exit."
+    )
+    parser.add_argument(
+        "--component", type=str, choices=["pipeline", "enrichment", "constraints", "confidence"],
+        default="pipeline", help="Which component to run"
     )
     args = parser.parse_args()
 
@@ -142,7 +146,15 @@ def main():
     # Initialize client for single run
     client = Client(config={"fallback_mode": args.fallback_mode})
     try:
-        result = client.full_pipeline(data, output_format="dict")
+        # Run the appropriate component based on user selection
+        if args.component == "enrichment":
+            result = client.run_enrichment(data, output_format="dict")
+        elif args.component == "constraints":
+            result = client.validate_constraints(data, output_format="dict")
+        elif args.component == "confidence":
+            result = client.score_confidence(data, output_format="dict")
+        else:  # pipeline is default
+            result = client.full_pipeline(data, output_format="dict")
     except Exception as e:
         logging.error(f"Pipeline execution failed: {e}")
         sys.exit(1)

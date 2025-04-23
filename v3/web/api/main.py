@@ -175,15 +175,46 @@ async def run_pipeline(request: RunRequest):
     - Performance profiling
     """
     try:
-        # TODO: Initialize ACDEKKernel when backend logic is ready
-        # kernel = ACDEKKernel()
-        # result = kernel.run(request.data)
+        kernel = ACDEKKernel()
+        start_time = time.time()
+        result = kernel.run(request.data)
+        execution_time = time.time() - start_time
         
-        # For now, return mock result
-        mock_result = {"status": "success", "data": request.data}
-        return {"result": mock_result}
+        # Add performance metadata
+        result["execution_time"] = execution_time
+        result["timestamp"] = time.time()
+        
+        return {"result": result}
     except Exception as e:
         logger.error(f"Error running pipeline: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/validate")
+async def validate_constraints(request: RunRequest):
+    """Validate constraints on the input data."""
+    try:
+        from enrichment.constraint_verifier import ConstraintVerifier
+        verifier = ConstraintVerifier()
+        result = verifier.validate(request.data)
+        return result.to_dict()
+    except Exception as e:
+        logger.error(f"Error validating constraints: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/confidence")
+async def score_confidence(request: RunRequest):
+    """Calculate confidence scores for the input data."""
+    try:
+        from enrichment.confidence_scorer import VectorConfidenceScorer
+        scorer = VectorConfidenceScorer()
+        score = scorer.score(request.data)
+        return {
+            "aggregate_score": score.aggregate_score,
+            "factors": {f.value if hasattr(f, "value") else str(f): v for f, v in score.factors.items()},
+            "metadata": {k: v for k, v in score.metadata.items() if k != "vector"}
+        }
+    except Exception as e:
+        logger.error(f"Error calculating confidence: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/status")

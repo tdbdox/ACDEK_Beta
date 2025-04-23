@@ -1,55 +1,147 @@
-# ACDEK v3 Python SDK
+# ACDEK v3 - Advanced Control Deck for Evaluating Knowledge
 
-Adaptive Contextual-Decision Execution Kernel (ACDEK) v3 provides a modular, enterprise-grade orchestration protocol for LLM-based pipelines.
+ACDEK is an enterprise-grade orchestration protocol for LLM-based pipelines that improves reliability, factuality, and performance of LLM responses.
 
-This SDK exposes a simplified client to:
-- Enrich data via plug-in stages
-- Validate formal constraints
-- Score confidence with evidence-based metrics
-- Handle fallback strategies and retries
+![ACDEK Logo](https://via.placeholder.com/200x100?text=ACDEK+v3)
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone <repo-url>
-   cd <repo-root>/v3
-   ```
-2. Install dependencies (if any) or use Python 3.8+:
-   ```bash
-   pip install -r requirements.txt  # if provided
-   ```
+## Features
 
-## Usage
-### SDK
+- **Enrichment Pipeline**: Process data through configurable stages with dependency management
+- **Constraint Verification**: Validate outputs against formal constraints with multiple validation modes
+- **Confidence Scoring**: Evaluate reliability based on multiple weighted factors
+- **Hallucination Detection**: Comprehensive metrics for measuring and reducing hallucinations
+- **Performance Profiling**: Detailed metrics, bottleneck detection, and visualizations
+- **Plugin Architecture**: Extensible system with dynamic component loading
+
+## Quick Start
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-organization/acdek.git
+cd acdek
+
+# Install the package
+pip install -e .
+```
+
+### Basic Usage
+
 ```python
 from sdk.acdek_client import Client
 
-# Initialize client (strict fallback by default)
-client = Client(config={"fallback_mode": "lenient"})
+# Initialize client
+client = Client()
 
-# Input data
-input_data = {"text": "Analyze this input text."}
+# Prepare input data
+input_data = {
+    "text": "Example input for ACDEK processing"
+}
 
-# Run full pipeline
-result = client.full_pipeline(input_data, output_format="dict")
-print(result)
+# Process with ACDEK
+result = client.full_pipeline(input_data)
+
+# Print results
+print(f"Confidence Score: {result['confidence']['aggregate_score']:.3f}")
+print(f"Constraints Passed: {result['constraints']['passed']}")
 ```
 
-### CLI
+## Distribution Interfaces
+
+ACDEK provides three interfaces for integration:
+
+### 1. SDK (Python Client)
+
+The SDK provides a Python interface for integrating ACDEK into your applications:
+
+```python
+from sdk.acdek_client import Client
+
+client = Client(config={"fallback_mode": "relaxed"})
+result = client.full_pipeline(input_data)
+```
+
+### 2. CLI Tools
+
+Command-line tools for running ACDEK from scripts or terminal:
+
 ```bash
-# From project root (v3 folder)
-echo '{"text": "Analyze this input."}' \
-  | python3 cli/run_pipeline.py \
-    --fallback-mode lenient \
-    --output-format json
+# Process input from a file
+python cli/run_pipeline.py -i input.json
+
+# Run in interactive session mode
+python cli/run_pipeline.py --session
+```
+
+### 3. Web API
+
+FastAPI server for integration with web applications:
+
+```bash
+# Start the server
+python tests/api_server_script.py
+
+# Make API requests
+curl -X POST http://localhost:8000/run \
+    -H "Content-Type: application/json" \
+    -d '{"data": {"text": "Example input"}}'
 ```
 
 ## Documentation
-- `docs/sdk_guide.md`: Detailed SDK usage and configuration
-- `docs/pipeline_example.md`: Pipeline example with sample input/output
+
+Explore the comprehensive documentation in the `docs/` directory:
+
+- [Getting Started Guide](docs/getting_started.md)
+- [API Reference](docs/api_reference.md)
+- [CLI Guide](docs/cli_guide.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [SDK Guide](docs/sdk_guide.md)
+- [Pipeline Example](docs/pipeline_example.md)
+- [Performance Framework](docs/performance_framework.md)
+- [Benchmark Integration](docs/benchmark_integration.md)
 
 ## Examples
-- `examples/basic_pipeline.py`: End-to-end demo using SDK and CLI
 
-## Contributing
-Contributions welcome. Please follow the repository guidelines.
+Check out the `examples/` directory for sample implementations:
+
+- Basic pipeline usage
+- Comparative analysis
+- Continuous monitoring
+- Performance measurement
+- Integrated benchmarking
+
+## Benchmarks
+
+ACDEK includes a comprehensive benchmarking suite:
+
+```bash
+# Run all benchmarks
+python benchmarks/run_benchmarks.py --all
+
+# Run specific benchmarks
+python benchmarks/run_benchmarks.py --grounding
+```
+
+## Architecture
+
+ACDEK follows a modular architecture with these key components:
+
+1. **ACDEKKernel**: Central orchestration component
+2. **EnrichmentPipeline**: Multi-stage data processing pipeline
+3. **ConstraintVerifier**: Formal constraint validation system
+4. **ConfidenceScorer**: Multi-factor confidence evaluation
+5. **Registry**: Plugin management system
+6. **Benchmarking Suite**: Comparative evaluation framework
+
+## License
+
+[MIT License](LICENSE)
+
+## Version
+
+Current version: 3.0.0-beta
+
+## Contact
+
+For questions or support, please [open an issue](https://github.com/your-organization/acdek/issues) on GitHub.

@@ -1,0 +1,3 @@
+[console_scripts]
+acdek = cli.run_pipeline:main
+acdek-perf = cli.performance_cli:main

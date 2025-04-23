@@ -13,6 +13,7 @@ from typing import Dict, List, Any, Optional, Tuple, Set, Union, Callable
 from registry.registry_types import PluginType
 from registry.plugin_registry import register_plugin
 from interfaces.enrichment_interface import EnrichmentInterface
+from interfaces.confidence_scorer_interface import ConfidenceScorerInterface
 
 # Vector utilities
 from storage.vector_store.embed_utils import cosine_similarity
@@ -162,10 +163,10 @@ def _create_default_config() -> ConfidenceConfig:
     name="vector_confidence_scorer",
     version="1.0.0",
     description="Configurable confidence scoring system for vector embeddings",
-    interfaces=["EnrichmentInterface"],
+    interfaces=["EnrichmentInterface", "ConfidenceScorerInterface"],
     is_default=True
 )
-class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore]):
+class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore], ConfidenceScorerInterface[ConfidenceScore]):
     """
     Configurable confidence scoring system for vector embeddings.
     
@@ -949,6 +950,66 @@ class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore
         
         return simplified
     
+    # Implementing EnrichmentInterface methods
+    def enrich(self, input_data: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ConfidenceScore:
+        """
+        Enrich input data with confidence scoring.
+        
+        Args:
+            input_data: Input data containing vector and context information
+            context: Optional contextual information
+            
+        Returns:
+            ConfidenceScore with detailed breakdown
+        """
+        # Merge context if provided
+        if context:
+            merged_data = {**input_data, **context}
+        else:
+            merged_data = input_data
+            
+        return self.score(merged_data)
+    
+    def get_confidence(self, enriched_data: ConfidenceScore) -> float:
+        """
+        Extract the overall confidence score from enriched data.
+        
+        Args:
+            enriched_data: The enriched data (ConfidenceScore)
+            
+        Returns:
+            Confidence score between 0 and 1
+        """
+        return enriched_data.aggregate_score
+    
+    def apply_constraints(self, enriched_data: ConfidenceScore, constraints: Dict[str, Any]) -> ConfidenceScore:
+        """
+        Apply additional constraints to already enriched data.
+        
+        Args:
+            enriched_data: The previously enriched data
+            constraints: Dictionary of constraints to apply
+            
+        Returns:
+            Enriched data with constraints applied
+        """
+        # Currently, constraints don't modify the confidence score
+        # This is a placeholder for potential future constraint application
+        return enriched_data
+    
+    def supports_input_type(self, input_type: str) -> bool:
+        """
+        Check if this enrichment component supports a given input type.
+        
+        Args:
+            input_type: String identifier of input type
+            
+        Returns:
+            Boolean indicating support
+        """
+        # Support dictionary and vector inputs
+        return input_type in ["dict", "vector", "embedding"]
+    
     def process(self, input_data: Dict[str, Any]) -> ConfidenceScore:
         """
         Process input data to generate a confidence score.
@@ -960,6 +1021,29 @@ class VectorConfidenceScorer(EnrichmentInterface[Dict[str, Any], ConfidenceScore
             ConfidenceScore with detailed breakdown
         """
         return self.score(input_data)
+    
+    # Implementing ConfidenceScorerInterface methods
+    def evaluate_with_threshold(self, data: Dict[str, Any], threshold: float = 0.6) -> bool:
+        """
+        Evaluate if input data meets a confidence threshold.
+        
+        Args:
+            data: Input data for scoring
+            threshold: Confidence threshold
+            
+        Returns:
+            Boolean indicating if data meets threshold
+        """
+        # Get the confidence score
+        score = self.score(data)
+        
+        # Use provided threshold or config default
+        effective_threshold = threshold if threshold is not None else self.config.default_threshold
+        
+        # Evaluate against threshold
+        passes = score.aggregate_score >= effective_threshold
+        
+        return passes
     
     def _save_historical_data(self, category: str) -> None:
         """
