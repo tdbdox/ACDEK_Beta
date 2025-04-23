@@ -33,6 +33,9 @@ from interfaces.constraint_interface import (
     ConstraintValidationResult
 )
 
+# Import centralized domain configuration
+from config.domain_config import Domain, get_threshold, get_domain_thresholds
+
 # Local imports
 from benchmarks.analysis_tools import (
     export_report,
@@ -56,17 +59,6 @@ logging.basicConfig(
 # Paths
 BENCHMARK_DATA_DIR = Path("./benchmarks/data")
 BENCHMARK_RESULTS_DIR = Path("./benchmarks/results")
-
-
-class Domain(Enum):
-    """Domains for test cases to enable domain-specific analysis."""
-    MEDICAL = "medical"
-    LEGAL = "legal"
-    FINANCIAL = "financial"
-    SCIENTIFIC = "scientific"
-    GENERAL = "general"
-    TECHNICAL = "technical"
-    HISTORICAL = "historical"
 
 
 class HallucinationType(Enum):

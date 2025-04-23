@@ -1,23 +1,29 @@
-# ACDEK v3 Performance Measurement Framework
+# ACDEK v3 Performance Framework
 
-This document provides a comprehensive guide to the performance measurement framework in ACDEK v3, which enables detailed profiling, bottleneck detection, and performance visualization.
+This document provides a comprehensive guide to the performance framework in ACDEK v3, which includes both measurement tools and continuous monitoring capabilities.
 
 ## Overview
 
-The ACDEK v3 Performance Measurement Framework is designed to provide enterprise-grade performance monitoring and optimization capabilities. It enables developers and operations teams to:
+The ACDEK v3 Performance Framework consists of two integrated systems:
 
-1. **Measure execution time** across all ACDEK pipeline stages with microsecond precision
-2. **Detect bottlenecks** automatically with intelligent analysis and recommendations
-3. **Visualize performance metrics** through interactive dashboards and CLI reports
-4. **Monitor performance in real-time** to catch regressions and optimize scaling
+1. **Performance Measurement Framework** - For detailed profiling, bottleneck detection, and performance visualization.
+2. **Performance Monitoring System** - For continuous performance monitoring, regression detection, and alerting.
 
-The framework is built to have minimal overhead (<5ms per request) and provides both programmatic and CLI interfaces for integration into development workflows, CI/CD pipelines, and production monitoring systems.
+Together, these systems provide enterprise-grade performance observability and optimization capabilities, enabling developers and operations teams to:
 
-## Core Components
+- Measure and optimize execution time across all ACDEK pipeline stages
+- Detect performance bottlenecks automatically
+- Monitor performance in real-time and detect regressions
+- Visualize metrics through interactive dashboards
+- Receive alerts on performance degradations
 
-The framework consists of the following core components:
+## Performance Measurement Framework
 
-### 1. PerformanceProfiler
+### Core Components
+
+The measurement framework consists of the following core components:
+
+#### 1. PerformanceProfiler
 
 The `PerformanceProfiler` class is the foundation of the framework, providing:
 
@@ -41,60 +47,31 @@ with profiler.profile_stage("my_stage", request_id="req_123"):
     # Code to be profiled
     process_data()
 
-# Profile a complete request
-with profiler.profile_request(request_id="req_123") as req_id:
-    # Request processing code
-    with profiler.profile_stage("stage1", req_id):
-        step1()
-    with profiler.profile_stage("stage2", req_id):
-        step2()
-
 # Get performance snapshot
 snapshot = profiler.get_snapshot()
-
-# Export to file
-profiler.export_snapshot(filename="performance_snapshot.json")
 ```
 
-### 2. BottleneckDetector
+#### 2. BottleneckDetector
 
 The `BottleneckDetector` class analyzes performance data to identify bottlenecks and provide optimization recommendations:
-
-- Intelligent bottleneck detection with configurable thresholds
-- Severity classification (critical, warning, info)
-- Stage-specific optimization recommendations
-- System-level performance analysis
-- Scaling efficiency metrics
 
 ```python
 from observability.bottleneck_detector import BottleneckDetector, BottleneckConfig
 
 # Create detector with custom thresholds
 config = BottleneckConfig(
-    warning_threshold_ms=100.0,  # Warning threshold in ms
-    critical_threshold_ms=200.0   # Critical threshold in ms
+    warning_threshold_ms=100.0,
+    critical_threshold_ms=200.0
 )
 detector = BottleneckDetector(profiler, config=config)
 
 # Detect bottlenecks
 bottlenecks = detector.detect_bottlenecks()
-
-# Generate comprehensive report
-report = detector.generate_report()
-
-# Export report to file
-detector.export_report(filename="bottleneck_report.json")
 ```
 
-### 3. PerformanceVisualizer
+#### 3. PerformanceVisualizer
 
 The `PerformanceVisualizer` class creates visualizations and reports:
-
-- Interactive HTML dashboards
-- Stage timing charts
-- Relative execution time breakdowns
-- Bottleneck impact visualizations
-- CLI-friendly text reports
 
 ```python
 from observability.performance_visualizer import PerformanceVisualizer
@@ -110,24 +87,11 @@ dashboard_path = visualizer.create_dashboard(
     bottleneck_data=report,
     filename="performance_dashboard.html"
 )
-
-# Generate CLI report
-cli_report = visualizer.create_cli_report(
-    profile_data=snapshot.to_dict(),
-    bottleneck_data=report
-)
-print(cli_report)
 ```
 
-### 4. EnhancedMetricsCollector
+#### 4. EnhancedMetricsCollector
 
 The `EnhancedMetricsCollector` class extends the base `MetricsCollector` with:
-
-- Integration with the performance profiler
-- Advanced histogram metrics
-- Prometheus-compatible export
-- Distributed trace context
-- Request correlation
 
 ```python
 from observability.metrics_collector_enhanced import (
@@ -144,82 +108,255 @@ metrics = EnhancedMetricsCollector(
 with metrics.time_execution("my_operation", request_id="req_123"):
     # Code to be timed
     perform_operation()
-
-# Use standalone timing context
-with ProfiledTimingContext("another_operation", metrics, "req_123"):
-    # More code to be timed
-    another_operation()
-
-# Export metrics
-metrics.export_to_file(format="prometheus", file_path="metrics.prom")
 ```
 
-### 5. CLI Tools
+## Performance Monitoring System
 
-The framework includes a command-line interface for performance measurement:
+The Performance Monitoring System builds upon the measurement framework to provide continuous monitoring, regression detection, and alerting capabilities.
 
-```bash
-# Run profiling
-python performance_cli.py profile --duration=60 --interval=5 --export
+### Core Components
 
-# Analyze bottlenecks
-python performance_cli.py analyze --input=profile_data.json --report-format=html
+#### 1. Benchmark Runner
 
-# Visualize performance data
-python performance_cli.py visualize --input=profile_data.json --bottleneck-data=bottleneck_report.json
+Located in `benchmarks/benchmark_run.py`, this component executes benchmarks with configurable parameters:
 
-# Monitor performance in real-time
-python performance_cli.py monitor --interval=5 --dashboard
-```
-
-## Integration with ACDEK
-
-The framework is designed to integrate seamlessly with ACDEK v3:
-
-### ACDEKKernel Integration
+- Load testing with concurrent users
+- Multi-stage testing (smoke, functional, performance, stress)
+- Resource tracking for CPU, memory, and threads
+- Detailed test results and performance metrics
 
 ```python
-from acdek.acdek_kernel import ACDEKKernel
-from observability.performance_profiler import PerformanceProfiler
+from benchmarks.benchmark_run import (
+    run_benchmark, BenchmarkConfig, run_load_test, run_multi_stage_test
+)
 
-profiler = PerformanceProfiler()
-kernel = ACDEKKernel()
+# Create configuration
+config = BenchmarkConfig(
+    domains=["medical", "legal", "financial"],
+    include_v2=True,
+    parallel=True
+)
 
-# Process a request with profiling
-with profiler.profile_request() as req_id:
-    request = {
-        "query": "What is the inventory status?",
-        "context": {"request_id": req_id}
+# Run benchmark
+results = run_benchmark(config)
+
+# Run load test
+load_results = run_load_test(
+    test_cases=test_cases,
+    config=config,
+    concurrent_users=10,
+    ramp_up=30,
+    duration=300
+)
+```
+
+#### 2. Continuous Monitor
+
+Located in `benchmarks/continuous_monitor.py`, this component provides:
+
+- Daemon process for ongoing performance monitoring
+- Configurable monitoring intervals
+- Metrics collection and storage
+- Integration with regression detection
+- Alert management
+
+```python
+from benchmarks.continuous_monitor import ContinuousMonitor
+
+# Create monitor
+monitor = ContinuousMonitor(
+    interval=3600,  # 1 hour between runs
+    baseline_path="baseline.json",
+    alert_threshold=0.05  # 5% regression threshold
+)
+
+# Start monitoring
+monitor.start()
+
+# Run once without starting daemon
+result = monitor.run_once()
+
+# Stop monitoring
+monitor.stop()
+```
+
+#### 3. Regression Detector
+
+Located in `benchmarks/regression_detector.py`, this component offers:
+
+- Statistical detection of performance regressions
+- Severity classification (minor, moderate, severe, critical)
+- Domain impact analysis
+- Trend analysis
+- Baseline optimization
+
+```python
+from benchmarks.regression_detector import RegressionDetector
+
+# Create detector
+detector = RegressionDetector(
+    significance_level=0.05,
+    regression_thresholds={
+        "minor": 0.02,  # 2% change
+        "moderate": 0.05,  # 5% change
+        "severe": 0.1,  # 10% change
+        "critical": 0.2  # 20% change
     }
-    
-    # Process with ACDEK kernel
-    result = kernel.run(
-        input_data=request,
-        context=request["context"]
-    )
+)
+
+# Detect regressions
+analysis = detector.detect_regressions(
+    current_results=current_data,
+    baseline_results=baseline_data
+)
+
+# Analyze trends
+trend_analysis = detector.analyze_trend(historical_results)
 ```
 
-### EnrichmentPipeline Integration
+#### 4. Performance Dashboard
+
+Located in `benchmarks/performance_dashboard.py`, this component provides:
+
+- Real-time visualization of performance metrics
+- Interactive charts and graphs
+- Regression visualization
+- Alert management interface
+- Domain-specific performance views
 
 ```python
-from enrichment.enrichment_pipeline import EnrichmentPipeline
-from observability.metrics_collector_enhanced import (
-    EnhancedMetricsCollector, ProfiledTimingContext
-)
+from benchmarks.performance_dashboard import run_dashboard
 
-# Create enhanced metrics collector
-metrics = EnhancedMetricsCollector(service_name="enrichment_pipeline")
+# Run dashboard with monitor
+run_dashboard(monitor, port=8080)
+```
 
-# Create pipeline with timing
-pipeline = EnrichmentPipeline(
-    stages=[...],
-    execution_mode="adaptive"
-)
+#### 5. API Endpoints
 
-# Execute pipeline with profiling
-with metrics.trace_request("req_123") as req_id:
-    with metrics.time_execution("pipeline_execute", req_id):
-        result = pipeline.execute(input_data, context)
+Located in `web/api/main.py`, the API server provides:
+
+- RESTful API for performance data
+- WebSocket connections for real-time updates
+- Control interface for the monitoring system
+
+```
+# RESTful API Endpoints
+GET /status - Get monitoring system status
+GET /metrics - Get performance metrics
+GET /alerts - Get active alerts
+POST /monitor/command - Send commands to the monitoring system
+
+# WebSocket API
+Connect to /ws for real-time updates
+```
+
+## Performance Metrics
+
+The framework tracks the following key metrics:
+
+### Core Metrics
+- **Hallucination Reduction**: Measures the effectiveness of ACDEK in reducing hallucinations
+- **Latency Overhead**: Measures the additional processing time introduced by ACDEK
+- **Confidence Score**: Measures the confidence in ACDEK's output
+- **Success Rate**: Measures the percentage of successful pipeline executions
+
+### Resource Metrics
+- **CPU Usage**: Average and peak CPU utilization
+- **Memory Usage**: Average and peak memory consumption
+- **Thread Count**: Number of threads used during execution
+- **Execution Time**: Total time to complete benchmarks
+
+### Domain-specific Metrics
+- Performance metrics broken down by domain (medical, legal, financial, etc.)
+- Domain-specific hallucination reduction rates
+- Domain-specific latency overhead
+
+## Regression Detection
+
+The regression detection system uses statistical analysis to identify performance degradations:
+
+### Detection Methods
+- **Delta Analysis**: Compares current values against baseline
+- **Significance Testing**: Determines if changes are statistically significant
+- **Trend Analysis**: Analyzes patterns over multiple runs
+
+### Severity Classification
+- **Minor**: Slight degradations with minimal impact
+- **Moderate**: Notable degradations requiring attention
+- **Severe**: Significant degradations requiring immediate action
+- **Critical**: Extreme degradations potentially blocking deployment
+
+## Alerts and Notifications
+
+The alert system provides timely notifications of performance issues:
+
+### Alert Types
+- **Regression Alerts**: Triggered by detected performance regressions
+- **Resource Alerts**: Triggered by excessive resource usage
+- **Threshold Alerts**: Triggered when metrics exceed defined thresholds
+- **System Alerts**: Triggered by monitoring system issues
+
+### Notification Channels
+- **Console**: Terminal output for local development
+- **Email**: Email notifications for critical issues
+- **Webhook**: Integration with external systems
+- **Slack**: Team notifications for collaborative response
+- **Dashboard**: Visual alerts in the monitoring dashboard
+
+## Dashboard
+
+The performance dashboard provides a unified view of system performance:
+
+### Dashboard Components
+- **Overview Panel**: High-level performance summary
+- **Trend Analysis**: Historical performance trends
+- **Regression Analysis**: Details of detected regressions
+- **Resource Monitoring**: System resource usage metrics
+- **Domain Analysis**: Domain-specific performance metrics
+- **Alert Management**: Active and historical alerts
+
+## Usage Guide
+
+### Running Benchmarks
+```bash
+# Run a standard benchmark
+python benchmark_run.py
+
+# Run a load test with 10 concurrent users
+python benchmark_run.py --load-test --users 10
+
+# Run a multi-stage test (smoke, functional, performance, stress)
+python benchmark_run.py --multi-stage
+```
+
+### Continuous Monitoring
+```bash
+# Start continuous monitoring with default settings
+python continuous_monitor.py
+
+# Start monitoring with custom interval and baseline
+python continuous_monitor.py --interval 3600 --baseline baseline.json
+
+# Start monitoring with dashboard
+python continuous_monitor.py --dashboard
+```
+
+### Regression Detection
+```bash
+# Detect regressions between current and baseline results
+python regression_detector.py --current results/latest.json --baseline results/baseline.json
+
+# Analyze performance trends
+python regression_detector.py --current results/latest.json --analyze-trend
+```
+
+### Dashboard
+```bash
+# Start the performance dashboard
+python performance_dashboard.py
+
+# Start dashboard on a specific port
+python performance_dashboard.py --port 8080
 ```
 
 ## Performance Overhead
@@ -230,36 +367,7 @@ The framework is designed to have minimal impact on production performance:
 - Resource monitoring overhead: ~2-3ms when enabled
 - Memory usage: <10MB for storing 1000 profile points
 - Total overhead per request: <5ms (without resource monitoring)
-
-For production environments, you can selectively disable resource monitoring or reduce profiling granularity to reduce overhead further.
-
-## Example Usage
-
-A complete example demonstrating the performance framework is available in `/examples/performance_measurement_example.py`. This example shows:
-
-- Profiling ACDEK pipeline execution
-- Analyzing bottlenecks
-- Creating visualizations
-- Monitoring performance in real-time
-
-```bash
-# Run full example
-python examples/performance_measurement_example.py --mode=all
-
-# Run specific mode
-python examples/performance_measurement_example.py --mode=profile --request-count=100
-```
-
-## Dashboard Features
-
-The generated performance dashboard includes:
-
-- **Overview**: High-level performance metrics and charts
-- **Bottlenecks**: Detailed analysis of performance bottlenecks with recommendations
-- **Stage Details**: Complete breakdown of all pipeline stages
-- **Raw Data**: (Optional) Full raw performance data for advanced analysis
-
-The dashboard is designed to be self-contained and can be shared with team members or included in CI/CD reports.
+- Continuous monitoring: Configurable intervals to manage impact
 
 ## Best Practices
 
@@ -268,10 +376,15 @@ For optimal results with the performance framework:
 1. **Profile granularity**: Create profile points around meaningful operations, not too fine-grained or too coarse
 2. **Naming conventions**: Use consistent, hierarchical naming for stages (e.g., `enrichment.vector_alignment`)
 3. **Request correlation**: Always pass request IDs to enable end-to-end tracing
-4. **Regular profiling**: Integrate profiling into CI/CD to catch performance regressions early
-5. **Custom thresholds**: Adjust thresholds based on your specific performance requirements
-6. **Production monitoring**: Use the monitoring mode with lower overhead settings in production
+4. **Regular monitoring**: Run continuous monitoring in pre-production to catch performance regressions early
+5. **Custom thresholds**: Adjust regression and alert thresholds based on your specific performance requirements
+6. **Baseline management**: Regularly update baseline measurements after validated performance improvements
+7. **Alert routing**: Configure appropriate alert channels based on severity and team responsibilities
+
+## Example Usage
+
+A complete example demonstrating the performance framework is available in `/examples/performance_measurement_example.py`. For monitoring examples, see `/examples/continuous_monitoring_example.py`.
 
 ## Conclusion
 
-The ACDEK v3 Performance Measurement Framework provides comprehensive tools for understanding, optimizing, and monitoring system performance. By integrating this framework into your development and operations workflows, you can ensure ACDEK meets enterprise-grade performance requirements and quickly identify opportunities for optimization.
+The ACDEK v3 Performance Framework provides comprehensive tools for understanding, optimizing, monitoring, and maintaining system performance. By integrating this framework into your development and operations workflows, you can ensure ACDEK meets enterprise-grade performance requirements and quickly identify opportunities for optimization.
