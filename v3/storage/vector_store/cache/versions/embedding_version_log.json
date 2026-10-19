@@ -1,22 +1,24 @@
 {
   "1.3.0": {
-    "timestamp": "2025-04-23T15:28:27.895956",
+    "timestamp": "2025-05-02T20:42:20.836192",
     "signature_method": "adaptive",
-    "cache_size": 0,
+    "cache_size": 200,
     "stats": {
-      "size": 0,
+      "size": 200,
       "max_size": 10000,
       "ttl": 86400,
-      "hits": 0,
-      "misses": 0,
-      "hit_ratio": 0.0,
+      "hits": 3122,
+      "misses": 200,
+      "hit_ratio": 0.9397953040337146,
       "expired_count": 0,
-      "avg_age": 0.0,
-      "avg_vector_norm": 0,
+      "avg_age": 124.24717174291611,
+      "avg_vector_norm": 0.999999997317791,
       "failure_count": 0,
       "version": "1.3.0",
       "signature_method": "adaptive",
-      "model_distribution": {}
+      "model_distribution": {
+        "all-MiniLM-L6-v2": 200
+      }
     }
   }
 }

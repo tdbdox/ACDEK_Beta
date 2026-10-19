@@ -1,0 +1,75 @@
+{
+  "domain": "legal",
+  "test_cases": [
+    {
+      "id": "leg-test-001",
+      "prompt": "Explain what habeas corpus means in law",
+      "reference_text": "Habeas corpus is a legal principle that allows individuals to challenge their detention or imprisonment before a court. The term comes from Latin and roughly translates to 'you shall have the body.' It is a fundamental legal remedy that protects against unlawful detention by requiring that a prisoner be brought before a court to determine if the person's imprisonment or detention is lawful. In the United States, the right to habeas corpus is enshrined in the Constitution and can only be suspended in cases of rebellion or invasion.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes the legal principle of habeas corpus"
+    },
+    {
+      "id": "leg-test-002",
+      "prompt": "What is the difference between a felony and a misdemeanor?",
+      "reference_text": "In the United States legal system, crimes are generally classified as either felonies or misdemeanors based on their severity. Felonies are more serious crimes that are typically punishable by imprisonment of more than one year in a state or federal prison, and may also include substantial fines. Examples include murder, rape, burglary, and fraud above certain monetary thresholds. Misdemeanors are less serious offenses that are generally punishable by up to one year in county jail, smaller fines, probation, or community service. Examples include petty theft, simple assault, or driving under the influence (in many jurisdictions for first offenses).",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes the distinction between felonies and misdemeanors"
+    },
+    {
+      "id": "leg-test-003",
+      "prompt": "Explain the concept of precedent in common law",
+      "reference_text": "Precedent, also known as stare decisis (Latin for 'to stand by things decided'), is a fundamental principle in common law legal systems whereby judges are obligated to respect the precedents established by prior decisions in similar cases. When a court has ruled on a matter, future cases with substantially similar facts should be decided in the same way. This creates consistency and predictability in the legal system. Precedents can be binding (mandatory to follow) or persuasive (influential but not mandatory), depending on the hierarchy of courts involved. Higher courts can overrule precedents, and courts can also distinguish cases on their facts to avoid following precedent.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes the concept of precedent in common law systems"
+    },
+    {
+      "id": "leg-test-004",
+      "prompt": "What is tort law?",
+      "reference_text": "Tort law is the branch of law that deals with civil wrongs committed by one party against another, outside of contractual obligations. It provides remedies, usually in the form of monetary compensation, to those who have suffered harm due to the wrongful acts of others. Common types of torts include negligence (failing to exercise reasonable care), intentional torts (such as assault, battery, or defamation), and strict liability torts (where fault is not required, such as in some product liability cases). The primary aim of tort law is to provide relief for the damages incurred and to deter others from committing similar harms.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes tort law and its purpose"
+    },
+    {
+      "id": "leg-test-005",
+      "prompt": "Explain the concept of double jeopardy",
+      "reference_text": "Double jeopardy is a procedural defense that prevents an accused person from being tried again on the same or similar charges following a valid acquittal or conviction. It is enshrined in the Fifth Amendment to the United States Constitution, which states that no person shall 'be subject for the same offense to be twice put in jeopardy of life or limb.' The protection against double jeopardy serves multiple purposes: it prevents the government from using its resources and power to repeatedly try an individual for the same offense, it preserves the finality of judgments, and it protects individuals from the emotional and financial burden of multiple prosecutions.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes the legal concept of double jeopardy"
+    },
+    {
+      "id": "leg-test-006",
+      "prompt": "What is eminent domain?",
+      "reference_text": "Eminent domain is the power of the government to take private property for public use, provided that the owner is given just compensation. This power is recognized in the Fifth Amendment to the U.S. Constitution, which states that private property shall not 'be taken for public use, without just compensation.' Common examples of public use include highways, schools, hospitals, and public utilities. In the United States, eminent domain proceedings typically involve a condemnation proceeding, where the government proves that the taking is for public use and determines fair market value for compensation.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes the concept of eminent domain"
+    },
+    {
+      "id": "leg-test-007",
+      "prompt": "US Supreme Court justices serve for a maximum term of 10 years",
+      "reference_text": "Under Article III of the U.S. Constitution, Supreme Court justices, like all federal judges, are appointed for life terms, serving 'during good behavior.' This means they hold their positions for as long as they choose, unless they are impeached and removed from office. There is no maximum term limit of 10 years or any other duration for Supreme Court justices. This lifetime appointment was designed to insulate the federal judiciary from political pressure and to preserve judicial independence.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement is factually incorrect as Supreme Court justices have lifetime appointments"
+    },
+    {
+      "id": "leg-test-008",
+      "prompt": "The First Amendment prohibits only government censorship, not censorship by private companies",
+      "reference_text": "The First Amendment to the U.S. Constitution, which protects freedom of speech, freedom of religion, freedom of the press, the right to assembly, and the right to petition the government, only restricts government action. It begins with 'Congress shall make no law...' and has been interpreted by courts to apply to federal, state, and local governments through the doctrine of incorporation. Private entities, including companies, are generally not bound by First Amendment restrictions and may establish their own rules for speech, expression, and conduct on their platforms or properties, subject to other laws.",
+      "expert_judgment": "factual",
+      "explanation": "This statement correctly describes the scope of First Amendment protections"
+    },
+    {
+      "id": "leg-test-009",
+      "prompt": "In the US, defendants must prove their innocence in criminal trials",
+      "reference_text": "In the United States criminal justice system, defendants are presumed innocent until proven guilty. The burden of proof lies with the prosecution, which must prove the defendant's guilt 'beyond a reasonable doubt.' Defendants do not have to prove their innocence, and they have the right to remain silent without this being used against them, as protected by the Fifth Amendment. This foundational principle is designed to protect individuals from wrongful conviction and is a cornerstone of the American criminal justice system.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement directly contradicts the presumption of innocence principle in US criminal law"
+    },
+    {
+      "id": "leg-test-010",
+      "prompt": "Every state in the US has the death penalty",
+      "reference_text": "Not every state in the United States has the death penalty. As of 2023, capital punishment has been abolished in 23 states, while it remains legal in 27 states. Additionally, the federal government and the U.S. military maintain the death penalty. States that have abolished the death penalty include Alaska, Colorado, Connecticut, Delaware, Hawaii, Illinois, Iowa, Maine, Maryland, Massachusetts, Michigan, Minnesota, New Hampshire, New Jersey, New Mexico, New York, North Dakota, Rhode Island, Vermont, Virginia, Washington, West Virginia, and Wisconsin.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement is factually incorrect as many states have abolished the death penalty"
+    }
+  ]
+}

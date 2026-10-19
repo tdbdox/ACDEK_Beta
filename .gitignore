@@ -1,3 +1,17 @@
 # API keys & secrets
 .env
 
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Caches / test outputs
+*.pkl
+*.log
+test_results/
+.embedding_cache/

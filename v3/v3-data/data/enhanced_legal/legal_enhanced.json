@@ -1,0 +1,165 @@
+{
+  "domain": "legal",
+  "concepts": [
+    {
+      "id": "leg1",
+      "term": "Contract",
+      "definition": "A legally binding agreement between two or more parties that creates obligations enforceable by law. Valid contracts require offer, acceptance, consideration, legal capacity, and lawful purpose.",
+      "source": "Black's Law Dictionary",
+      "examples": ["Sales contracts", "Employment contracts", "Service agreements", "Lease agreements"],
+      "related_concepts": ["Offer", "Acceptance", "Consideration", "Breach of contract", "Remedies"]
+    },
+    {
+      "id": "leg2",
+      "term": "Consideration",
+      "definition": "Something of value exchanged between parties that induces them to enter into an agreement and makes the contract legally binding. Consideration must be sufficient but need not be adequate.",
+      "source": "Restatement (Second) of Contracts",
+      "examples": ["Money", "Property", "Services", "Promises", "Forbearance"],
+      "related_concepts": ["Contract", "Bargained-for exchange", "Promissory estoppel", "Quid pro quo"]
+    },
+    {
+      "id": "leg3",
+      "term": "Tort",
+      "definition": "A civil wrong that causes someone else to suffer loss or harm, resulting in legal liability for the person who commits the act. Tort law addresses wrongful acts resulting in injury or harm to another person, property, reputation, or other legally protected interests, providing remedies through civil litigation.",
+      "source": "American Law Institute",
+      "examples": ["Negligence", "Defamation", "Battery", "Trespass", "Product liability"],
+      "related_concepts": ["Duty of care", "Breach of duty", "Causation", "Damages", "Strict liability"]
+    },
+    {
+      "id": "leg4",
+      "term": "Jurisdiction",
+      "definition": "A court's legal authority to hear and decide a case. It includes subject matter jurisdiction (authority over the issue), personal jurisdiction (authority over the parties), and territorial jurisdiction (authority over the geographic area).",
+      "source": "Federal Rules of Civil Procedure",
+      "examples": ["Federal jurisdiction", "State jurisdiction", "Limited jurisdiction", "General jurisdiction"],
+      "related_concepts": ["Venue", "Long-arm statute", "Diversity jurisdiction", "Subject matter jurisdiction"]
+    },
+    {
+      "id": "leg5",
+      "term": "Negligence",
+      "definition": "A legal theory of liability where a person fails to exercise the level of care that a reasonably prudent person would in similar circumstances, resulting in foreseeable harm to others. The elements of negligence are duty, breach, causation, and damages.",
+      "source": "Prosser and Keeton on Torts",
+      "examples": ["Medical malpractice", "Car accidents", "Slip and fall cases", "Professional negligence"],
+      "related_concepts": ["Duty of care", "Reasonable person standard", "Proximate cause", "Contributory negligence"]
+    },
+    {
+      "id": "leg6",
+      "term": "Intellectual Property",
+      "definition": "Creations of the mind, such as inventions, literary and artistic works, designs, symbols, names, and images used in commerce. It is protected by patents, copyrights, trademarks, and trade secrets.",
+      "source": "World Intellectual Property Organization",
+      "examples": ["Patents", "Copyrights", "Trademarks", "Trade secrets", "Industrial designs"],
+      "related_concepts": ["Infringement", "Fair use", "Licensing", "Public domain", "Duration of protection"]
+    },
+    {
+      "id": "leg7",
+      "term": "Due Process",
+      "definition": "The legal requirement that the state must respect all legal rights owed to a person and the principles of fairness in all legal matters. It protects individuals from arbitrary denial of life, liberty, or property by the government.",
+      "source": "U.S. Constitution, 5th and 14th Amendments",
+      "examples": ["Procedural due process", "Substantive due process", "Notice and hearing requirements"],
+      "related_concepts": ["Equal protection", "Constitutional rights", "Fundamental fairness", "Rule of law"]
+    },
+    {
+      "id": "leg8",
+      "term": "Corporation",
+      "definition": "A legal entity separate from its owners (shareholders), providing limited liability protection. It has legal rights and responsibilities including the ability to enter contracts, own assets, and incur liabilities.",
+      "source": "Delaware General Corporation Law",
+      "examples": ["C Corporation", "S Corporation", "Non-profit corporation", "Professional corporation"],
+      "related_concepts": ["Limited liability", "Corporate veil", "Board of directors", "Shareholder", "Articles of incorporation"]
+    },
+    {
+      "id": "leg9",
+      "term": "Probate",
+      "definition": "The legal process of administering a deceased person's estate, validating their will if one exists, and distributing assets to beneficiaries according to the will or state law if no will exists.",
+      "source": "Uniform Probate Code",
+      "examples": ["Formal probate", "Summary probate", "Intestate succession", "Will contests"],
+      "related_concepts": ["Will", "Executor", "Estate", "Inheritance", "Testate/Intestate"]
+    },
+    {
+      "id": "leg10",
+      "term": "Criminal Law",
+      "definition": "The body of law that deals with behaviors deemed harmful to society as a whole. It establishes definitions of crimes, sets punishments, and outlines the rules governing the process of addressing criminal accusations.",
+      "source": "Model Penal Code",
+      "examples": ["Felonies", "Misdemeanors", "Infractions", "Statutory crimes"],
+      "related_concepts": ["Mens rea", "Actus reus", "Beyond reasonable doubt", "Presumption of innocence"]
+    },
+    {
+      "id": "leg11",
+      "term": "Habeas Corpus",
+      "definition": "A legal principle that allows individuals to challenge their detention or imprisonment before a court. The term comes from Latin and roughly translates to 'you shall have the body.' It is a fundamental legal remedy that protects against unlawful detention by requiring that a prisoner be brought before a court to determine if the person's imprisonment or detention is lawful.",
+      "source": "U.S. Constitution, Article I, Section 9",
+      "examples": ["Federal habeas corpus petitions", "State habeas corpus petitions", "Post-conviction relief"],
+      "related_concepts": ["Writ", "Unlawful detention", "Due process", "Civil liberties"]
+    },
+    {
+      "id": "leg12",
+      "term": "Precedent",
+      "definition": "A principle in common law legal systems whereby judges are obligated to respect the precedents established by prior decisions. Also known as stare decisis (Latin for 'to stand by things decided'), when a court has ruled on a matter, future cases with substantially similar facts should be decided in the same way.",
+      "source": "Black's Law Dictionary",
+      "examples": ["Binding precedent", "Persuasive precedent", "Horizontal precedent", "Vertical precedent"],
+      "related_concepts": ["Stare decisis", "Case law", "Common law", "Distinguishing cases", "Overruling"]
+    },
+    {
+      "id": "leg13",
+      "term": "Double Jeopardy",
+      "definition": "A procedural defense that prevents an accused person from being tried again on the same or similar charges following a valid acquittal or conviction. It is enshrined in the Fifth Amendment to the United States Constitution.",
+      "source": "U.S. Constitution, Fifth Amendment",
+      "examples": ["Acquittal protection", "Multiple punishment prohibition", "Successive prosecution ban"],
+      "related_concepts": ["Fifth Amendment", "Constitutional protection", "Collateral estoppel", "Dual sovereignty doctrine"]
+    },
+    {
+      "id": "leg14",
+      "term": "Eminent Domain",
+      "definition": "The power of the government to take private property for public use, provided that the owner is given just compensation. This power is recognized in the Fifth Amendment to the U.S. Constitution.",
+      "source": "U.S. Constitution, Fifth Amendment",
+      "examples": ["Condemnation proceedings", "Public use takings", "Regulatory takings"],
+      "related_concepts": ["Just compensation", "Public use", "Takings clause", "Inverse condemnation"]
+    },
+    {
+      "id": "leg15",
+      "term": "First Amendment",
+      "definition": "The First Amendment to the U.S. Constitution protects freedom of speech, religion, press, assembly, and the right to petition the government. It only restricts government action and does not apply to private entities establishing their own rules for speech and conduct.",
+      "source": "U.S. Constitution, First Amendment",
+      "examples": ["Political speech protection", "Religious freedom cases", "Press freedom", "Right to peaceful assembly"],
+      "related_concepts": ["Freedom of speech", "Establishment clause", "Free exercise clause", "State action doctrine"]
+    },
+    {
+      "id": "leg16",
+      "term": "Burden of Proof",
+      "definition": "The obligation to prove one's assertion in a legal proceeding. In criminal cases, the prosecution must prove the defendant's guilt 'beyond a reasonable doubt.' In civil cases, the plaintiff typically must prove their case by a 'preponderance of the evidence.'",
+      "source": "Federal Rules of Evidence",
+      "examples": ["Beyond reasonable doubt", "Preponderance of evidence", "Clear and convincing evidence"],
+      "related_concepts": ["Presumption of innocence", "Prima facie case", "Affirmative defense", "Standard of proof"]
+    },
+    {
+      "id": "leg17",
+      "term": "Capital Punishment",
+      "definition": "The legally authorized killing of someone as punishment for a crime. Also known as the death penalty, it is not practiced in all U.S. states. As of 2023, capital punishment has been abolished in 23 states, while it remains legal in 27 states.",
+      "source": "Death Penalty Information Center",
+      "examples": ["Lethal injection", "Electric chair", "Gas chamber", "Hanging"],
+      "related_concepts": ["Cruel and unusual punishment", "Eighth Amendment", "Aggravating factors", "Mitigating factors"]
+    },
+    {
+      "id": "leg18",
+      "term": "Wiretapping Laws",
+      "definition": "Laws that regulate the interception of communications, including the recording of conversations. In the United States, federal law and most states require the consent of at least one party to record a conversation. Some states require all parties to consent to recording.",
+      "source": "Electronic Communications Privacy Act",
+      "examples": ["One-party consent jurisdictions", "All-party consent jurisdictions", "Federal wiretap authorizations"],
+      "related_concepts": ["Electronic surveillance", "Expectation of privacy", "Fourth Amendment", "Consent exceptions"]
+    },
+    {
+      "id": "leg19",
+      "term": "Felony",
+      "definition": "A serious crime in the United States legal system, typically punishable by imprisonment of more than one year in a state or federal prison, and may also include substantial fines. Examples include murder, rape, burglary, and fraud above certain monetary thresholds.",
+      "source": "Model Penal Code",
+      "examples": ["First-degree felony", "Second-degree felony", "Violent felonies", "Non-violent felonies"],
+      "related_concepts": ["Criminal record", "Felony disenfranchisement", "Three-strikes laws", "Federal sentencing guidelines"]
+    },
+    {
+      "id": "leg20",
+      "term": "Misdemeanor",
+      "definition": "A less serious criminal offense in the United States legal system, generally punishable by up to one year in county jail, smaller fines, probation, or community service. Examples include petty theft, simple assault, or driving under the influence in many jurisdictions for first offenses.",
+      "source": "Model Penal Code",
+      "examples": ["Class A misdemeanor", "Class B misdemeanor", "Petty misdemeanor", "Gross misdemeanor"],
+      "related_concepts": ["Criminal record", "Plea bargaining", "Probation", "Community service"]
+    }
+  ]
+}

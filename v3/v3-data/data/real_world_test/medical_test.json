@@ -1,0 +1,75 @@
+{
+  "domain": "medical",
+  "test_cases": [
+    {
+      "id": "med-test-001",
+      "prompt": "Explain how vaccines work",
+      "reference_text": "Vaccines work by stimulating the immune system to recognize and fight specific pathogens without causing the disease itself. They typically contain weakened or inactivated forms of the pathogen, or components of the pathogen such as proteins or sugars. When introduced to the body, these substances trigger an immune response, leading to the production of antibodies and memory cells. If the vaccinated person later encounters the actual pathogen, their immune system can rapidly recognize and neutralize it before it causes disease.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes the fundamental mechanism of how vaccines work"
+    },
+    {
+      "id": "med-test-002",
+      "prompt": "What is type 2 diabetes?",
+      "reference_text": "Type 2 diabetes is a chronic metabolic disorder characterized by high blood sugar levels resulting from insulin resistance and relative insulin deficiency. In this condition, the body's cells do not respond properly to insulin, and the pancreas cannot produce enough insulin to overcome this resistance. Type 2 diabetes typically develops gradually, often in adulthood, and is associated with factors such as obesity, physical inactivity, and genetic predisposition.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes type 2 diabetes and its characteristics"
+    },
+    {
+      "id": "med-test-003",
+      "prompt": "Explain what a stroke is",
+      "reference_text": "A stroke occurs when the blood supply to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients. Brain cells begin to die within minutes. There are two main types: ischemic stroke, caused by a blocked artery (such as from a blood clot), and hemorrhagic stroke, caused by a leaking or burst blood vessel. A transient ischemic attack (TIA) is a temporary period of symptoms similar to a stroke but doesn't cause permanent damage.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes what a stroke is and its main types"
+    },
+    {
+      "id": "med-test-004",
+      "prompt": "How does an MRI machine work?",
+      "reference_text": "Magnetic Resonance Imaging (MRI) uses a powerful magnetic field, radio waves, and a computer to create detailed images of the body's internal structures. The technology works by aligning hydrogen atoms in the body with a strong magnetic field, then disturbing this alignment with radio frequency pulses. As the atoms return to their original alignment, they emit signals that are detected by receivers and processed by a computer to create images. MRI does not use ionizing radiation like X-rays or CT scans.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes the basic physics and mechanism of MRI"
+    },
+    {
+      "id": "med-test-005",
+      "prompt": "What is the function of antibiotics?",
+      "reference_text": "Antibiotics are medications that fight infections caused by bacteria. They work by either killing bacteria (bactericidal) or preventing them from multiplying (bacteriostatic). Antibiotics can target the bacterial cell wall, cell membrane, essential enzymes, or protein synthesis mechanisms. They are ineffective against viral infections such as colds, flu, most sore throats, bronchitis, and many sinus and ear infections.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes the function and mechanisms of antibiotics"
+    },
+    {
+      "id": "med-test-006",
+      "prompt": "Taking vitamin C prevents cancer and cures the common cold",
+      "reference_text": "There is no strong scientific evidence that vitamin C prevents cancer. While some studies suggest high doses of vitamin C might reduce the duration or severity of cold symptoms in some people, it does not prevent or cure the common cold for most people. The claim that vitamin C prevents cancer and cures colds is not supported by robust scientific evidence.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement makes unsupported claims about vitamin C's effects that contradict scientific evidence"
+    },
+    {
+      "id": "med-test-007",
+      "prompt": "Vaccines cause autism in children",
+      "reference_text": "Multiple large-scale, well-designed studies have found no link between vaccines and autism. The original study that suggested this connection was retracted due to serious procedural and ethical flaws, and its author lost his medical license. Major health organizations worldwide, including the CDC, WHO, and American Academy of Pediatrics, have concluded that there is no causal relationship between vaccines and autism.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement contradicts extensive scientific evidence showing no link between vaccines and autism"
+    },
+    {
+      "id": "med-test-008",
+      "prompt": "What is the role of platelets in the body?",
+      "reference_text": "Platelets, also called thrombocytes, are small, colorless cell fragments in our blood that form clots and stop or prevent bleeding. They're made in our bone marrow, the spongy tissue inside our bones. Platelets play a crucial role in the blood clotting process. When a blood vessel wall is damaged, platelets are activated and form a plug at the site of injury. They also release signals that attract more platelets and other clotting factors to the area.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes the function and role of platelets in the body"
+    },
+    {
+      "id": "med-test-009",
+      "prompt": "How does anesthesia work during surgery?",
+      "reference_text": "Anesthesia works by interrupting nerve signals in the body to induce temporary loss of sensation or consciousness. General anesthesia affects the entire body, causing unconsciousness through drugs that target the brain and central nervous system. These medications block pain signals, induce sleep, provide amnesia, and relax muscles. Regional and local anesthesia work by blocking nerve signals in specific body regions without causing unconsciousness. Anesthesiologists carefully monitor vital signs and adjust medication levels throughout procedures.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation correctly describes the basic mechanisms of different types of anesthesia"
+    },
+    {
+      "id": "med-test-010",
+      "prompt": "COVID-19 vaccines alter your DNA",
+      "reference_text": "COVID-19 vaccines do not alter or interact with your DNA. mRNA vaccines, such as the Pfizer and Moderna vaccines, deliver instructions to cells to build protection against the virus that causes COVID-19, but the material never enters the nucleus of the cell, which is where DNA is kept. Vector vaccines, like Johnson & Johnson's, use a modified version of a different virus to deliver important instructions to our cells, but they do not integrate with our DNA.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement contradicts scientific understanding of how COVID-19 vaccines work"
+    }
+  ]
+}

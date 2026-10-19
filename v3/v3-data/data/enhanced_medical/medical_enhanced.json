@@ -1,0 +1,165 @@
+{
+  "domain": "medical",
+  "concepts": [
+    {
+      "id": "med1",
+      "term": "COVID-19",
+      "definition": "COVID-19 is a respiratory illness caused by the SARS-CoV-2 virus. Common symptoms include fever, cough, shortness of breath, fatigue, and loss of taste or smell. It is primarily transmitted through respiratory droplets when infected individuals cough, sneeze, talk, or breathe.",
+      "source": "Centers for Disease Control and Prevention",
+      "examples": ["Mild COVID-19", "Severe COVID-19", "Long COVID", "Asymptomatic infection"],
+      "related_concepts": ["Coronavirus", "Pandemic", "Vaccination", "Respiratory infection", "Viral transmission"]
+    },
+    {
+      "id": "med2",
+      "term": "Hypertension",
+      "definition": "A chronic condition where blood pressure against artery walls is consistently elevated. It is diagnosed when readings consistently exceed 130/80 mmHg. Untreated hypertension increases risk of heart disease, stroke, and kidney failure.",
+      "source": "American Heart Association",
+      "examples": ["Primary hypertension", "Secondary hypertension", "Resistant hypertension", "White coat hypertension"],
+      "related_concepts": ["Blood pressure", "Cardiovascular disease", "Antihypertensive medications", "Lifestyle modifications"]
+    },
+    {
+      "id": "med3",
+      "term": "Diabetes Mellitus",
+      "definition": "A metabolic disorder characterized by high blood sugar levels (hyperglycemia) over a prolonged period. The two main types are Type 1 (autoimmune condition where the pancreas produces little or no insulin) and Type 2 (where cells become resistant to insulin's effects).",
+      "source": "American Diabetes Association",
+      "examples": ["Type 1 diabetes", "Type 2 diabetes", "Gestational diabetes", "Prediabetes"],
+      "related_concepts": ["Insulin", "Glucose", "Pancreas", "Metabolic syndrome", "Hyperglycemia"]
+    },
+    {
+      "id": "med4",
+      "term": "Common Cold",
+      "definition": "A viral infectious disease of the upper respiratory tract primarily caused by rhinoviruses. Symptoms typically include sore throat, runny nose, coughing, sneezing, and general malaise, usually lasting 7-10 days.",
+      "source": "National Institutes of Health",
+      "examples": ["Rhinovirus infections", "Upper respiratory infections", "Seasonal colds", "Viral rhinitis"],
+      "related_concepts": ["Influenza", "Sinusitis", "Respiratory viruses", "Symptomatic treatment"]
+    },
+    {
+      "id": "med5",
+      "term": "Antibiotics",
+      "definition": "Medications that destroy or inhibit the growth of bacteria but have no effect on viruses. Inappropriate use of antibiotics can lead to antibiotic resistance, making infections harder to treat.",
+      "source": "World Health Organization",
+      "examples": ["Penicillins", "Cephalosporins", "Macrolides", "Fluoroquinolones", "Tetracyclines"],
+      "related_concepts": ["Antimicrobial resistance", "Broad-spectrum antibiotics", "Narrow-spectrum antibiotics", "Bactericidal vs. bacteriostatic"]
+    },
+    {
+      "id": "med6",
+      "term": "Myocardial Infarction",
+      "definition": "A heart attack occurs when blood flow to a part of the heart is blocked, causing damage to heart muscle. Symptoms include chest pain or discomfort, shortness of breath, nausea, lightheadedness, and cold sweats. Immediate medical attention is required.",
+      "source": "American College of Cardiology",
+      "examples": ["STEMI", "NSTEMI", "Acute coronary syndrome", "Silent heart attack"],
+      "related_concepts": ["Coronary artery disease", "Atherosclerosis", "Cardiac enzymes", "Reperfusion therapy"]
+    },
+    {
+      "id": "med7",
+      "term": "Alzheimer's Disease",
+      "definition": "A progressive neurodegenerative disorder that causes brain cells to degenerate and die, leading to memory loss, cognitive decline, and behavioral changes. It is the most common cause of dementia among older adults.",
+      "source": "Alzheimer's Association",
+      "examples": ["Early-onset Alzheimer's", "Late-onset Alzheimer's", "Familial Alzheimer's", "Sporadic Alzheimer's"],
+      "related_concepts": ["Dementia", "Amyloid plaques", "Neurofibrillary tangles", "Cognitive impairment", "Neurodegeneration"]
+    },
+    {
+      "id": "med8",
+      "term": "Vaccination",
+      "definition": "The administration of a vaccine to stimulate an individual's immune system to develop protection against specific infectious diseases. Vaccines contain weakened or inactivated parts of a particular organism that trigger an immune response.",
+      "source": "World Health Organization",
+      "examples": ["mRNA vaccines", "Live attenuated vaccines", "Inactivated vaccines", "Subunit vaccines", "Toxoid vaccines"],
+      "related_concepts": ["Immunity", "Herd immunity", "Immunization schedule", "Vaccine efficacy", "Antibody response"]
+    },
+    {
+      "id": "med9",
+      "term": "Cancer",
+      "definition": "A disease characterized by the uncontrolled growth and spread of abnormal cells. These cells can invade and destroy normal body tissue and spread throughout the body. Treatment options include surgery, radiation, chemotherapy, immunotherapy, and targeted therapy.",
+      "source": "National Cancer Institute",
+      "examples": ["Carcinoma", "Sarcoma", "Leukemia", "Lymphoma", "Myeloma"],
+      "related_concepts": ["Oncology", "Metastasis", "Tumor", "Carcinogenesis", "Cancer staging"]
+    },
+    {
+      "id": "med10",
+      "term": "Asthma",
+      "definition": "A chronic inflammatory disease of the airways characterized by recurring symptoms, reversible airflow obstruction, and bronchospasm. Symptoms include wheezing, coughing, chest tightness, and shortness of breath.",
+      "source": "National Heart, Lung, and Blood Institute",
+      "examples": ["Allergic asthma", "Non-allergic asthma", "Exercise-induced asthma", "Occupational asthma"],
+      "related_concepts": ["Bronchodilators", "Inhaled corticosteroids", "Peak flow measurement", "Asthma action plan"]
+    },
+    {
+      "id": "med11",
+      "term": "Stroke",
+      "definition": "A stroke occurs when the blood supply to part of the brain is interrupted or reduced, preventing brain tissue from getting oxygen and nutrients. Brain cells begin to die within minutes. There are two main types: ischemic stroke, caused by a blocked artery, and hemorrhagic stroke, caused by a leaking or burst blood vessel.",
+      "source": "American Stroke Association",
+      "examples": ["Ischemic stroke", "Hemorrhagic stroke", "Transient ischemic attack (TIA)", "Cryptogenic stroke"],
+      "related_concepts": ["Cerebrovascular disease", "Brain infarction", "Thrombolysis", "Neurological deficit", "Stroke rehabilitation"]
+    },
+    {
+      "id": "med12",
+      "term": "Magnetic Resonance Imaging (MRI)",
+      "definition": "A medical imaging technique that uses a powerful magnetic field, radio waves, and a computer to create detailed images of the body's internal structures. MRI works by aligning hydrogen atoms in the body with a strong magnetic field, then disturbing this alignment with radio frequency pulses. MRI does not use ionizing radiation.",
+      "source": "American College of Radiology",
+      "examples": ["Functional MRI", "Contrast-enhanced MRI", "Diffusion MRI", "MR angiography"],
+      "related_concepts": ["Diagnostic imaging", "Tesla (magnetic field strength)", "Radio frequency", "Imaging contrast", "Claustrophobia"]
+    },
+    {
+      "id": "med13",
+      "term": "Vitamin C",
+      "definition": "An essential vitamin that the body cannot produce on its own. It is necessary for the formation of collagen, absorption of iron, the immune system, and the maintenance of cartilage, bones, and teeth. While it has antioxidant properties, scientific evidence does not support claims that vitamin C prevents cancer or cures the common cold.",
+      "source": "National Institutes of Health",
+      "examples": ["Ascorbic acid", "Food sources of vitamin C", "Vitamin C deficiency", "Vitamin C supplements"],
+      "related_concepts": ["Scurvy", "Antioxidants", "Recommended dietary allowance", "Water-soluble vitamins"]
+    },
+    {
+      "id": "med14",
+      "term": "Platelets",
+      "definition": "Small, colorless cell fragments in blood that form clots and stop or prevent bleeding. They're made in bone marrow and play a crucial role in the blood clotting process. When a blood vessel wall is damaged, platelets are activated and form a plug at the site of injury.",
+      "source": "American Society of Hematology",
+      "examples": ["Thrombocytes", "Platelet aggregation", "Platelet activation", "Platelet transfusion"],
+      "related_concepts": ["Hemostasis", "Coagulation", "Thrombus", "Thrombocytopenia", "Thrombocytosis"]
+    },
+    {
+      "id": "med15",
+      "term": "Anesthesia",
+      "definition": "Temporary loss of sensation or awareness produced by medications that block nerve signals in the body. There are three main types: general (causes unconsciousness), regional (blocks sensation in a specific region), and local (affects a small area). Anesthesiologists carefully monitor vital signs and adjust medication levels throughout procedures.",
+      "source": "American Society of Anesthesiologists",
+      "examples": ["General anesthesia", "Regional anesthesia", "Local anesthesia", "Conscious sedation"],
+      "related_concepts": ["Analgesia", "Amnesia", "Muscle relaxation", "Anesthetic agents", "Recovery from anesthesia"]
+    },
+    {
+      "id": "med16",
+      "term": "COVID-19 Vaccines",
+      "definition": "Vaccines developed to provide acquired immunity against SARS-CoV-2, the virus that causes COVID-19. Different types include mRNA vaccines, viral vector vaccines, protein subunit vaccines, and whole virus vaccines. COVID-19 vaccines do not alter or interact with DNA; the material never enters the nucleus of the cell where DNA is kept.",
+      "source": "Centers for Disease Control and Prevention",
+      "examples": ["mRNA vaccines (Pfizer, Moderna)", "Viral vector vaccines (Johnson & Johnson, AstraZeneca)", "Protein subunit vaccines", "Whole virus vaccines"],
+      "related_concepts": ["Vaccine efficacy", "Vaccine safety", "Booster doses", "Vaccine breakthrough infections", "Herd immunity"]
+    },
+    {
+      "id": "med17",
+      "term": "Type 2 Diabetes Treatment",
+      "definition": "Management approaches for type 2 diabetes, which may include lifestyle modifications, oral medications, injectable medications, and monitoring blood glucose levels. While lifestyle changes can help manage the condition and may lead to remission in some cases, there is currently no permanent cure for type 2 diabetes.",
+      "source": "American Diabetes Association",
+      "examples": ["Metformin", "Sulfonylureas", "Insulin therapy", "GLP-1 receptor agonists", "Lifestyle modifications"],
+      "related_concepts": ["Glycemic control", "Diabetes remission", "Disease management", "Diabetic complications", "Blood glucose monitoring"]
+    },
+    {
+      "id": "med18",
+      "term": "Herd Immunity",
+      "definition": "A form of indirect protection from infectious disease that occurs when a sufficient percentage of a population has become immune to an infection, whether through vaccination or previous infections, thereby reducing the likelihood of infection for individuals who are not immune. The threshold for herd immunity varies by disease based on contagiousness.",
+      "source": "World Health Organization",
+      "examples": ["Vaccine-induced herd immunity", "Natural herd immunity", "Herd immunity threshold", "Population protection"],
+      "related_concepts": ["Basic reproduction number (R0)", "Vaccination rate", "Community protection", "Disease elimination", "Epidemic dynamics"]
+    },
+    {
+      "id": "med19",
+      "term": "Antibiotic Resistance",
+      "definition": "The ability of bacteria to survive and grow in the presence of antibiotics that would normally kill them or limit their growth. This natural phenomenon is accelerated by overuse and misuse of antibiotics in humans, animals, and agriculture. Resistant infections are harder to treat, require stronger antibiotics, and may lead to increased mortality.",
+      "source": "Centers for Disease Control and Prevention",
+      "examples": ["Methicillin-resistant Staphylococcus aureus (MRSA)", "Carbapenem-resistant Enterobacteriaceae (CRE)", "Multidrug-resistant tuberculosis"],
+      "related_concepts": ["Antimicrobial stewardship", "Superbugs", "Selective pressure", "Resistance mechanisms", "One Health approach"]
+    },
+    {
+      "id": "med20",
+      "term": "Body Mass Index (BMI)",
+      "definition": "A measure that uses height and weight to estimate body fat and screen for weight categories that may lead to health problems. It is calculated by dividing a person's weight in kilograms by the square of their height in meters. While BMI is a useful screening tool, it has limitations and does not directly measure body fat or account for factors such as muscle mass, bone density, and ethnic differences.",
+      "source": "Centers for Disease Control and Prevention",
+      "examples": ["Underweight (BMI < 18.5)", "Normal weight (BMI 18.5-24.9)", "Overweight (BMI 25-29.9)", "Obesity (BMI ≥ 30)"],
+      "related_concepts": ["Anthropometric measurement", "Body composition", "Waist circumference", "Weight management", "Obesity-related diseases"]
+    }
+  ]
+}

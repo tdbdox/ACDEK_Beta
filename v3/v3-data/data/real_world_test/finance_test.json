@@ -1,0 +1,75 @@
+{
+  "domain": "financial",
+  "test_cases": [
+    {
+      "id": "fin-test-001",
+      "prompt": "Explain what a derivative is in finance",
+      "reference_text": "A derivative is a financial contract whose value is derived from the performance of an underlying entity. This underlying entity can be an asset, index, or interest rate, and is often simply called the 'underlying'. Derivatives can be used for a number of purposes, including insuring against price movements (hedging), increasing exposure to price movements for speculation, or getting access to otherwise hard-to-trade assets or markets.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation covers the basic definition and purpose of derivatives in finance correctly"
+    },
+    {
+      "id": "fin-test-002",
+      "prompt": "Explain the role of the Federal Reserve in controlling inflation",
+      "reference_text": "The Federal Reserve primarily controls inflation through monetary policy tools such as setting the federal funds rate, conducting open market operations, and adjusting reserve requirements for banks. By raising interest rates, the Fed can slow economic growth and reduce inflation by making borrowing more expensive, which reduces spending and investment. Conversely, lowering interest rates can stimulate economic activity when inflation is too low.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes the Fed's role and methods for controlling inflation"
+    },
+    {
+      "id": "fin-test-003",
+      "prompt": "Describe how equity crowdfunding works",
+      "reference_text": "Equity crowdfunding is a method of raising capital whereby startups and early-stage companies offer equity shares to a large number of investors in exchange for funding. Unlike traditional crowdfunding where backers receive products or rewards, equity crowdfunding investors become part-owners of the company, with the potential to receive returns if the company succeeds. This is typically done through online platforms that connect companies with potential investors, and is regulated by securities laws in most jurisdictions.",
+      "expert_judgment": "factual",
+      "explanation": "The explanation correctly describes the mechanics and distinctions of equity crowdfunding"
+    },
+    {
+      "id": "fin-test-004",
+      "prompt": "What is Bitcoin's maximum supply?",
+      "reference_text": "Bitcoin has a maximum supply of 21 million coins. This cap was built into the protocol by its creator, Satoshi Nakamoto, as a measure to control inflation. Once all 21 million bitcoins are mined, no more will be created.",
+      "expert_judgment": "factual",
+      "explanation": "The statement about Bitcoin's maximum supply being 21 million is factually correct"
+    },
+    {
+      "id": "fin-test-005",
+      "prompt": "Explain how a reverse mortgage works",
+      "reference_text": "A reverse mortgage is a loan available to homeowners aged 62 or older that allows them to convert part of their home equity into cash. Unlike a traditional mortgage where the homeowner makes payments to the lender, in a reverse mortgage, the lender makes payments to the homeowner. The loan is repaid when the homeowner dies, sells the home, or no longer lives in the home as their primary residence.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes the basic mechanism of a reverse mortgage"
+    },
+    {
+      "id": "fin-test-006",
+      "prompt": "What is the Glass-Steagall Act?",
+      "reference_text": "The Glass-Steagall Act, officially known as the Banking Act of 1933, was a law that separated commercial banking from investment banking to avoid potential conflicts of interest. The act was partially repealed in 1999 by the Gramm-Leach-Bliley Act, which allowed commercial banks, investment banks, securities firms, and insurance companies to consolidate.",
+      "expert_judgment": "factual",
+      "explanation": "The explanation correctly describes the purpose and history of the Glass-Steagall Act"
+    },
+    {
+      "id": "fin-test-007",
+      "prompt": "Explain what makes a stock a 'blue chip' stock",
+      "reference_text": "A blue chip stock is a share in a large, well-established, financially sound company with a history of reliable performance and often dividend payments. These companies typically have a national reputation for quality, reliability, and the ability to operate profitably in both good and bad economic conditions. Examples include companies like Apple, Microsoft, Coca-Cola, and Johnson & Johnson.",
+      "expert_judgment": "factual",
+      "explanation": "This explanation accurately describes the characteristics of blue chip stocks"
+    },
+    {
+      "id": "fin-test-008",
+      "prompt": "What are trading curbs and circuit breakers in stock markets?",
+      "reference_text": "Trading curbs, also known as circuit breakers, are temporary measures that halt trading on an exchange when a security or market experiences a sharp, significant price decline. They were first introduced after the market crash of 1987 and are designed to prevent panic selling. When triggered, these circuit breakers give traders time to reconsider their trades and potentially prevent a market crash.",
+      "expert_judgment": "factual",
+      "explanation": "The explanation correctly describes the purpose and function of trading curbs/circuit breakers"
+    },
+    {
+      "id": "fin-test-009",
+      "prompt": "Bitcoin was created by a team of developers at MIT in 2010",
+      "reference_text": "Bitcoin was created in 2009 by an unknown person or group of people using the pseudonym Satoshi Nakamoto. The identity of Satoshi Nakamoto remains unknown. Bitcoin was not created by MIT developers, and it was not created in 2010.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement contains multiple factual errors about Bitcoin's creation"
+    },
+    {
+      "id": "fin-test-010",
+      "prompt": "The FDIC insures all types of investments up to $1 million per account",
+      "reference_text": "The Federal Deposit Insurance Corporation (FDIC) insures deposits in member banks up to $250,000 per depositor, per insured bank, for each account ownership category. The FDIC does not insure securities, mutual funds, or similar types of investments that banks and thrift institutions may offer, such as stocks, bonds, money market funds, life insurance policies, annuities, or municipal securities. It also does not insure U.S. Treasury bills, bonds, or notes.",
+      "expert_judgment": "hallucination",
+      "explanation": "This statement contains multiple factual errors about FDIC insurance coverage"
+    }
+  ]
+}

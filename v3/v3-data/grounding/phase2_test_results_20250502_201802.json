@@ -1,0 +1,213 @@
+{
+  "timestamp": "2025-05-02 20:18:02",
+  "metrics": {
+    "Baseline (Phase 1)": {
+      "total_tests": 4,
+      "correct_detections": 2,
+      "accuracy": 0.5,
+      "avg_processing_time_ms": 222.97251224517822
+    },
+    "Semantic Chunking Only": {
+      "total_tests": 4,
+      "correct_detections": 2,
+      "accuracy": 0.5,
+      "avg_processing_time_ms": 1.0287761688232422
+    },
+    "Enhanced Contradiction Only": {
+      "total_tests": 4,
+      "correct_detections": 2,
+      "accuracy": 0.5,
+      "avg_processing_time_ms": 1.7177462577819824
+    },
+    "Full Phase 2": {
+      "total_tests": 4,
+      "correct_detections": 2,
+      "accuracy": 0.5,
+      "avg_processing_time_ms": 1.6297101974487305
+    }
+  },
+  "configurations": [
+    {
+      "name": "Baseline (Phase 1)",
+      "use_chunks": false,
+      "use_enhanced_contradiction": false
+    },
+    {
+      "name": "Semantic Chunking Only",
+      "use_chunks": true,
+      "use_enhanced_contradiction": false
+    },
+    {
+      "name": "Enhanced Contradiction Only",
+      "use_chunks": false,
+      "use_enhanced_contradiction": true
+    },
+    {
+      "name": "Full Phase 2",
+      "use_chunks": true,
+      "use_enhanced_contradiction": true
+    }
+  ],
+  "results": [
+    {
+      "test_id": 0,
+      "domain": "financial",
+      "factuality_score": 0.05462660640478134,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 299.5648384094238,
+      "config": "Baseline (Phase 1)"
+    },
+    {
+      "test_id": 1,
+      "domain": "medical",
+      "factuality_score": 0.3,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 268.7380313873291,
+      "config": "Baseline (Phase 1)"
+    },
+    {
+      "test_id": 2,
+      "domain": "legal",
+      "factuality_score": 0.2243662327528,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 177.15001106262207,
+      "config": "Baseline (Phase 1)"
+    },
+    {
+      "test_id": 3,
+      "domain": "legal",
+      "factuality_score": 0.1673535406589508,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 146.4371681213379,
+      "config": "Baseline (Phase 1)"
+    },
+    {
+      "test_id": 0,
+      "domain": "financial",
+      "factuality_score": 0.05462660640478134,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 1.3718605041503906,
+      "config": "Semantic Chunking Only"
+    },
+    {
+      "test_id": 1,
+      "domain": "medical",
+      "factuality_score": 0.3,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 0.6809234619140625,
+      "config": "Semantic Chunking Only"
+    },
+    {
+      "test_id": 2,
+      "domain": "legal",
+      "factuality_score": 0.2243662327528,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 1.0721683502197266,
+      "config": "Semantic Chunking Only"
+    },
+    {
+      "test_id": 3,
+      "domain": "legal",
+      "factuality_score": 0.1673535406589508,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 0.9901523590087891,
+      "config": "Semantic Chunking Only"
+    },
+    {
+      "test_id": 0,
+      "domain": "financial",
+      "factuality_score": 0.05462660640478134,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 1.3790130615234375,
+      "config": "Enhanced Contradiction Only"
+    },
+    {
+      "test_id": 1,
+      "domain": "medical",
+      "factuality_score": 0.3,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 3.364086151123047,
+      "config": "Enhanced Contradiction Only"
+    },
+    {
+      "test_id": 2,
+      "domain": "legal",
+      "factuality_score": 0.2243662327528,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 1.1587142944335938,
+      "config": "Enhanced Contradiction Only"
+    },
+    {
+      "test_id": 3,
+      "domain": "legal",
+      "factuality_score": 0.1673535406589508,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 0.9691715240478516,
+      "config": "Enhanced Contradiction Only"
+    },
+    {
+      "test_id": 0,
+      "domain": "financial",
+      "factuality_score": 0.05462660640478134,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 1.7459392547607422,
+      "config": "Full Phase 2"
+    },
+    {
+      "test_id": 1,
+      "domain": "medical",
+      "factuality_score": 0.3,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 1.6210079193115234,
+      "config": "Full Phase 2"
+    },
+    {
+      "test_id": 2,
+      "domain": "legal",
+      "factuality_score": 0.2243662327528,
+      "hallucination_flag": true,
+      "expected_hallucination": false,
+      "correct_detection": false,
+      "processing_time_ms": 1.5048980712890625,
+      "config": "Full Phase 2"
+    },
+    {
+      "test_id": 3,
+      "domain": "legal",
+      "factuality_score": 0.1673535406589508,
+      "hallucination_flag": true,
+      "expected_hallucination": true,
+      "correct_detection": true,
+      "processing_time_ms": 1.6469955444335938,
+      "config": "Full Phase 2"
+    }
+  ]
+}

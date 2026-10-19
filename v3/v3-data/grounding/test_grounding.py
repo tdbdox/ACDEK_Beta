@@ -23,8 +23,8 @@ parent_dir = Path(__file__).resolve().parent.parent.parent
 sys.path.append(str(parent_dir))
 
 try:
-    # Import grounding functions
-    from v3.grounding import (
+    # Import grounding functions directly from the grounding_engine module
+    from grounding_engine import (
         grounded_validation_pipeline,
         retrieve_reference,
         score_factuality,
@@ -69,20 +69,23 @@ try:
             reference = result["reference"]["text"]
             
             # Test with exact match (should be 1.0)
-            score_exact = score_factuality(reference, reference)
+            result_exact = score_factuality(reference, reference)
+            score_exact = result_exact["score"]  # Extract score from result dict
             logger.info(f"Domain '{domain}' exact match score: {score_exact:.4f}")
             assert score_exact > 0.95, f"Exact match score too low: {score_exact}"
             
             # Test with partial content
             if len(reference) > 20:
                 partial = reference[:len(reference)//2]
-                score_partial = score_factuality(partial, reference)
+                result_partial = score_factuality(partial, reference)
+                score_partial = result_partial["score"]  # Extract score from result dict
                 logger.info(f"Domain '{domain}' partial match score: {score_partial:.4f}")
                 assert 0 <= score_partial <= 1, f"Invalid partial score: {score_partial}"
             
             # Test with unrelated content
             unrelated = f"This is completely unrelated to {domain}"
-            score_unrelated = score_factuality(unrelated, reference)
+            result_unrelated = score_factuality(unrelated, reference)
+            score_unrelated = result_unrelated["score"]  # Extract score from result dict
             logger.info(f"Domain '{domain}' unrelated score: {score_unrelated:.4f}")
             assert score_unrelated < 0.7, f"Unrelated score too high: {score_unrelated}"
     
